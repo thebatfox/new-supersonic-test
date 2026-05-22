@@ -1,75 +1,107 @@
-import { Button } from "@/components/ui/button";
-import { ArrowLeft, ImageIcon } from "lucide-react";
-import Link from "next/link";
+"use client";
 
-interface GalleryHoldingPageProps {
-  title: string;
-  description: string;
-  icon: React.ComponentType<{ className?: string }>;
+import { useState } from 'react';
+import Link from 'next/link';
+import { ArrowLeft, X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
+
+function titleFromFilename(filename: string): string {
+  return filename
+    .replace(/\.jpg$|\.png$|\.jpeg$|\.webp$/, '')
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
 }
 
-export default function GalleryHoldingPage({ title, description, icon: IconComponent }: GalleryHoldingPageProps) {
+interface GalleryPageProps {
+  title: string;
+  description: string;
+  images: string[]; // just the filenames, e.g. 'halo-nightclub-main-floor.jpg'
+  folder: string;   // e.g. 'night-clubs'
+}
+
+export default function GalleryHoldingPage({ title, description, images, folder }: GalleryPageProps) {
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const openLightbox = (index: number) => setLightboxIndex(index);
+  const closeLightbox = () => setLightboxIndex(null);
+  const prev = () => setLightboxIndex(i => (i !== null ? (i - 1 + images.length) % images.length : null));
+  const next = () => setLightboxIndex(i => (i !== null ? (i + 1) % images.length : null));
+
   return (
-    <div className="min-h-screen bg-background">
-      {/* Navigation Header */}
-      <nav className="bg-primary text-primary-foreground py-4 px-6">
-        <div className="max-w-7xl mx-auto flex items-center">
-          <Button variant="ghost" size="sm" asChild className="mr-4 text-primary-foreground hover:bg-primary-foreground/20">
-            <Link href="/">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home
-            </Link>
-          </Button>
-          <IconComponent className="w-5 h-5 mr-2" />
-          <h1 className="text-xl font-semibold">{title} Gallery</h1>
-        </div>
-      </nav>
-
-      {/* Main Content */}
-      <main className="py-12 px-6">
+    <div className="min-h-screen bg-black">
+      {/* Header */}
+      <div className="bg-gray-900 border-b border-gray-800 py-6 px-6">
         <div className="max-w-7xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center mb-4">
-              <IconComponent className="w-12 h-12 text-primary mr-4" />
-              <h1 className="text-4xl font-bold">{title}</h1>
-            </div>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              {description}
-            </p>
-          </div>
+          <Link href="/#gallery" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-4 transition-colors">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Gallery
+          </Link>
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">{title}</h1>
+          <p className="text-gray-400">{description}</p>
+          <p className="text-gray-500 text-sm mt-1">{images.length} photos</p>
+        </div>
+      </div>
 
-          {/* Holding Message */}
-          <div className="text-center py-20">
-            <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-12 max-w-2xl mx-auto border border-primary/20">
-              <ImageIcon className="w-24 h-24 text-primary mx-auto mb-6 opacity-50" />
-              <h2 className="text-3xl font-bold text-primary mb-4">
-                New images incoming
-              </h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Watch this space
-              </p>
-              <div className="w-full bg-muted rounded-full h-2 mb-4">
-                <div className="bg-primary h-2 rounded-full animate-pulse" style={{ width: '60%' }} />
+      {/* Masonry Grid */}
+      <div className="max-w-7xl mx-auto px-6 py-10">
+        <div className="columns-2 md:columns-3 lg:columns-4 gap-4">
+          {images.map((filename, index) => (
+            <div
+              key={filename}
+              className="break-inside-avoid group relative cursor-pointer rounded-xl overflow-hidden bg-gray-900 mb-4"
+              onClick={() => openLightbox(index)}
+            >
+              <img
+                src={`/gallery/${folder}/${filename}`}
+                alt={titleFromFilename(filename)}
+                className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                <ZoomIn className="w-8 h-8 text-white" />
               </div>
-              <p className="text-sm text-muted-foreground">
-                We're preparing stunning project images for this category
-              </p>
+              <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <p className="text-white text-xs font-medium truncate">{titleFromFilename(filename)}</p>
+              </div>
             </div>
-          </div>
+          ))}
+        </div>
+      </div>
 
-          {/* Upload Instructions */}
-          <div className="mt-16 text-center">
-            <div className="bg-muted p-8 rounded-lg max-w-2xl mx-auto">
-              <h3 className="text-xl font-semibold mb-4">Coming Soon</h3>
-              <p className="text-muted-foreground">
-                This gallery will showcase our latest {title.toLowerCase()} projects.
-                Check back soon for inspiring acoustic solutions and professional installations.
-              </p>
+      {/* Lightbox */}
+      {lightboxIndex !== null && (
+        <div
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
+          onClick={closeLightbox}
+        >
+          <button className="absolute top-4 right-4 text-white hover:text-gray-300 z-10" onClick={closeLightbox}>
+            <X className="w-8 h-8" />
+          </button>
+          <button
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-blue-400 z-10 bg-black/50 rounded-full p-2"
+            onClick={(e) => { e.stopPropagation(); prev(); }}
+          >
+            <ChevronLeft className="w-8 h-8" />
+          </button>
+          <button
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-blue-400 z-10 bg-black/50 rounded-full p-2"
+            onClick={(e) => { e.stopPropagation(); next(); }}
+          >
+            <ChevronRight className="w-8 h-8" />
+          </button>
+          <div className="max-w-5xl max-h-[90vh] relative" onClick={e => e.stopPropagation()}>
+            <img
+              src={`/gallery/${folder}/${images[lightboxIndex]}`}
+              alt={titleFromFilename(images[lightboxIndex])}
+              className="max-h-[80vh] max-w-full object-contain rounded-lg"
+            />
+            <div className="text-center mt-3">
+              <span className="text-white font-medium">{titleFromFilename(images[lightboxIndex])}</span>
+              <span className="text-gray-500 text-sm ml-3">{lightboxIndex + 1} / {images.length}</span>
             </div>
           </div>
         </div>
-      </main>
+      )}
     </div>
   );
 }
