@@ -252,7 +252,7 @@ export default function BookSiteVisitPage() {
                   <p className="text-muted-foreground text-sm">Message us on WhatsApp and we'll book your site visit in minutes.</p>
                 </div>
                 <a
-                  href="https://wa.me/27767702767?text=Hi%20Supersonic%20Customs!%20I%27d%20like%20to%20book%20a%20site%20visit."
+                  href="https://wa.me/27767702767?text=Hi%20Superzola%20Customs!%20I%27d%20like%20to%20book%20a%20site%20visit."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-xl transition-colors whitespace-nowrap"

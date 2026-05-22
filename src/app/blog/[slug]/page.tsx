@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
   if (!post) {
     return {
-      title: 'Post Not Found | SuperSonic Customs',
+      title: 'Post Not Found | SuperZola Customs',
       description: 'The requested blog post could not be found.',
     };
   }
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       type: 'article',
       publishedTime: post.publishDate,
       authors: [post.author],
-      url: `https://supersoniccustoms.co.za/blog/${post.slug}`,
+      url: `https://superzolacustoms.co.za/blog/${post.slug}`,
       images: [
         {
           url: post.image,

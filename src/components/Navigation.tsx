@@ -29,7 +29,7 @@ export default function Navigation() {
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <img
               src="/nav-logo.png"
-              alt="Supersonic Customs"
+              alt="Superzola Customs"
               className="h-8 md:h-10 w-auto object-contain"
             />
             <span className="text-white font-bold text-lg md:text-xl tracking-wide">

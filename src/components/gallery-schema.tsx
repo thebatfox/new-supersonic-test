@@ -17,21 +17,21 @@ export default function GallerySchema({ projects }: GallerySchemaProps) {
   const gallerySchema = {
     "@context": "https://schema.org",
     "@type": "ImageGallery",
-    "name": "Supersonic Customs Project Gallery",
+    "name": "Superzola Customs Project Gallery",
     "description": "Portfolio of successful acoustic projects across various industries including soundproofing, acoustic treatment, carpentry, and AV installations.",
-    "url": "https://supersoniccustoms.com#gallery",
+    "url": "https://superzolacustoms.com#gallery",
     "mainEntity": projects.map(project => ({
       "@type": "CreativeWork",
       "name": project.title,
       "description": project.description,
-      "url": `https://supersoniccustoms.com/gallery/${project.slug}`,
+      "url": `https://superzolacustoms.com/gallery/${project.slug}`,
       "about": {
         "@type": "Service",
         "name": project.category,
         "category": project.category,
         "provider": {
           "@type": "Organization",
-          "name": "Supersonic Customs"
+          "name": "Superzola Customs"
         }
       }
     }))
@@ -53,11 +53,11 @@ export default function GallerySchema({ projects }: GallerySchemaProps) {
           "@type": "CreativeWork",
           "name": project.title,
           "description": project.description,
-          "url": `https://supersoniccustoms.com/gallery/${project.slug}`,
+          "url": `https://superzolacustoms.com/gallery/${project.slug}`,
           "creator": {
             "@type": "Organization",
-            "name": "Supersonic Customs",
-            "url": "https://supersoniccustoms.com"
+            "name": "Superzola Customs",
+            "url": "https://superzolacustoms.com"
           },
           "about": {
             "@type": "Service",
@@ -65,7 +65,7 @@ export default function GallerySchema({ projects }: GallerySchemaProps) {
             "category": project.category,
             "provider": {
               "@type": "Organization",
-              "name": "Supersonic Customs"
+              "name": "Superzola Customs"
             }
           },
           "keywords": [

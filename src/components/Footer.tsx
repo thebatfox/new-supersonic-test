@@ -1,6 +1,6 @@
 const footerSections = [
   {
-    title: "Supersonic Customs",
+    title: "Superzola Customs",
     content: "Professional acoustic solutions for entertainment, residential, commercial and industrial applications.",
     isDescription: true
   },
@@ -16,7 +16,7 @@ const footerSections = [
     title: "Contact",
     items: [
       "+27 21 2030054",
-      "info@supersonicafrica.co.za",
+      "info@superzolaafrica.co.za",
       "25B Gray Rd,",
       "Paarden Eiland,\nCape Town\n7405"
     ]
@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-[hsl(220,15%,22%)] mt-8 pt-8 text-center text-sm text-gray-400">
-          <p>© 2025 Supersonic Customs. All rights reserved.</p>
+          <p>© 2025 Superzola Customs. All rights reserved.</p>
         </div>
       </div>
     </footer>

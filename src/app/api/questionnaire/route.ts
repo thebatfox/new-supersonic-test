@@ -26,8 +26,8 @@ export async function POST(request: NextRequest) {
 
     // Send email
     const { data, error } = await resend.emails.send({
-      from: 'Questionnaire <noreply@supersoniccustoms.com>',
-      to: ['info@supersoniccustoms.com'],
+      from: 'Questionnaire <noreply@superzolacustoms.com>',
+      to: ['info@superzolacustoms.com'],
       subject: `New Project Questionnaire - ${projectType}`,
       html: `
         <h2>New Project Questionnaire Submission</h2>
@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
         ` : ''}
 
         <hr>
-        <p><em>This questionnaire was submitted from the Supersonic Customs website.</em></p>
+        <p><em>This questionnaire was submitted from the Superzola Customs website.</em></p>
       `,
     });
 

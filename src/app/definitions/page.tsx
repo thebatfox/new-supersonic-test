@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Acoustic & Soundproofing Definitions | Supersonic Customs',
+  title: 'Acoustic & Soundproofing Definitions | Superzola Customs',
   description: 'Plain-language definitions of common acoustic and soundproofing terms — STC, NRC, decoupling, floating floors, RT60 and more.',
 };
 
@@ -96,7 +96,7 @@ export default function DefinitionsPage() {
             <Link href="/book-site-visit" className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors">
               Book a Free Site Visit <ArrowRight className="w-4 h-4" />
             </Link>
-            <a href="https://wa.me/27767702767?text=Hi%20Supersonic%20Customs!%20I%20have%20a%20soundproofing%20question." target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/27767702767?text=Hi%20Superzola%20Customs!%20I%20have%20a%20soundproofing%20question." target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors">
               💬 WhatsApp Us
             </a>

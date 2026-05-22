@@ -5,16 +5,16 @@ import "./globals.css";
 import ClientBody from "./ClientBody";
 import SchemaMarkup from "@/components/schema-markup";
 import FloatingRestaurantSuggestion from "@/components/FloatingRestaurantSuggestion";
-import SonicBot from "@/components/SonicBot";
+import ZolaBot from "@/components/ZolaBot";
 
 const geistSans = GeistSans;
 const geistMono = GeistMono;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://supersoniccustoms.com"),
+  metadataBase: new URL("https://superzolacustoms.com"),
   title: {
-    default: "Supersonic Customs - Professional Soundproofing & Acoustic Treatment",
-    template: "%s | Supersonic Customs"
+    default: "Superzola Customs - Professional Soundproofing & Acoustic Treatment",
+    template: "%s | Superzola Customs"
   },
   description: "Specialist soundproofing & acoustic treatment company serving South Africa, DRC, Zambia, Mozambique & Namibia. Expert noise control solutions, sound isolation, carpentry & AV installations for residential, commercial & industrial applications.",
   keywords: [
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     "Cape Town acoustics",
     "Southern Africa soundproofing"
   ],
-  authors: [{ name: "Supersonic Customs", url: "https://supersoniccustoms.com" }],
-  creator: "Supersonic Customs",
-  publisher: "Supersonic Customs",
+  authors: [{ name: "Superzola Customs", url: "https://superzolacustoms.com" }],
+  creator: "Superzola Customs",
+  publisher: "Superzola Customs",
   robots: {
     index: true,
     follow: true,
@@ -52,29 +52,29 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Supersonic Customs - Professional Soundproofing & Acoustic Treatment",
+    title: "Superzola Customs - Professional Soundproofing & Acoustic Treatment",
     description: "Specialist soundproofing & acoustic treatment company serving Southern Africa. Expert solutions for all acoustic needs.",
     type: "website",
     locale: "en_ZA",
-    siteName: "Supersonic Customs",
+    siteName: "Superzola Customs",
     countryName: "South Africa",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Supersonic Customs - Soundproofing Specialists in Southern Africa",
+        alt: "Superzola Customs - Soundproofing Specialists in Southern Africa",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Supersonic Customs - Professional Soundproofing & Acoustic Treatment",
+    title: "Superzola Customs - Professional Soundproofing & Acoustic Treatment",
     description: "Specialist soundproofing & acoustic treatment company serving Southern Africa. Expert noise control solutions & AV installations.",
     images: ["/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://supersoniccustoms.com",
+    canonical: "https://superzolacustoms.com",
   },
   category: "Professional Services",
   classification: "Acoustic Engineering & Soundproofing Services",
@@ -132,7 +132,7 @@ export default function RootLayout({
         <div style={{ position: 'relative', zIndex: 10 }}>
           <ClientBody>{children}</ClientBody>
           <FloatingRestaurantSuggestion />
-          <SonicBot />
+          <ZolaBot />
         </div>
       </body>
     </html>

@@ -4,11 +4,11 @@ export default function SchemaMarkup() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Supersonic Customs",
+    name: "Superzola Customs",
     description: "Specialist soundproofing and acoustic treatment company serving South Africa, DRC, Zambia, Mozambique, and Namibia.",
-    url: "https://supersoniccustoms.com",
+    url: "https://superzolacustoms.com",
     telephone: "+27 21 203 0054",
-    email: "info@supersoniccustoms.com",
+    email: "info@superzolacustoms.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "25B Gray Rd",
@@ -39,8 +39,8 @@ export default function SchemaMarkup() {
         "name": "Namibia"
       }
     ],
-    logo: "https://supersoniccustoms.com/logo.svg",
-    image: "https://supersoniccustoms.com/logo.svg",
+    logo: "https://superzolacustoms.com/logo.svg",
+    image: "https://superzolacustoms.com/logo.svg",
     sameAs: [],
     foundingDate: "2014",
     numberOfEmployees: "10-50"
@@ -49,12 +49,12 @@ export default function SchemaMarkup() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://supersoniccustoms.com/#business",
-    name: "Supersonic Customs",
+    "@id": "https://superzolacustoms.com/#business",
+    name: "Superzola Customs",
     description: "Professional soundproofing and acoustic treatment services for residential, commercial, and industrial applications.",
-    url: "https://supersoniccustoms.com",
+    url: "https://superzolacustoms.com",
     telephone: "+27 21 203 0054",
-    email: "info@supersoniccustoms.com",
+    email: "info@superzolacustoms.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "25B Gray Rd",

@@ -33,11 +33,11 @@ export default function WorkshopSection() {
             </h2>
 
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              Most acoustic companies work out of a garage or subcontract their manufacturing. Supersonic Customs operates from a fully-equipped workshop and production facility — meaning everything from custom acoustic panels and DJ booths to generator enclosures and shopfitting is designed, fabricated, and quality-checked under one roof before it ever reaches your site.
+              Most acoustic companies work out of a garage or subcontract their manufacturing. Superzola Customs operates from a fully-equipped workshop and production facility — meaning everything from custom acoustic panels and DJ booths to generator enclosures and shopfitting is designed, fabricated, and quality-checked under one roof before it ever reaches your site.
             </p>
 
             <p className="text-gray-400 leading-relaxed mb-8">
-              This gives us complete control over quality, lead times, and cost — and the ability to tackle complex, bespoke projects that most competitors simply cannot. When you work with Supersonic Customs, you get a proper manufacturing partner, not a middleman.
+              This gives us complete control over quality, lead times, and cost — and the ability to tackle complex, bespoke projects that most competitors simply cannot. When you work with Superzola Customs, you get a proper manufacturing partner, not a middleman.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3">
@@ -45,7 +45,7 @@ export default function WorkshopSection() {
                 className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors">
                 Book a Site Visit
               </Link>
-              <a href="https://wa.me/27767702767?text=Hi%20Supersonic%20Customs!%20I%27d%20like%20to%20find%20out%20more%20about%20your%20workshop%20capabilities."
+              <a href="https://wa.me/27767702767?text=Hi%20Superzola%20Customs!%20I%27d%20like%20to%20find%20out%20more%20about%20your%20workshop%20capabilities."
                 target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-[hsl(220,15%,22%)] hover:bg-[hsl(220,15%,26%)] text-white font-semibold px-6 py-3 rounded-xl transition-colors border border-[hsl(220,15%,28%)]">
                 💬 Ask About Capabilities

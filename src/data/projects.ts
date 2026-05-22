@@ -35,7 +35,7 @@ export const services: Service[] = [
     title: 'Soundproofing',
     subtitle: 'Blocking Noise at the Source',
     hero: true,
-    description: 'Supersonic Customs delivers professional soundproofing solutions for homes, studios, restaurants, nightclubs, offices, and industrial facilities across Southern Africa. Using mass, sealing, decoupling, and damping techniques, we stop unwanted noise in its tracks — whether that\'s a noisy generator, a busy road, a thumping club next door, or machinery on your factory floor.',
+    description: 'Superzola Customs delivers professional soundproofing solutions for homes, studios, restaurants, nightclubs, offices, and industrial facilities across Southern Africa. Using mass, sealing, decoupling, and damping techniques, we stop unwanted noise in its tracks — whether that\'s a noisy generator, a busy road, a thumping club next door, or machinery on your factory floor.',
     features: ['Mass Loaded Vinyl (MLV)', 'Acoustic Sealing & Gaskets', 'Decoupling & Isolation Systems', 'Soundproof Walls, Floors & Ceilings', 'Acoustic Doors & Windows', 'Generator & Machinery Enclosures']
   },
   {
@@ -62,7 +62,7 @@ export const services: Service[] = [
     icon: 'Settings',
     title: 'Noise & Vibration Control',
     subtitle: 'Industrial & Outdoor Solutions',
-    description: 'From factory floors to property boundaries, Supersonic Customs designs and builds noise control solutions for any environment — indoor or outdoor. We tackle everything from machinery enclosures and HVAC systems to permanent property boundary barriers and temporary deployable sound curtain fences.',
+    description: 'From factory floors to property boundaries, Superzola Customs designs and builds noise control solutions for any environment — indoor or outdoor. We tackle everything from machinery enclosures and HVAC systems to permanent property boundary barriers and temporary deployable sound curtain fences.',
     features: ['Factory Machinery Enclosures', 'Generator & Compressor Enclosures', 'Property Boundary Sound Barriers', 'Temporary Sound Barrier Fence Curtains', 'Anti-Vibration Mounts & Isolation Pads', 'Acoustic Louvres, Silencers & HVAC Solutions', 'Indoor & Outdoor Applications']
   },
   {

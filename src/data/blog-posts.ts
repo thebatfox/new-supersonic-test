@@ -116,16 +116,16 @@ Look around the spaces you use every day—your home, office, or local café. As
 
 ## Want to learn more or get expert advice for your space?
 
-We specialise in both soundproofing and acoustic design—reach out to SuperSonic Customs for tailored solutions that really work.
+We specialise in both soundproofing and acoustic design—reach out to SuperZola Customs for tailored solutions that really work.
     `,
-    author: "SuperSonic Customs Team",
+    author: "SuperZola Customs Team",
     publishDate: "2024-12-20",
     readTime: 6,
     category: "Beginner's Guide",
     tags: ["soundproofing", "acoustic treatment", "beginner guide", "sound control", "acoustic design"],
     image: "/blog/soundproofing-vs-acoustic-treatment.jpg",
     seo: {
-      title: "Soundproofing vs Acoustic Treatment: Complete Beginner's Guide | SuperSonic Customs",
+      title: "Soundproofing vs Acoustic Treatment: Complete Beginner's Guide | SuperZola Customs",
       description: "Learn the key differences between soundproofing and acoustic treatment. Expert guide to help you choose the right solution for your space.",
       keywords: ["soundproofing vs acoustic treatment", "sound control guide", "acoustic design", "noise reduction", "sound isolation"]
     }
@@ -189,7 +189,7 @@ While some basic improvements can be DIY projects, professional soundproofing en
 
 ## When to Call the Professionals
 
-Contact SuperSonic Customs if you're experiencing:
+Contact SuperZola Customs if you're experiencing:
 - Noise levels above 45 dB during work hours
 - Difficulty conducting video calls
 - Complaints from neighbors about your noise
@@ -203,16 +203,16 @@ Effective home office soundproofing should achieve:
 - Improved concentration and productivity
 - Reduced stress from noise distractions
 
-Ready to transform your home office? Contact SuperSonic Customs for a professional acoustic assessment and custom soundproofing solution.
+Ready to transform your home office? Contact SuperZola Customs for a professional acoustic assessment and custom soundproofing solution.
     `,
-    author: "SuperSonic Customs Team",
+    author: "SuperZola Customs Team",
     publishDate: "2024-12-15",
     readTime: 8,
     category: "Home Acoustics",
     tags: ["home office", "soundproofing", "productivity", "remote work", "acoustic treatment"],
     image: "/blog/home-office-soundproofing.jpg",
     seo: {
-      title: "Complete Home Office Soundproofing Guide 2024 | SuperSonic Customs",
+      title: "Complete Home Office Soundproofing Guide 2024 | SuperZola Customs",
       description: "Professional guide to soundproofing your home office. Expert tips, materials, and solutions for quiet, productive remote work spaces.",
       keywords: ["home office soundproofing", "acoustic treatment", "noise reduction", "remote work", "professional soundproofing"]
     }
@@ -321,16 +321,16 @@ Professional acoustic treatment typically provides:
 3. **Phased Implementation**: Priority areas first, with expansion plans
 4. **Performance Verification**: Post-installation measurements ensure targets are met
 
-Transform your restaurant's atmosphere with professional acoustic design. Contact SuperSonic Customs for a comprehensive acoustic assessment and custom solution.
+Transform your restaurant's atmosphere with professional acoustic design. Contact SuperZola Customs for a comprehensive acoustic assessment and custom solution.
     `,
-    author: "SuperSonic Customs Team",
+    author: "SuperZola Customs Team",
     publishDate: "2024-12-10",
     readTime: 6,
     category: "Commercial Acoustics",
     tags: ["restaurant acoustics", "dining atmosphere", "commercial soundproofing", "hospitality", "customer experience"],
     image: "/blog/restaurant-acoustics.jpg",
     seo: {
-      title: "Restaurant Acoustics Guide: Perfect Dining Atmosphere | SuperSonic Customs",
+      title: "Restaurant Acoustics Guide: Perfect Dining Atmosphere | SuperZola Customs",
       description: "Professional restaurant acoustic design guide. Learn how proper sound control improves customer experience and increases revenue.",
       keywords: ["restaurant acoustics", "dining atmosphere", "commercial acoustic design", "noise control", "hospitality acoustics"]
     }
@@ -460,7 +460,7 @@ Effective industrial noise control provides:
 
 ## Getting Professional Help
 
-Contact SuperSonic Customs when experiencing:
+Contact SuperZola Customs when experiencing:
 - Regulatory compliance challenges
 - Worker noise exposure concerns
 - Community noise complaints
@@ -469,14 +469,14 @@ Contact SuperSonic Customs when experiencing:
 
 Our industrial noise control experts provide comprehensive solutions from assessment through implementation, ensuring long-term success and compliance.
     `,
-    author: "SuperSonic Customs Team",
+    author: "SuperZola Customs Team",
     publishDate: "2024-12-05",
     readTime: 7,
     category: "Industrial Acoustics",
     tags: ["industrial noise control", "workplace safety", "noise regulations", "compliance", "worker protection"],
     image: "/blog/industrial-noise-control.jpg",
     seo: {
-      title: "Industrial Noise Control & Regulations Guide | SuperSonic Customs",
+      title: "Industrial Noise Control & Regulations Guide | SuperZola Customs",
       description: "Comprehensive guide to industrial noise control solutions. Ensure worker safety and regulatory compliance with professional acoustic treatments.",
       keywords: ["industrial noise control", "workplace safety", "noise regulations", "compliance", "acoustic engineering"]
     }
@@ -609,16 +609,16 @@ Professional acoustic design for educational and worship spaces requires:
 3. **Custom Design**: Solutions tailored to architectural and functional requirements
 4. **Performance Verification**: Post-installation testing ensuring targets are met
 
-Transform your educational or worship space with professional acoustic design. Contact SuperSonic Customs for a comprehensive assessment and custom solution that enhances communication and learning.
+Transform your educational or worship space with professional acoustic design. Contact SuperZola Customs for a comprehensive assessment and custom solution that enhances communication and learning.
     `,
-    author: "SuperSonic Customs Team",
+    author: "SuperZola Customs Team",
     publishDate: "2024-11-30",
     readTime: 8,
     category: "Educational Acoustics",
     tags: ["church acoustics", "school acoustics", "speech intelligibility", "educational environments", "worship spaces"],
     image: "/blog/church-school-acoustics.jpg",
     seo: {
-      title: "Church & School Acoustics Design Guide | SuperSonic Customs",
+      title: "Church & School Acoustics Design Guide | SuperZola Customs",
       description: "Expert guide to acoustic design for churches and schools. Ensure clear communication and optimal learning environments with professional solutions.",
       keywords: ["church acoustics", "school acoustics", "educational acoustics", "speech intelligibility", "worship space design"]
     }
@@ -772,16 +772,16 @@ Entertainment venue acoustics require:
 4. **Performance Verification**: Testing and optimization for optimal results
 5. **Ongoing Support**: Maintenance and operational assistance
 
-Create the perfect entertainment experience while maintaining community harmony. Contact SuperSonic Customs for expert entertainment venue acoustic design and implementation.
+Create the perfect entertainment experience while maintaining community harmony. Contact SuperZola Customs for expert entertainment venue acoustic design and implementation.
     `,
-    author: "SuperSonic Customs Team",
+    author: "SuperZola Customs Team",
     publishDate: "2024-11-25",
     readTime: 9,
     category: "Entertainment Acoustics",
     tags: ["nightclub acoustics", "entertainment venue", "sound system design", "noise control", "compliance"],
     image: "/blog/nightclub-acoustics.jpg",
     seo: {
-      title: "Nightclub & Entertainment Venue Acoustics Guide | SuperSonic Customs",
+      title: "Nightclub & Entertainment Venue Acoustics Guide | SuperZola Customs",
       description: "Professional guide to entertainment venue acoustics. Balance exceptional sound experiences with noise control and regulatory compliance.",
       keywords: ["nightclub acoustics", "entertainment venue acoustics", "sound system design", "noise control", "venue compliance"]
     }
