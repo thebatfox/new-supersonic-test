@@ -53,17 +53,17 @@ export const services: Service[] = [
     title: 'Carpentry & Custom Manufacturing',
     subtitle: 'Built in South Africa, Built to Last',
     hero: true,
-    description: 'Our in-house carpentry team designs and builds bespoke acoustic installations that combine function with stunning aesthetics. From custom DJ booths and bar features to decorative ceiling systems, living walls, and chain curtain installations — we manufacture everything to your exact specification, right here in South Africa, with no imported guesswork.',
-    features: ['Custom DJ Booths & Stages', 'Acoustic Wall & Ceiling Feature Work', 'Bar & Entertainment Venue Fit-Outs', 'Chain Curtain & LED Installations', 'Decorative Acoustic Panel Systems', 'Bespoke Acoustic Furniture']
+    description: 'Our in-house carpentry team goes far beyond acoustics. We design and build anything from bespoke acoustic installations and entertainment venue fit-outs to full shopfitting, custom cabinetry, and commercial interiors — all manufactured to your exact specification in South Africa. If you can imagine it, we can build it.',
+    features: ['Custom DJ Booths & Entertainment Fit-Outs', 'Shopfitting & Retail Interiors', 'Custom Cabinetry & Built-in Furniture', 'Bar, Restaurant & Club Fit-Outs', 'Acoustic Wall, Ceiling & Feature Work', 'Chain Curtain, Living Wall & LED Installations']
   },
   // ─── SUPPORTING SERVICES ─────────────────────────────────────────
   {
     id: 'noise-vibration-control',
     icon: 'Settings',
     title: 'Noise & Vibration Control',
-    subtitle: 'Industrial Solutions',
-    description: 'Specialised noise and vibration control for generators, compressors, HVAC systems, pool equipment, and heavy industrial machinery. We design and build custom enclosures, barriers, and isolation systems that meet environmental compliance requirements.',
-    features: ['Generator Enclosures', 'Anti-Vibration Mounts & Pads', 'Industrial Noise Barriers', 'Acoustic Louvres & Silencers', 'Pool & HVAC Equipment Enclosures']
+    subtitle: 'Industrial & Outdoor Solutions',
+    description: 'From factory floors to property boundaries, Supersonic Customs designs and builds noise control solutions for any environment — indoor or outdoor. We tackle everything from machinery enclosures and HVAC systems to permanent property boundary barriers and temporary deployable sound curtain fences.',
+    features: ['Factory Machinery Enclosures', 'Generator & Compressor Enclosures', 'Property Boundary Sound Barriers', 'Temporary Sound Barrier Fence Curtains', 'Anti-Vibration Mounts & Isolation Pads', 'Acoustic Louvres, Silencers & HVAC Solutions', 'Indoor & Outdoor Applications']
   },
   {
     id: 'anc',
