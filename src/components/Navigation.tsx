@@ -28,7 +28,7 @@ export default function Navigation() {
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
             <img
-              src="/logo.svg"
+              src="/nav-logo.png"
               alt="Supersonic Customs"
               className="h-8 md:h-10 w-auto object-contain hover:opacity-80 transition-opacity"
             />
