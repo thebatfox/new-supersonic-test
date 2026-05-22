@@ -26,12 +26,15 @@ export default function Navigation() {
     <nav className="bg-primary text-primary-foreground py-4 px-6 shadow-lg relative">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <img
               src="/nav-logo.png"
               alt="Supersonic Customs"
-              className="h-8 md:h-10 w-auto object-contain hover:opacity-80 transition-opacity"
+              className="h-8 md:h-10 w-auto object-contain"
             />
+            <span className="text-white font-bold text-lg md:text-xl tracking-wide">
+              SUPERSONIC <span className="text-blue-400">CUSTOMS</span>
+            </span>
           </Link>
         </div>
 
