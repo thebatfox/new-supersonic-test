@@ -5,6 +5,7 @@ import "./globals.css";
 import ClientBody from "./ClientBody";
 import SchemaMarkup from "@/components/schema-markup";
 import FloatingRestaurantSuggestion from "@/components/FloatingRestaurantSuggestion";
+import SonicBot from "@/components/SonicBot";
 
 const geistSans = GeistSans;
 const geistMono = GeistMono;
@@ -131,6 +132,7 @@ export default function RootLayout({
         <div style={{ position: 'relative', zIndex: 10 }}>
           <ClientBody>{children}</ClientBody>
           <FloatingRestaurantSuggestion />
+          <SonicBot />
         </div>
       </body>
     </html>
