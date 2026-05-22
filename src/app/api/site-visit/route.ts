@@ -17,7 +17,6 @@ export async function POST(request: NextRequest) {
 
     if (formspreeEndpoint) {
       try {
-        // Send notification to Supersonic Customs team
         await fetch(formspreeEndpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -34,27 +33,13 @@ export async function POST(request: NextRequest) {
             project_description: details || 'Not provided',
           }),
         });
-
-        // Send confirmation email to the customer using Formspree
-        await fetch(formspreeEndpoint, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify({
-            name,
-            _replyto: 'leads@supersonicafrica.co.za',
-            _subject: `Your Site Visit Request - Supersonic Customs`,
-            to: email,
-            message: `Hi ${name},\n\nThank you for booking a site visit with Supersonic Customs!\n\nHere are your booking details:\n- Date: ${formattedDate}\n- Time: ${preferredTime}\n- Location: ${location}\n- Project Type: ${projectType}\n\nOur team will contact you within 24 hours to confirm your appointment.\n\nIf you have any questions, please WhatsApp us on +27 76 770 2767.\n\nBest regards,\nThe Supersonic Customs Team\nwww.supersoniccustoms.co.za`,
-          }),
-        });
-
       } catch (err) {
         console.error('Formspree error:', err);
       }
     }
 
     return NextResponse.json(
-      { message: "Site visit request submitted! We'll contact you within 24 hours. A confirmation has been sent to your email." },
+      { message: "Thank you! Your site visit request has been received. We'll contact you within 24 hours to confirm your appointment." },
       { status: 200 }
     );
 
