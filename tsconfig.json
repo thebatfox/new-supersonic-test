@@ -12,7 +12,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "jsxImportSource": "bippy/dist",
+    "jsxImportSource": "react",
     "incremental": true,
     "plugins": [
       {
