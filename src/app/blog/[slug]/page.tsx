@@ -189,7 +189,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <main className="py-12 px-6">
         <div className="max-w-4xl mx-auto">
           <article className="prose prose-lg max-w-none">
-            <div className="bg-gradient-to-br from-muted/50 to-muted/20 rounded-lg p-8 mb-8 flex items-center justify-center">
+            <div className="bg-gradient-to-br from-muted/50 to-muted/20 rounded-xl p-8 mb-8 flex items-center justify-center">
               <div className="text-center">
                 <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <BookOpen className="w-12 h-12 text-primary" />
@@ -238,7 +238,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     href={`/blog/${relatedPost.slug}`}
                     className="group block"
                   >
-                    <div className="bg-card rounded-lg p-6 border hover:shadow-lg transition-all duration-300">
+                    <div className="bg-card rounded-xl p-6 border hover:shadow-lg transition-all duration-300">
                       <div className="flex items-center gap-2 mb-3">
                         <Badge variant="secondary" className="text-xs">{relatedPost.category}</Badge>
                         <div className="flex items-center gap-1 text-xs text-muted-foreground">

@@ -172,7 +172,7 @@ export default function ImageGalleryPage() {
             {galleryImages.map((image) => (
               <div
                 key={image.id}
-                className="group relative bg-card rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
+                className="group relative bg-card rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
                 onClick={() => openModal(image)}
               >
                 <div className="aspect-[4/3] relative overflow-hidden">
@@ -182,7 +182,7 @@ export default function ImageGalleryPage() {
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-[hsl(220,15%,11%)]/0 group-hover:bg-[hsl(220,15%,11%)]/20 transition-colors duration-300 flex items-center justify-center">
                     <ZoomIn className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </div>
@@ -201,7 +201,7 @@ export default function ImageGalleryPage() {
       {/* Modal */}
       {selectedImage && (
         <div
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-[hsl(220,15%,11%)]/90 z-50 flex items-center justify-center p-4"
           onClick={closeModal}
           onKeyDown={handleKeyDown}
           tabIndex={0}
@@ -210,7 +210,7 @@ export default function ImageGalleryPage() {
             {/* Close Button */}
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors"
+              className="absolute top-4 right-4 z-10 bg-[hsl(220,15%,11%)]/50 hover:bg-[hsl(220,15%,11%)]/70 text-white rounded-full p-2 transition-colors"
               aria-label="Close modal"
             >
               <X className="w-6 h-6" />
@@ -221,7 +221,7 @@ export default function ImageGalleryPage() {
               <img
                 src={selectedImage.src}
                 alt={selectedImage.title}
-                className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+                className="w-full h-auto max-h-[80vh] object-contain rounded-xl"
               />
             </div>
 

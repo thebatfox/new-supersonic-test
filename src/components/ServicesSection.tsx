@@ -9,7 +9,7 @@ export default function ServicesSection() {
   const supportingServices = services.filter(s => !s.hero);
 
   return (
-    <section id="services" className="py-20 px-6 bg-gray-950">
+    <section id="services" className="py-20 px-6 bg-[hsl(220,15%,13%)]">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
@@ -27,12 +27,12 @@ export default function ServicesSection() {
           {heroServices.map((service) => {
             const IconComponent = iconMap[service.icon as keyof typeof iconMap];
             return (
-              <div key={service.id} className="relative bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-blue-500 transition-all duration-300 group">
+              <div key={service.id} className="relative bg-[hsl(220,15%,17%)] rounded-2xl overflow-hidden border border-[hsl(220,15%,22%)] hover:border-blue-500 transition-all duration-300 group">
                 {/* Blue accent bar */}
                 <div className="h-1 w-full bg-gradient-to-r from-blue-500 to-blue-700" />
                 <div className="p-8">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="bg-blue-500/10 p-3 rounded-xl">
+                    <div className="bg-blue-500/10 p-3 rounded-2xl">
                       <IconComponent className="w-8 h-8 text-blue-400" />
                     </div>
                     <div>
@@ -65,7 +65,7 @@ export default function ServicesSection() {
           {supportingServices.map((service) => {
             const IconComponent = iconMap[service.icon as keyof typeof iconMap];
             return (
-              <div key={service.id} className="bg-gray-900/60 rounded-xl border border-gray-800 hover:border-blue-500/50 p-6 transition-all duration-300 group">
+              <div key={service.id} className="bg-[hsl(220,15%,17%)]/60 rounded-2xl border border-[hsl(220,15%,22%)] hover:border-blue-500/50 p-6 transition-all duration-300 group">
                 <div className="flex items-center gap-3 mb-3">
                   <IconComponent className="w-6 h-6 text-blue-400" />
                   <div>
@@ -92,7 +92,7 @@ export default function ServicesSection() {
           <p className="text-gray-400 mb-4">Not sure which service you need?</p>
           <Link
             href="/book-site-visit"
-            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200"
+            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-xl transition-colors duration-200"
           >
             Book a Free Site Visit <ArrowRight className="w-4 h-4" />
           </Link>

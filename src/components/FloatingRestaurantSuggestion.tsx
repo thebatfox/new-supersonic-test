@@ -96,7 +96,7 @@ export default function FloatingRestaurantSuggestion() {
           Suggest a restaurant that needs our help
         </Button>
       ) : (
-        <div className="bg-card border border-border rounded-xl shadow-2xl p-8 w-96 transition-all duration-300 transform animate-in slide-in-from-bottom-2">
+        <div className="bg-card border border-border rounded-2xl shadow-2xl p-8 w-96 transition-all duration-300 transform animate-in slide-in-from-bottom-2">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center">
               <MapPin className="w-6 h-6 text-primary mr-2" />

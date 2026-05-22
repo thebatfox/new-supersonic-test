@@ -79,7 +79,7 @@ export default function SonicBot() {
     <>
       {/* Chat window */}
       {open && (
-        <div className="fixed bottom-20 right-4 md:right-6 z-50 w-[calc(100vw-2rem)] max-w-sm bg-gray-900 rounded-2xl shadow-2xl border border-gray-700 flex flex-col overflow-hidden" style={{ height: '480px' }}>
+        <div className="fixed bottom-20 right-4 md:right-6 z-50 w-[calc(100vw-2rem)] max-w-sm bg-[hsl(220,15%,17%)] rounded-2xl shadow-2xl border border-[hsl(220,15%,26%)] flex flex-col overflow-hidden" style={{ height: '480px' }}>
           {/* Header */}
           <div className="bg-gradient-to-r from-blue-700 to-blue-600 px-4 py-3 flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -98,7 +98,7 @@ export default function SonicBot() {
           <div className="flex-1 overflow-y-auto p-4 space-y-3">
             {messages.map((msg, i) => (
               <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                <div className={`max-w-[85%] px-3 py-2 rounded-xl text-sm leading-relaxed ${
+                <div className={`max-w-[85%] px-3 py-2 rounded-2xl text-sm leading-relaxed ${
                   msg.role === 'user'
                     ? 'bg-blue-600 text-white rounded-br-none'
                     : 'bg-gray-800 text-gray-200 rounded-bl-none'
@@ -109,7 +109,7 @@ export default function SonicBot() {
             ))}
             {loading && (
               <div className="flex justify-start">
-                <div className="bg-gray-800 px-3 py-2 rounded-xl rounded-bl-none">
+                <div className="bg-gray-800 px-3 py-2 rounded-2xl rounded-bl-none">
                   <Loader2 className="w-4 h-4 text-blue-400 animate-spin" />
                 </div>
               </div>
@@ -118,16 +118,16 @@ export default function SonicBot() {
           </div>
 
           {/* Input */}
-          <div className="p-3 border-t border-gray-700 flex gap-2">
+          <div className="p-3 border-t border-[hsl(220,15%,26%)] flex gap-2">
             <input
               value={input}
               onChange={e => setInput(e.target.value)}
               onKeyDown={e => e.key === 'Enter' && send()}
               placeholder="Ask about soundproofing..."
-              className="flex-1 bg-gray-800 text-white text-sm px-3 py-2 rounded-lg border border-gray-700 focus:outline-none focus:border-blue-500 placeholder-gray-500"
+              className="flex-1 bg-gray-800 text-white text-sm px-3 py-2 rounded-xl border border-[hsl(220,15%,26%)] focus:outline-none focus:border-blue-500 placeholder-gray-500"
             />
             <button onClick={send} disabled={loading || !input.trim()}
-              className="bg-blue-600 hover:bg-blue-700 disabled:opacity-40 text-white p-2 rounded-lg transition-colors">
+              className="bg-blue-600 hover:bg-blue-700 disabled:opacity-40 text-white p-2 rounded-xl transition-colors">
               <Send className="w-4 h-4" />
             </button>
           </div>

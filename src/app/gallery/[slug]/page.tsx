@@ -211,7 +211,7 @@ export default function ProjectGallery({ params }: Props) {
             {project.images.map((image, index) => (
               <div
                 key={image}
-                className="aspect-square bg-gray-900 rounded-lg overflow-hidden cursor-pointer hover:ring-2 hover:ring-primary transition-all duration-300"
+                className="aspect-square bg-[hsl(220,15%,17%)] rounded-xl overflow-hidden cursor-pointer hover:ring-2 hover:ring-primary transition-all duration-300"
                 onClick={() => openModal(index)}
               >
                 <img
@@ -230,7 +230,7 @@ export default function ProjectGallery({ params }: Props) {
             {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
               <div
                 key={i}
-                className="aspect-square bg-gray-900 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-700"
+                className="aspect-square bg-[hsl(220,15%,17%)] rounded-xl flex items-center justify-center border-2 border-dashed border-[hsl(220,15%,26%)]"
               >
                 <Upload className="w-8 h-8 text-gray-600" />
               </div>
@@ -241,25 +241,25 @@ export default function ProjectGallery({ params }: Props) {
 
       {/* Image Modal */}
       {selectedImage !== null && project.images.length > 0 && (
-        <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 bg-[hsl(220,15%,11%)]/90 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="relative max-w-6xl w-full h-full flex items-center justify-center">
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 z-10 w-12 h-12 bg-black/70 hover:bg-black/90 text-white rounded-full flex items-center justify-center transition-colors duration-300"
+              className="absolute top-4 right-4 z-10 w-12 h-12 bg-[hsl(220,15%,11%)]/70 hover:bg-[hsl(220,15%,11%)]/90 text-white rounded-full flex items-center justify-center transition-colors duration-300"
             >
               <X size={24} />
             </button>
 
             <button
               onClick={prevImage}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-black/70 hover:bg-black/90 text-white rounded-full flex items-center justify-center transition-colors duration-300"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-[hsl(220,15%,11%)]/70 hover:bg-[hsl(220,15%,11%)]/90 text-white rounded-full flex items-center justify-center transition-colors duration-300"
             >
               <ChevronLeft size={24} />
             </button>
 
             <button
               onClick={nextImage}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-black/70 hover:bg-black/90 text-white rounded-full flex items-center justify-center transition-colors duration-300"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-[hsl(220,15%,11%)]/70 hover:bg-[hsl(220,15%,11%)]/90 text-white rounded-full flex items-center justify-center transition-colors duration-300"
             >
               <ChevronRight size={24} />
             </button>
@@ -272,7 +272,7 @@ export default function ProjectGallery({ params }: Props) {
               />
             </div>
 
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/70 text-white px-4 py-2 rounded-full">
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-[hsl(220,15%,11%)]/70 text-white px-4 py-2 rounded-full">
               {selectedImage + 1} of {project.images.length}
             </div>
           </div>

@@ -92,7 +92,7 @@ export default function ContactSection() {
               </CardHeader>
               <CardContent>
                 {message && (
-                  <div className={`mb-6 p-4 rounded-lg ${
+                  <div className={`mb-6 p-4 rounded-xl ${
                     message.type === 'success'
                       ? 'bg-green-100 text-green-800 border border-green-200'
                       : 'bg-red-100 text-red-800 border border-red-200'
@@ -179,7 +179,7 @@ export default function ContactSection() {
 
           {/* Google Map */}
           <div className="lg:col-span-1">
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg h-full min-h-[600px]">
+            <div className="bg-white rounded-xl overflow-hidden shadow-lg h-full min-h-[600px]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.0524156932087!2d18.475567315521!3d-33.90525428063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5d355df215e3%3A0xcb7791784a28b7fe!2s25B%20Gray%20Rd%2C%20Paarden%20Eiland%2C%20Cape%20Town%2C%207405!5e0!3m2!1sen!2sza!4v1735252800000!5m2!1sen!2sza"
                 width="100%"

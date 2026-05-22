@@ -86,7 +86,7 @@ export default function BookSiteVisitPage() {
             </CardHeader>
             <CardContent className="p-6">
               {message && (
-                <div className={`mb-6 p-4 rounded-lg ${
+                <div className={`mb-6 p-4 rounded-xl ${
                   message.type === 'success'
                     ? 'bg-green-100 text-green-800 border border-green-200'
                     : 'bg-red-100 text-red-800 border border-red-200'
@@ -255,7 +255,7 @@ export default function BookSiteVisitPage() {
                   href="https://wa.me/27767702767?text=Hi%20Supersonic%20Customs!%20I%27d%20like%20to%20book%20a%20site%20visit."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors whitespace-nowrap"
+                  className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-xl transition-colors whitespace-nowrap"
                 >
                   💬 WhatsApp Us
                 </a>

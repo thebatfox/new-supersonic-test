@@ -171,7 +171,7 @@ export default function BlogComments({ postSlug, postTitle }: BlogCommentsProps)
             </div>
           </div>
 
-          <div className="bg-muted/50 rounded-lg p-4">
+          <div className="bg-muted/50 rounded-xl p-4">
             <p className="text-sm text-muted-foreground">
               <strong>📧 Privacy Note:</strong> Your email will not be published or shared.
               We only use it to notify you of replies and for moderation purposes.

@@ -4,7 +4,7 @@ export default function PrivacyNotice() {
       <summary className="cursor-pointer text-sm text-muted-foreground hover:text-foreground transition-colors">
         Click here to view Privacy Notice & Consent Information
       </summary>
-      <div className="mt-3 p-4 bg-muted rounded-lg text-sm text-muted-foreground space-y-3">
+      <div className="mt-3 p-4 bg-muted rounded-xl text-sm text-muted-foreground space-y-3">
         <p>
           By submitting this form, you consent to Supersonic Customs collecting and using your personal information (such as your name, email address, and phone number) solely for the purpose of providing you with a quotation or contacting you regarding our acoustic and soundproofing services.
         </p>

@@ -12,7 +12,7 @@ export default function HeroSection() {
       }}
     >
       {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-black/70" />
+      <div className="absolute inset-0 bg-[hsl(220,15%,11%)]/70" />
       <div className="relative max-w-7xl mx-auto text-center z-10">
         <div className="mb-6 flex justify-center">
           <img

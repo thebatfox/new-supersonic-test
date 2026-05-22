@@ -214,27 +214,27 @@ export default function AboutPage() {
             <CardContent className="p-8">
               <h2 className="text-3xl font-bold mb-6 text-center">Our Reach Across Southern Africa</h2>
               <div className="grid md:grid-cols-5 gap-4 text-center">
-                <div className="p-4 bg-primary/10 rounded-lg">
+                <div className="p-4 bg-primary/10 rounded-xl">
                   <MapPin className="w-8 h-8 text-primary mx-auto mb-2" />
                   <h4 className="font-semibold">South Africa</h4>
                   <p className="text-sm text-muted-foreground">Home Base</p>
                 </div>
-                <div className="p-4 bg-primary/10 rounded-lg">
+                <div className="p-4 bg-primary/10 rounded-xl">
                   <MapPin className="w-8 h-8 text-primary mx-auto mb-2" />
                   <h4 className="font-semibold">Namibia</h4>
                   <p className="text-sm text-muted-foreground">Regional Projects</p>
                 </div>
-                <div className="p-4 bg-primary/10 rounded-lg">
+                <div className="p-4 bg-primary/10 rounded-xl">
                   <MapPin className="w-8 h-8 text-primary mx-auto mb-2" />
                   <h4 className="font-semibold">Zambia</h4>
                   <p className="text-sm text-muted-foreground">Expanding Presence</p>
                 </div>
-                <div className="p-4 bg-primary/10 rounded-lg">
+                <div className="p-4 bg-primary/10 rounded-xl">
                   <MapPin className="w-8 h-8 text-primary mx-auto mb-2" />
                   <h4 className="font-semibold">Mozambique</h4>
                   <p className="text-sm text-muted-foreground">Growing Market</p>
                 </div>
-                <div className="p-4 bg-primary/10 rounded-lg">
+                <div className="p-4 bg-primary/10 rounded-xl">
                   <MapPin className="w-8 h-8 text-primary mx-auto mb-2" />
                   <h4 className="font-semibold">DRC</h4>
                   <p className="text-sm text-muted-foreground">Specialized Projects</p>

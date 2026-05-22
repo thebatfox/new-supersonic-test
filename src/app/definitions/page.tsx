@@ -37,8 +37,8 @@ const categories = [...new Set(definitions.map(d => d.category))];
 
 export default function DefinitionsPage() {
   return (
-    <div className="min-h-screen bg-black">
-      <div className="bg-gray-900 border-b border-gray-800 py-8 px-6">
+    <div className="min-h-screen bg-[hsl(220,15%,11%)]">
+      <div className="bg-[hsl(220,15%,17%)] border-b border-[hsl(220,15%,22%)] py-8 px-6">
         <div className="max-w-5xl mx-auto">
           <Link href="/" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6 transition-colors text-sm">
             <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
@@ -52,7 +52,7 @@ export default function DefinitionsPage() {
         </div>
       </div>
 
-      <div className="sticky top-0 z-10 bg-gray-950/95 backdrop-blur border-b border-gray-800 py-3 px-6">
+      <div className="sticky top-0 z-10 bg-[hsl(220,15%,13%)]/95 backdrop-blur border-b border-[hsl(220,15%,22%)] py-3 px-6">
         <div className="max-w-5xl mx-auto flex flex-wrap gap-2">
           {categories.map(cat => (
             <a key={cat} href={`#${cat.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
@@ -66,10 +66,10 @@ export default function DefinitionsPage() {
       <div className="max-w-5xl mx-auto px-6 py-12">
         {categories.map(cat => (
           <div key={cat} id={cat.toLowerCase().replace(/[^a-z0-9]+/g, '-')} className="mb-14">
-            <h2 className="text-xs font-bold uppercase tracking-widest text-blue-400 mb-6 pb-2 border-b border-gray-800">{cat}</h2>
+            <h2 className="text-xs font-bold uppercase tracking-widest text-blue-400 mb-6 pb-2 border-b border-[hsl(220,15%,22%)]">{cat}</h2>
             <div className="space-y-6">
               {definitions.filter(d => d.category === cat).map(def => (
-                <div key={def.term} id={def.term.toLowerCase().replace(/[^a-z0-9]+/g, '-')} className="bg-gray-900/50 rounded-xl p-6 border border-gray-800 hover:border-gray-700 transition-colors">
+                <div key={def.term} id={def.term.toLowerCase().replace(/[^a-z0-9]+/g, '-')} className="bg-[hsl(220,15%,17%)]/50 rounded-2xl p-6 border border-[hsl(220,15%,22%)] hover:border-[hsl(220,15%,26%)] transition-colors">
                   <h3 className="text-xl font-bold text-white mb-3">{def.term}</h3>
                   <p className="text-gray-300 leading-relaxed mb-4">{def.definition}</p>
                   {def.related.length > 0 && (
@@ -93,11 +93,11 @@ export default function DefinitionsPage() {
           <h3 className="text-2xl font-bold text-white mb-3">Still have questions?</h3>
           <p className="text-gray-400 mb-6 max-w-xl mx-auto">Our team has decades of combined experience across Southern Africa. Book a free site visit and get expert advice specific to your space and budget.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/book-site-visit" className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+            <Link href="/book-site-visit" className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors">
               Book a Free Site Visit <ArrowRight className="w-4 h-4" />
             </Link>
             <a href="https://wa.me/27767702767?text=Hi%20Supersonic%20Customs!%20I%20have%20a%20soundproofing%20question." target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+              className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors">
               💬 WhatsApp Us
             </a>
           </div>

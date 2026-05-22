@@ -62,7 +62,7 @@ export default function GallerySection() {
   const nextImage = () => setLightboxIndex(i => (i !== null ? (i + 1) % filtered.length : null));
 
   return (
-    <section id="gallery" className="py-20 px-6 bg-black">
+    <section id="gallery" className="py-20 px-6 bg-[hsl(220,15%,11%)]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -106,7 +106,7 @@ export default function GallerySection() {
           {filtered.map((img, index) => (
             <div
               key={img.src}
-              className="break-inside-avoid group relative cursor-pointer rounded-xl overflow-hidden bg-gray-900 mb-4"
+              className="break-inside-avoid group relative cursor-pointer rounded-2xl overflow-hidden bg-[hsl(220,15%,17%)] mb-4"
               onClick={() => openLightbox(index)}
             >
               <img
@@ -116,7 +116,7 @@ export default function GallerySection() {
                 loading="lazy"
               />
               {/* Hover overlay */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100">
+              <div className="absolute inset-0 bg-[hsl(220,15%,11%)]/0 group-hover:bg-[hsl(220,15%,11%)]/50 transition-all duration-300 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100">
                 <ZoomIn className="w-8 h-8 text-white mb-2" />
                 <span className="text-white text-xs font-medium px-2 py-1 bg-blue-600 rounded-full">
                   {img.category}
@@ -134,7 +134,7 @@ export default function GallerySection() {
               <Link
                 key={cat.id}
                 href={`/gallery/${cat.id}`}
-                className="px-5 py-2 border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white rounded-lg text-sm font-medium transition-all duration-200"
+                className="px-5 py-2 border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white rounded-xl text-sm font-medium transition-all duration-200"
               >
                 {cat.label}
               </Link>
@@ -146,7 +146,7 @@ export default function GallerySection() {
       {/* Lightbox */}
       {lightboxIndex !== null && (
         <div
-          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 bg-[hsl(220,15%,11%)]/95 flex items-center justify-center p-4"
           onClick={closeLightbox}
         >
           <button
@@ -157,14 +157,14 @@ export default function GallerySection() {
           </button>
 
           <button
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-blue-400 z-10 bg-black/50 rounded-full p-2"
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-blue-400 z-10 bg-[hsl(220,15%,11%)]/50 rounded-full p-2"
             onClick={(e) => { e.stopPropagation(); prevImage(); }}
           >
             <ChevronLeft className="w-8 h-8" />
           </button>
 
           <button
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-blue-400 z-10 bg-black/50 rounded-full p-2"
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-blue-400 z-10 bg-[hsl(220,15%,11%)]/50 rounded-full p-2"
             onClick={(e) => { e.stopPropagation(); nextImage(); }}
           >
             <ChevronRight className="w-8 h-8" />
@@ -174,7 +174,7 @@ export default function GallerySection() {
             <img
               src={filtered[lightboxIndex].src}
               alt={titleFromFilename(filtered[lightboxIndex].src.split('/').pop() || '')}
-              className="max-h-[80vh] max-w-full object-contain rounded-lg"
+              className="max-h-[80vh] max-w-full object-contain rounded-xl"
             />
             <div className="text-center mt-3">
               <span className="text-white font-medium">
