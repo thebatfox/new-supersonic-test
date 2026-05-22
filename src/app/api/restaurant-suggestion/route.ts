@@ -125,7 +125,7 @@ async function sendEmail(restaurantName: string, count: number, isNew: boolean) 
   // Example with Resend (when you're ready):
   /*
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    const resend = new Resend(process.env.RESEND_API_KEY || "placeholder");
 
     const result = await resend.emails.send({
       from: 'suggestions@supersoniccustoms.com',
