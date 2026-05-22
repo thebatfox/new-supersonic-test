@@ -104,7 +104,7 @@ export default function BookSiteVisitPage() {
                     <Input
                       id="name"
                       placeholder="Your full name"
-                      className="mt-1 text-black"
+                      className="mt-1 bg-white text-gray-900 border-gray-300"
                       value={data.name}
                       onChange={(e) => updateField('name', e.target.value)}
                       required
@@ -116,7 +116,7 @@ export default function BookSiteVisitPage() {
                       id="phone"
                       type="tel"
                       placeholder="+27 XX XXX XXXX"
-                      className="mt-1 text-black"
+                      className="mt-1 bg-white text-gray-900 border-gray-300"
                       value={data.phone}
                       onChange={(e) => updateField('phone', e.target.value)}
                       required
@@ -130,7 +130,7 @@ export default function BookSiteVisitPage() {
                     id="email"
                     type="email"
                     placeholder="your.email@example.com"
-                    className="mt-1 text-black"
+                    className="mt-1 bg-white text-gray-900 border-gray-300"
                     value={data.email}
                     onChange={(e) => updateField('email', e.target.value)}
                     required
@@ -144,7 +144,7 @@ export default function BookSiteVisitPage() {
                     <Input
                       id="preferredDate"
                       type="date"
-                      className="mt-1 text-black"
+                      className="mt-1 bg-white text-gray-900 border-gray-300"
                       min={today}
                       value={data.preferredDate}
                       onChange={(e) => updateField('preferredDate', e.target.value)}
@@ -154,7 +154,7 @@ export default function BookSiteVisitPage() {
                   <div>
                     <Label htmlFor="preferredTime">Preferred Time *</Label>
                     <Select value={data.preferredTime} onValueChange={(value) => updateField('preferredTime', value)} required>
-                      <SelectTrigger className="mt-1 text-black">
+                      <SelectTrigger className="mt-1 bg-white text-gray-900 border-gray-300">
                         <SelectValue placeholder="Select time slot" />
                       </SelectTrigger>
                       <SelectContent>
@@ -172,7 +172,7 @@ export default function BookSiteVisitPage() {
                   <Input
                     id="location"
                     placeholder="Full address of the site to visit"
-                    className="mt-1 text-black"
+                    className="mt-1 bg-white text-gray-900 border-gray-300"
                     value={data.location}
                     onChange={(e) => updateField('location', e.target.value)}
                     required
@@ -183,7 +183,7 @@ export default function BookSiteVisitPage() {
                 <div>
                   <Label htmlFor="projectType">Project Type *</Label>
                   <Select value={data.projectType} onValueChange={(value) => updateField('projectType', value)} required>
-                    <SelectTrigger className="mt-1 text-black">
+                    <SelectTrigger className="mt-1 bg-white text-gray-900 border-gray-300">
                       <SelectValue placeholder="Select project type" />
                     </SelectTrigger>
                     <SelectContent>
@@ -205,7 +205,7 @@ export default function BookSiteVisitPage() {
                   <Textarea
                     id="details"
                     placeholder="Tell us about your acoustic challenges or what you'd like to achieve (optional)"
-                    className="mt-1 min-h-[100px] text-black"
+                    className="mt-1 min-h-[100px] bg-white text-gray-900 border-gray-300"
                     value={data.details}
                     onChange={(e) => updateField('details', e.target.value)}
                   />
