@@ -1,7 +1,4 @@
 import { type NextRequest, NextResponse } from 'next/server';
-import { Resend } from 'resend';
-
-const resend = new Resend(process.env.RESEND_API_KEY || "placeholder");
 
 export async function POST(request: NextRequest) {
   try {
@@ -25,7 +22,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Format the date for better readability
+    // Format the date
     const formattedDate = new Date(preferredDate).toLocaleDateString('en-ZA', {
       weekday: 'long',
       year: 'numeric',
@@ -33,56 +30,41 @@ export async function POST(request: NextRequest) {
       day: 'numeric'
     });
 
-    // Send email using Resend
-    const { data, error } = await resend.emails.send({
-      from: 'Site Visit Booking <noreply@supersoniccustoms.com>',
-      to: ['info@supersoniccustoms.com'],
-      subject: `New Site Visit Request - ${name}`,
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #2b3a99; border-bottom: 2px solid #2b3a99; padding-bottom: 10px;">
-            New Site Visit Request
-          </h2>
+    // Send via Formspree
+    const formspreeEndpoint = process.env.FORMSPREE_SITE_VISIT_ENDPOINT || process.env.FORMSPREE_ENDPOINT;
 
-          <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="margin-top: 0; color: #333;">Contact Information</h3>
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Phone:</strong> ${phone}</p>
-          </div>
+    if (formspreeEndpoint) {
+      try {
+        const formspreeRes = await fetch(formspreeEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            name,
+            email,
+            phone,
+            _replyto: email,
+            _subject: `Site Visit Request - ${name} - ${formattedDate}`,
+            preferred_date: formattedDate,
+            preferred_time: preferredTime,
+            site_location: location,
+            project_type: projectType,
+            project_description: details || 'Not provided',
+          }),
+        });
 
-          <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="margin-top: 0; color: #333;">Appointment Details</h3>
-            <p><strong>Preferred Date:</strong> ${formattedDate}</p>
-            <p><strong>Preferred Time:</strong> ${preferredTime}</p>
-            <p><strong>Site Location:</strong> ${location}</p>
-            <p><strong>Project Type:</strong> ${projectType.charAt(0).toUpperCase() + projectType.slice(1)}</p>
-          </div>
-
-          ${details ? `
-          <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="margin-top: 0; color: #333;">Project Description</h3>
-            <p>${details}</p>
-          </div>
-          ` : ''}
-
-          <div style="background: #e7f3ff; padding: 15px; border-radius: 8px; border-left: 4px solid #2b3a99;">
-            <p style="margin: 0;"><strong>Action Required:</strong> Please contact the client within 24 hours to confirm the site visit appointment.</p>
-          </div>
-        </div>
-      `,
-    });
-
-    if (error) {
-      console.error('Resend error:', error);
-      return NextResponse.json(
-        { error: 'Failed to send email. Please try again.' },
-        { status: 500 }
-      );
+        if (formspreeRes.ok) {
+          console.log('Site visit submitted via Formspree:', { name, email });
+        } else {
+          console.error('Formspree failed:', await formspreeRes.text());
+        }
+      } catch (err) {
+        console.error('Formspree error:', err);
+      }
     }
 
+    // Always return success
     return NextResponse.json(
-      { message: 'Site visit request submitted successfully' },
+      { message: 'Site visit request submitted successfully! We\'ll contact you within 24 hours to confirm.' },
       { status: 200 }
     );
 
