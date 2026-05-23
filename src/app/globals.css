@@ -4,24 +4,24 @@
 
 @layer base {
   :root {
-    --background: 220 20% 96%;        /* Very light cool grey - almost white */
+    --background: 220 15% 88%;        /* Very light cool grey - almost white */
     --foreground: 220 25% 15%;        /* Dark charcoal text */
-    --card: 0 0% 100%;                /* Pure white cards */
+    --card: 220 15% 93%;                /* Pure white cards */
     --card-foreground: 220 25% 15%;
     --popover: 0 0% 100%;
     --popover-foreground: 220 25% 15%;
     --primary: 225 80% 48%;           /* Brand blue */
     --primary-foreground: 0 0% 98%;
-    --secondary: 220 15% 92%;
+    --secondary: 220 15% 84%;
     --secondary-foreground: 220 25% 20%;
-    --muted: 220 15% 90%;
+    --muted: 220 15% 82%;
     --muted-foreground: 220 10% 45%;
-    --accent: 220 15% 88%;
+    --accent: 220 15% 80%;
     --accent-foreground: 220 25% 15%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 15% 85%;
-    --input: 220 15% 94%;
+    --border: 220 15% 76%;
+    --input: 220 15% 86%;
     --ring: 225 80% 48%;
     --radius: 1rem;
   }
@@ -34,7 +34,7 @@
 
   body {
     @apply bg-background text-foreground;
-    background-color: hsl(220, 20%, 96%);
+    background-color: hsl(220, 15%, 88%);
     background-image:
       /* Very subtle diamond acoustic grid */
       repeating-linear-gradient(
