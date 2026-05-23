@@ -110,8 +110,8 @@ export default function AboutPage() {
             <Card className="text-center">
               <CardContent className="p-6">
                 <Award className="w-12 h-12 text-primary mx-auto mb-4" />
-                <div className="text-3xl font-bold text-primary mb-2">500+</div>
-                <p className="text-muted-foreground">Projects Completed</p>
+                <div className="text-3xl font-bold text-primary mb-2">10+</div>
+                <p className="text-muted-foreground">Years of Acoustic Excellence</p>
               </CardContent>
             </Card>
           </div>

@@ -4,7 +4,6 @@ import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import ClientBody from "./ClientBody";
 import SchemaMarkup from "@/components/schema-markup";
-import FloatingRestaurantSuggestion from "@/components/FloatingRestaurantSuggestion";
 import ZolaBot from "@/components/ZolaBot";
 
 const geistSans = GeistSans;
@@ -131,7 +130,6 @@ export default function RootLayout({
 
         <div style={{ position: 'relative', zIndex: 10 }}>
           <ClientBody>{children}</ClientBody>
-          <FloatingRestaurantSuggestion />
           <ZolaBot />
         </div>
       </body>
