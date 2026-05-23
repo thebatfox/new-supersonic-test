@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, X, ZoomIn } from "lucide-react";
 import Link from "next/link";
 
-// Gallery images - only uploaded SuperZola Customs project work
+// Gallery images - only uploaded Supersonic Customs project work
 const galleryImages = [
   {
     id: 1,
@@ -33,9 +33,9 @@ const galleryImages = [
   },
   {
     id: 5,
-    src: '/gallery/restaurants/superzola-installation-work.jpg',
-    title: 'SuperZola Installation Team',
-    description: 'Professional installation work by certified SuperZola technicians'
+    src: '/gallery/restaurants/supersonic-installation-work.jpg',
+    title: 'Supersonic Installation Team',
+    description: 'Professional installation work by certified Supersonic technicians'
   },
   {
     id: 6,
@@ -59,7 +59,7 @@ const galleryImages = [
     id: 9,
     src: '/gallery/restaurants/team-installation.jpg',
     title: 'Professional Installation',
-    description: 'SuperZola team executing complex restaurant acoustic installation'
+    description: 'Supersonic team executing complex restaurant acoustic installation'
   },
   {
     id: 10,
@@ -83,7 +83,7 @@ const galleryImages = [
     id: 13,
     src: '/gallery/acoustic-panels/ceiling-installation-work.jpg',
     title: 'Professional Installation Work',
-    description: 'SuperZola technician installing acoustic ceiling panels with precision'
+    description: 'Supersonic technician installing acoustic ceiling panels with precision'
   },
   {
     id: 14,
@@ -99,9 +99,9 @@ const galleryImages = [
   },
   {
     id: 16,
-    src: '/gallery/night-clubs/superzola-branded-technician.jpg',
-    title: 'SuperZola Branded Technician',
-    description: 'SuperZola Customs technician performing professional installation work in nightclub'
+    src: '/gallery/night-clubs/supersonic-branded-technician.jpg',
+    title: 'Supersonic Branded Technician',
+    description: 'Supersonic Customs technician performing professional installation work in nightclub'
   },
   {
     id: 17,

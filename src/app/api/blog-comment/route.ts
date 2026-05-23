@@ -95,7 +95,7 @@ async function sendCommentEmail(comment: BlogComment) {
 
         <hr style="margin: 30px 0; border: 1px solid #e5e7eb;">
         <p style="font-size: 12px; color: #6b7280;">
-          💡 This comment was submitted through the blog comments section on your SuperZola Customs website.<br>
+          💡 This comment was submitted through the blog comments section on your Supersonic Customs website.<br>
           📧 Comment tracking system active - all comments are being recorded for moderation.
         </p>
       </div>
@@ -105,7 +105,7 @@ async function sendCommentEmail(comment: BlogComment) {
 
   // Store email data for logging
   const emailData = {
-    to: process.env.NOTIFICATION_EMAIL || 'info@superzolacustoms.com',
+    to: process.env.NOTIFICATION_EMAIL || 'info@supersoniccustoms.com',
     subject: emailSubject,
     html: emailBody,
     metadata: {

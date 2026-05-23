@@ -17,7 +17,7 @@ export default function HeroSection() {
         <div className="mb-6 flex justify-center">
           <img
             src="https://ugc.same-assets.com/mPV43MWKgtE4HVSGMz-VP38DKbAO2OjZ.svg"
-            alt="Superzola Customs Logo"
+            alt="Supersonic Customs Logo"
             className="h-64 md:h-80 w-auto"
           />
         </div>

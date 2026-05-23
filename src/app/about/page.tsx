@@ -58,12 +58,12 @@ export default function AboutPage() {
           <div className="mb-6 flex justify-center">
             <img
               src="https://ugc.same-assets.com/mPV43MWKgtE4HVSGMz-VP38DKbAO2OjZ.svg"
-              alt="Superzola Customs Logo"
+              alt="Supersonic Customs Logo"
               className="h-32 md:h-40 w-auto"
             />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            About <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Superzola Customs</span>
+            About <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Supersonic Customs</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Your trusted partner in soundproofing and acoustic treatment solutions across Southern Africa
@@ -77,10 +77,10 @@ export default function AboutPage() {
           {/* Introduction */}
           <Card className="mb-12">
             <CardContent className="p-8">
-              <h2 className="text-3xl font-bold mb-6 text-center">Welcome to Superzola Customs</h2>
+              <h2 className="text-3xl font-bold mb-6 text-center">Welcome to Supersonic Customs</h2>
               <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed space-y-6">
                 <p>
-                  Welcome to Superzola Customs, your trusted partner in soundproofing and acoustic treatment solutions. Based in Paarden Eiland, Cape Town, our small but dynamic team of eight passionate professionals is dedicated to transforming spaces into acoustic masterpieces.
+                  Welcome to Supersonic Customs, your trusted partner in soundproofing and acoustic treatment solutions. Based in Paarden Eiland, Cape Town, our small but dynamic team of eight passionate professionals is dedicated to transforming spaces into acoustic masterpieces.
                 </p>
                 <p>
                   With over a decade of experience in the industry, we specialize in creating bespoke soundproofing and acoustic solutions for diverse venues, including nightclubs, restaurants, recording studios, schools, and more. Our expertise extends beyond South Africa, having successfully delivered projects across Namibia, Zambia, Mozambique, and the DRC.
@@ -248,7 +248,7 @@ export default function AboutPage() {
             <CardContent className="p-8 text-center">
               <h2 className="text-3xl font-bold mb-6">Let's Make Great Spaces Together!</h2>
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-                Whether you're enhancing a vibrant entertainment venue, refining a corporate space, or improving acoustic performance in schools or studios, Superzola Customs is here to help.
+                Whether you're enhancing a vibrant entertainment venue, refining a corporate space, or improving acoustic performance in schools or studios, Supersonic Customs is here to help.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/#contact">

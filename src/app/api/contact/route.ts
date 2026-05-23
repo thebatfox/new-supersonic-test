@@ -62,8 +62,8 @@ export async function POST(request: NextRequest) {
     if (process.env.RESEND_API_KEY && process.env.RESEND_API_KEY !== 'your_actual_resend_api_key_here') {
       try {
         const { data, error } = await resend.emails.send({
-          from: 'Contact Form <noreply@superzolacustoms.co.za>',
-          to: ['info@superzolaafrica.co.za'],
+          from: 'Contact Form <noreply@supersoniccustoms.co.za>',
+          to: ['info@supersonicafrica.co.za'],
           replyTo: email,
           subject: `Contact Form: ${subject}`,
           html: `
@@ -88,7 +88,7 @@ export async function POST(request: NextRequest) {
 
               <hr style="border: none; border-top: 1px solid #dee2e6; margin: 30px 0;">
               <p style="color: #6c757d; font-size: 14px; text-align: center;">
-                <em>This message was sent from the Superzola Customs website contact form at ${new Date().toLocaleString()}</em>
+                <em>This message was sent from the Supersonic Customs website contact form at ${new Date().toLocaleString()}</em>
               </p>
             </div>
           `,

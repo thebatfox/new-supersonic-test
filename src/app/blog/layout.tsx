@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Expert Acoustic Blog | SuperZola Customs',
+  title: 'Expert Acoustic Blog | Supersonic Customs',
   description: 'Professional insights on soundproofing, acoustic treatment, and noise control solutions from South Africa\'s leading acoustic specialists.',
   keywords: ['acoustic blog', 'soundproofing tips', 'noise control', 'acoustic treatment', 'professional acoustics'],
   openGraph: {
-    title: 'Expert Acoustic Blog | SuperZola Customs',
+    title: 'Expert Acoustic Blog | Supersonic Customs',
     description: 'Professional insights on soundproofing, acoustic treatment, and noise control solutions.',
     type: 'website',
-    url: 'https://superzolacustoms.co.za/blog',
+    url: 'https://supersoniccustoms.co.za/blog',
   },
 };
 

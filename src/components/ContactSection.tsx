@@ -35,7 +35,7 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "info@superzolaafrica.co.za"
+    value: "info@supersonicafrica.co.za"
   },
   {
     icon: MapPin,
@@ -188,7 +188,7 @@ export default function ContactSection() {
                 allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="SuperZola Customs Workshop Location - 25B Gray Road, Paarden Eiland"
+                title="Supersonic Customs Workshop Location - 25B Gray Road, Paarden Eiland"
               />
             </div>
           </div>

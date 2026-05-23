@@ -64,7 +64,7 @@ async function sendEmail(restaurantName: string, count: number, isNew: boolean) 
     </head>
     <body>
       <div class="header">
-        <h2>🎯 Restaurant Suggestion from SuperZola Customs Website</h2>
+        <h2>🎯 Restaurant Suggestion from Supersonic Customs Website</h2>
       </div>
 
       <div class="content">
@@ -97,7 +97,7 @@ async function sendEmail(restaurantName: string, count: number, isNew: boolean) 
 
         <hr style="margin: 30px 0; border: 1px solid #e5e7eb;">
         <p style="font-size: 12px; color: #6b7280;">
-          💡 This suggestion was submitted through the floating suggestion form on your SuperZola Customs website.<br>
+          💡 This suggestion was submitted through the floating suggestion form on your Supersonic Customs website.<br>
           📧 Suggestion tracking system active - all duplicates are being counted automatically.
         </p>
       </div>
@@ -107,7 +107,7 @@ async function sendEmail(restaurantName: string, count: number, isNew: boolean) 
 
   // Store email data for logging and future email service integration
   const emailData = {
-    to: process.env.NOTIFICATION_EMAIL || 'info@superzolacustoms.com',
+    to: process.env.NOTIFICATION_EMAIL || 'info@supersoniccustoms.com',
     subject: emailSubject,
     html: emailBody,
     metadata: {
@@ -128,7 +128,7 @@ async function sendEmail(restaurantName: string, count: number, isNew: boolean) 
     const resend = new Resend(process.env.RESEND_API_KEY || "placeholder");
 
     const result = await resend.emails.send({
-      from: 'suggestions@superzolacustoms.com',
+      from: 'suggestions@supersoniccustoms.com',
       to: emailData.to,
       subject: emailData.subject,
       html: emailData.html,
