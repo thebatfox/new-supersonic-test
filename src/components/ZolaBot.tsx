@@ -79,17 +79,17 @@ export default function ZolaBot() {
     <>
       {/* Chat window */}
       {open && (
-        <div className="fixed bottom-20 right-4 md:right-6 z-50 w-[calc(100vw-2rem)] max-w-sm bg-[hsl(220,15%,17%)] rounded-2xl shadow-2xl border border-[hsl(220,15%,26%)] flex flex-col overflow-hidden" style={{ height: '480px' }}>
+        <div className="fixed bottom-20 right-4 md:right-6 z-50 w-[calc(100vw-2rem)] max-w-sm bg-white rounded-2xl shadow-2xl border border-gray-300 flex flex-col overflow-hidden" style={{ height: '480px' }}>
           {/* Header */}
           <div className="bg-gradient-to-r from-blue-700 to-blue-600 px-4 py-3 flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-white font-bold text-sm">S</div>
+              <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-gray-900 font-bold text-sm">S</div>
               <div>
-                <p className="text-white font-semibold text-sm">Zola</p>
+                <p className="text-gray-900 font-semibold text-sm">Zola</p>
                 <p className="text-blue-200 text-xs">Supersonic Customs Assistant</p>
               </div>
             </div>
-            <button onClick={() => setOpen(false)} className="text-white/70 hover:text-white transition-colors">
+            <button onClick={() => setOpen(false)} className="text-gray-900/70 hover:text-gray-900 transition-colors">
               <X className="w-5 h-5" />
             </button>
           </div>
@@ -100,8 +100,8 @@ export default function ZolaBot() {
               <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                 <div className={`max-w-[85%] px-3 py-2 rounded-2xl text-sm leading-relaxed ${
                   msg.role === 'user'
-                    ? 'bg-blue-600 text-white rounded-br-none'
-                    : 'bg-gray-800 text-gray-200 rounded-bl-none'
+                    ? 'bg-blue-600 text-gray-900 rounded-br-none'
+                    : 'bg-gray-100 text-gray-800 rounded-bl-none'
                 }`}>
                   {msg.content}
                 </div>
@@ -118,16 +118,16 @@ export default function ZolaBot() {
           </div>
 
           {/* Input */}
-          <div className="p-3 border-t border-[hsl(220,15%,26%)] flex gap-2">
+          <div className="p-3 border-t border-gray-300 flex gap-2">
             <input
               value={input}
               onChange={e => setInput(e.target.value)}
               onKeyDown={e => e.key === 'Enter' && send()}
               placeholder="Ask about soundproofing..."
-              className="flex-1 bg-gray-800 text-white text-sm px-3 py-2 rounded-xl border border-[hsl(220,15%,26%)] focus:outline-none focus:border-blue-500 placeholder-gray-500"
+              className="flex-1 bg-gray-800 text-gray-900 text-sm px-3 py-2 rounded-xl border border-gray-300 focus:outline-none focus:border-blue-500 placeholder-gray-400"
             />
             <button onClick={send} disabled={loading || !input.trim()}
-              className="bg-blue-600 hover:bg-blue-700 disabled:opacity-40 text-white p-2 rounded-xl transition-colors">
+              className="bg-blue-600 hover:bg-blue-700 disabled:opacity-40 text-gray-900 p-2 rounded-xl transition-colors">
               <Send className="w-4 h-4" />
             </button>
           </div>
@@ -137,7 +137,7 @@ export default function ZolaBot() {
       {/* Toggle button */}
       <button
         onClick={() => setOpen(o => !o)}
-        className="fixed bottom-4 right-4 md:right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110"
+        className="fixed bottom-4 right-4 md:right-6 z-50 bg-blue-600 hover:bg-blue-700 text-gray-900 rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110"
         aria-label="Chat with Zola"
       >
         {open ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}

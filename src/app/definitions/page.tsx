@@ -37,26 +37,26 @@ const categories = [...new Set(definitions.map(d => d.category))];
 
 export default function DefinitionsPage() {
   return (
-    <div className="min-h-screen bg-[hsl(220,15%,11%)]">
-      <div className="bg-[hsl(220,15%,17%)] border-b border-[hsl(220,15%,22%)] py-8 px-6">
+    <div className="min-h-screen bg-gray-100">
+      <div className="bg-white border-b border-gray-200 py-8 px-6">
         <div className="max-w-5xl mx-auto">
           <Link href="/" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6 transition-colors text-sm">
             <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
           </Link>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Acoustic <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Definitions</span>
           </h1>
-          <p className="text-xl text-gray-400 max-w-3xl">
+          <p className="text-xl text-gray-500 max-w-3xl">
             Plain-language explanations of the most common acoustic and soundproofing terms — no jargon, just honest definitions to help you understand your project.
           </p>
         </div>
       </div>
 
-      <div className="sticky top-0 z-10 bg-[hsl(220,15%,13%)]/95 backdrop-blur border-b border-[hsl(220,15%,22%)] py-3 px-6">
+      <div className="sticky top-0 z-10 bg-gray-100/95 backdrop-blur border-b border-gray-200 py-3 px-6">
         <div className="max-w-5xl mx-auto flex flex-wrap gap-2">
           {categories.map(cat => (
             <a key={cat} href={`#${cat.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-              className="px-3 py-1 bg-gray-800 hover:bg-blue-600 text-gray-300 hover:text-white rounded-full text-xs font-medium transition-colors">
+              className="px-3 py-1 bg-gray-200 hover:bg-blue-600 text-gray-600 hover:text-gray-900 rounded-full text-xs font-medium transition-colors">
               {cat}
             </a>
           ))}
@@ -66,12 +66,12 @@ export default function DefinitionsPage() {
       <div className="max-w-5xl mx-auto px-6 py-12">
         {categories.map(cat => (
           <div key={cat} id={cat.toLowerCase().replace(/[^a-z0-9]+/g, '-')} className="mb-14">
-            <h2 className="text-xs font-bold uppercase tracking-widest text-blue-400 mb-6 pb-2 border-b border-[hsl(220,15%,22%)]">{cat}</h2>
+            <h2 className="text-xs font-bold uppercase tracking-widest text-blue-400 mb-6 pb-2 border-b border-gray-200">{cat}</h2>
             <div className="space-y-6">
               {definitions.filter(d => d.category === cat).map(def => (
-                <div key={def.term} id={def.term.toLowerCase().replace(/[^a-z0-9]+/g, '-')} className="bg-[hsl(220,15%,17%)]/50 rounded-2xl p-6 border border-[hsl(220,15%,22%)] hover:border-[hsl(220,15%,26%)] transition-colors">
-                  <h3 className="text-xl font-bold text-white mb-3">{def.term}</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">{def.definition}</p>
+                <div key={def.term} id={def.term.toLowerCase().replace(/[^a-z0-9]+/g, '-')} className="bg-white/50 rounded-2xl p-6 border border-gray-200 hover:border-gray-300 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{def.term}</h3>
+                  <p className="text-gray-600 leading-relaxed mb-4">{def.definition}</p>
                   {def.related.length > 0 && (
                     <div className="flex flex-wrap gap-2 items-center">
                       <span className="text-gray-500 text-xs">Related:</span>
@@ -90,14 +90,14 @@ export default function DefinitionsPage() {
         ))}
 
         <div className="mt-16 bg-blue-600/10 border border-blue-500/30 rounded-2xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-white mb-3">Still have questions?</h3>
-          <p className="text-gray-400 mb-6 max-w-xl mx-auto">Our team has decades of combined experience across Southern Africa. Book a free site visit and get expert advice specific to your space and budget.</p>
+          <h3 className="text-2xl font-bold text-gray-900 mb-3">Still have questions?</h3>
+          <p className="text-gray-500 mb-6 max-w-xl mx-auto">Our team has decades of combined experience across Southern Africa. Book a free site visit and get expert advice specific to your space and budget.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/book-site-visit" className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors">
+            <Link href="/book-site-visit" className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-gray-900 font-semibold px-6 py-3 rounded-xl transition-colors">
               Book a Free Site Visit <ArrowRight className="w-4 h-4" />
             </Link>
             <a href="https://wa.me/27767702767?text=Hi%20Supersonic%20Customs!%20I%20have%20a%20soundproofing%20question." target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors">
+              className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-gray-900 font-semibold px-6 py-3 rounded-xl transition-colors">
               💬 WhatsApp Us
             </a>
           </div>

@@ -182,8 +182,8 @@ export default function ImageGalleryPage() {
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-[hsl(220,15%,11%)]/0 group-hover:bg-[hsl(220,15%,11%)]/20 transition-colors duration-300 flex items-center justify-center">
-                    <ZoomIn className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gray-100/0 group-hover:bg-gray-100/20 transition-colors duration-300 flex items-center justify-center">
+                    <ZoomIn className="w-8 h-8 text-gray-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </div>
                 <div className="p-4">
@@ -201,7 +201,7 @@ export default function ImageGalleryPage() {
       {/* Modal */}
       {selectedImage && (
         <div
-          className="fixed inset-0 bg-[hsl(220,15%,11%)]/90 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-gray-100/90 z-50 flex items-center justify-center p-4"
           onClick={closeModal}
           onKeyDown={handleKeyDown}
           tabIndex={0}
@@ -210,7 +210,7 @@ export default function ImageGalleryPage() {
             {/* Close Button */}
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 z-10 bg-[hsl(220,15%,11%)]/50 hover:bg-[hsl(220,15%,11%)]/70 text-white rounded-full p-2 transition-colors"
+              className="absolute top-4 right-4 z-10 bg-gray-100/50 hover:bg-gray-100/70 text-gray-900 rounded-full p-2 transition-colors"
               aria-label="Close modal"
             >
               <X className="w-6 h-6" />
@@ -227,8 +227,8 @@ export default function ImageGalleryPage() {
 
             {/* Image Info */}
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-lg">
-              <h3 className="text-white text-xl font-semibold mb-2">{selectedImage.title}</h3>
-              <p className="text-gray-200">{selectedImage.description}</p>
+              <h3 className="text-gray-900 text-xl font-semibold mb-2">{selectedImage.title}</h3>
+              <p className="text-gray-700">{selectedImage.description}</p>
             </div>
           </div>
         </div>

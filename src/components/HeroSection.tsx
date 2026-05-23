@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 export default function HeroSection() {
   return (
     <section
-      className="relative py-20 px-6 text-white"
+      className="relative py-20 px-6 text-gray-900"
       style={{
         backgroundImage: 'url(/hero-bg.jpg)',
         backgroundSize: 'cover',
@@ -12,7 +12,7 @@ export default function HeroSection() {
       }}
     >
       {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-[hsl(220,15%,11%)]/70" />
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-blue-950/70" />
       <div className="relative max-w-7xl mx-auto text-center z-10">
         <div className="mb-6 flex justify-center">
           <img
@@ -69,13 +69,13 @@ export default function HeroSection() {
           <Button size="lg" variant="secondary" className="text-lg px-8 py-3" asChild>
             <a href="/about">Who are we?</a>
           </Button>
-          <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-white text-white hover:bg-white hover:text-hover-text" asChild>
+          <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-white text-gray-900 hover:bg-white hover:text-hover-text" asChild>
             <a href="/book-site-visit">Book a Site Visit</a>
           </Button>
           <Button
             size="lg"
             variant="outline"
-            className="text-lg px-8 py-3 border-white text-white hover:bg-white hover:text-hover-text bg-[#1339AA]"
+            className="text-lg px-8 py-3 border-white text-gray-900 hover:bg-white hover:text-hover-text bg-[#1339AA]"
             asChild
           >
             <a href="#questionnaire">Get Started Now</a>
