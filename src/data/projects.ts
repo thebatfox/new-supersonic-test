@@ -53,7 +53,7 @@ export const services: Service[] = [
     title: 'Carpentry & Custom Manufacturing',
     subtitle: 'Built in South Africa, Built to Last',
     hero: true,
-    description: 'Our in-house carpentry team goes far beyond acoustics. We design and build anything from bespoke acoustic installations and entertainment venue fit-outs to full shopfitting, custom cabinetry, and commercial interiors — all manufactured to your exact specification in South Africa. If you can imagine it, we can build it.',
+    description: 'Our in-house shopfitting team goes far beyond acoustics. We design and build anything from bespoke acoustic installations and entertainment venue fit-outs to full shopfitting, custom cabinetry, and commercial interiors — all manufactured to your exact specification in South Africa. If you can imagine it, we can build it.',
     features: ['Custom DJ Booths & Entertainment Fit-Outs', 'Shopfitting & Retail Interiors', 'Custom Cabinetry & Built-in Furniture', 'Bar, Restaurant & Club Fit-Outs', 'Acoustic Wall, Ceiling & Feature Work', 'Chain Curtain, Living Wall & LED Installations']
   },
   // ─── SUPPORTING SERVICES ─────────────────────────────────────────
