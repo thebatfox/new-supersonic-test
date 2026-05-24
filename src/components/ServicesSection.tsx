@@ -27,7 +27,7 @@ export default function ServicesSection() {
           {heroServices.map((service) => {
             const IconComponent = iconMap[service.icon as keyof typeof iconMap];
             return (
-              <div key={service.id} className="relative bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-blue-500 transition-all duration-300 group">
+              <div key={service.id} className="relative bg-gray-200 rounded-2xl overflow-hidden border border-gray-200 hover:border-blue-500 transition-all duration-300 group">
                 {/* Blue accent bar */}
                 <div className="h-1 w-full bg-gradient-to-r from-blue-500 to-blue-700" />
                 <div className="p-8">
