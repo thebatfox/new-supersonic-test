@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 export default function HeroSection() {
   return (
     <section
-      className="relative py-20 px-6 text-white"
+      className="relative py-20 px-6 text-white" style={{backgroundImage: "linear-gradient(hsla(0,0%,100%,0.05) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.05) 1px, transparent 1px), linear-gradient(hsla(0,0%,100%,0.02) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.02) 1px, transparent 1px)", backgroundSize: "50px 50px, 50px 50px, 10px 10px, 10px 10px"}}
       style={{
         backgroundImage: 'url(/hero-bg.jpg)',
         backgroundSize: 'cover',

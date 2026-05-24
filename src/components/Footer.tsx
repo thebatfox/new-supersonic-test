@@ -25,7 +25,7 @@ const footerSections = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12 px-6">
+    <footer className="bg-gray-900" style={{backgroundImage: "linear-gradient(hsla(0,0%,100%,0.04) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.04) 1px, transparent 1px), linear-gradient(hsla(0,0%,100%,0.015) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.015) 1px, transparent 1px)", backgroundSize: "50px 50px, 50px 50px, 10px 10px, 10px 10px" text-white py-12 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {footerSections.map((section, index) => (

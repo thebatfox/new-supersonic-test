@@ -35,23 +35,14 @@
   body {
     @apply bg-background text-foreground;
     background-color: hsl(220, 15%, 88%);
+    /* Graph paper — blue lines on light background */
     background-image:
-      /* Very subtle diamond acoustic grid */
-      repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 24px,
-        hsla(220, 30%, 75%, 0.15) 24px,
-        hsla(220, 30%, 75%, 0.15) 25px
-      ),
-      repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 24px,
-        hsla(220, 30%, 75%, 0.15) 24px,
-        hsla(220, 30%, 75%, 0.15) 25px
-      );
+      linear-gradient(hsla(220, 70%, 55%, 0.12) 1px, transparent 1px),
+      linear-gradient(90deg, hsla(220, 70%, 55%, 0.12) 1px, transparent 1px),
+      linear-gradient(hsla(220, 70%, 55%, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, hsla(220, 70%, 55%, 0.05) 1px, transparent 1px);
     background-attachment: fixed;
-    background-size: 50px 50px;
+    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+    background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
   }
 }

@@ -11,12 +11,8 @@ const stats = [
 export default function WorkshopSection() {
   return (
     <section id="workshop" className="py-20 px-6 bg-gray-100 relative overflow-hidden">
-      {/* Subtle background detail */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none"
-        style={{
-          backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 40px, hsl(225,80%,50%) 40px, hsl(225,80%,50%) 41px), repeating-linear-gradient(90deg, transparent, transparent 40px, hsl(225,80%,50%) 40px, hsl(225,80%,50%) 41px)',
-        }}
-      />
+      {/* Graph paper background */}
+      <div className="absolute inset-0 pointer-events-none" style={{backgroundImage: "linear-gradient(hsla(0,0%,100%,0.05) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.05) 1px, transparent 1px), linear-gradient(hsla(0,0%,100%,0.02) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.02) 1px, transparent 1px)", backgroundSize: "50px 50px, 50px 50px, 10px 10px, 10px 10px"}} />
 
       <div className="max-w-7xl mx-auto relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
