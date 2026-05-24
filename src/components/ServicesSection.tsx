@@ -18,7 +18,7 @@ export default function ServicesSection() {
             Our <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Services</span>
           </h2>
           <p className="text-xl text-gray-500 max-w-3xl mx-auto">
-            Comprehensive acoustic and AV solutions delivered across Southern Africa — from concept to completion.
+            Comprehensive acoustic shopfitters delivering projects across Southern Africa — from concept to completion.
           </p>
         </div>
 
