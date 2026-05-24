@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 export default function HeroSection() {
   return (
     <section
-      className="relative py-20 px-6 text-white" style={{backgroundImage: "linear-gradient(hsla(0,0%,100%,0.05) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.05) 1px, transparent 1px), linear-gradient(hsla(0,0%,100%,0.02) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.02) 1px, transparent 1px)", backgroundSize: "50px 50px, 50px 50px, 10px 10px, 10px 10px"}}
+      className="relative py-20 px-6 text-white"
       style={{
         backgroundImage: 'url(/hero-bg.jpg)',
         backgroundSize: 'cover',
@@ -11,6 +11,8 @@ export default function HeroSection() {
         backgroundRepeat: 'no-repeat'
       }}
     >
+      {/* Graph paper overlay */}
+      <div className="absolute inset-0 pointer-events-none" style={{backgroundImage: "linear-gradient(hsla(0,0%,100%,0.05) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.05) 1px, transparent 1px), linear-gradient(hsla(0,0%,100%,0.02) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.02) 1px, transparent 1px)", backgroundSize: "50px 50px, 50px 50px, 10px 10px, 10px 10px"}} />
       {/* Dark overlay for text readability */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-blue-950/70" />
       <div className="relative max-w-7xl mx-auto text-center z-10">
