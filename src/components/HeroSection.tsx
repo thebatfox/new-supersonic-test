@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 export default function HeroSection() {
   return (
     <section
-      className="relative py-20 px-6 text-gray-900"
+      className="relative py-20 px-6 text-white"
       style={{
         backgroundImage: 'url(/hero-bg.jpg)',
         backgroundSize: 'cover',
@@ -69,13 +69,13 @@ export default function HeroSection() {
           <Button size="lg" variant="secondary" className="text-lg px-8 py-3" asChild>
             <a href="/about">Who are we?</a>
           </Button>
-          <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-white text-gray-900 hover:bg-white hover:text-hover-text" asChild>
+          <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-white text-white hover:bg-white hover:text-gray-900" asChild>
             <a href="/book-site-visit">Book a Site Visit</a>
           </Button>
           <Button
             size="lg"
             variant="outline"
-            className="text-lg px-8 py-3 border-white text-gray-900 hover:bg-white hover:text-hover-text bg-[#1339AA]"
+            className="text-lg px-8 py-3 border-white text-white hover:bg-white hover:text-gray-900 bg-[#1339AA]"
             asChild
           >
             <a href="#questionnaire">Get Started Now</a>
