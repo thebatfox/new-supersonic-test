@@ -71,7 +71,7 @@ export default function HeroSection() {
           <Button size="lg" variant="secondary" className="text-lg px-8 py-3" asChild>
             <a href="/about">Who are we?</a>
           </Button>
-          <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-white text-white hover:bg-white hover:text-gray-900" asChild>
+          <Button size="lg" className="text-lg px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl border-0 shadow-lg shadow-blue-900/40 transition-all" asChild>
             <a href="/book-site-visit">Book a Site Visit</a>
           </Button>
           <Button
