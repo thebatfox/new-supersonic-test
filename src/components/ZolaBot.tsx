@@ -103,7 +103,9 @@ export default function ZolaBot() {
                     ? 'bg-blue-600 text-gray-900 rounded-br-none'
                     : 'bg-gray-100 text-gray-800 rounded-bl-none'
                 }`}>
-                  {msg.content}
+                  {msg.content.replace(/\*\*(.*?)\*\*/g, '$1').split('\n').map((line, i) => (
+                    <span key={i}>{line}{i < msg.content.split('\n').length - 1 && <br/>}</span>
+                  ))}
                 </div>
               </div>
             ))}
