@@ -124,7 +124,7 @@ export default function ZolaBot() {
               onChange={e => setInput(e.target.value)}
               onKeyDown={e => e.key === 'Enter' && send()}
               placeholder="Ask about soundproofing..."
-              className="flex-1 bg-gray-800 text-gray-900 text-sm px-3 py-2 rounded-xl border border-gray-300 focus:outline-none focus:border-blue-500 placeholder-gray-400"
+              className="flex-1 bg-white text-gray-900 text-sm px-3 py-2 rounded-xl border border-gray-300 focus:outline-none focus:border-blue-500 placeholder-gray-500"
             />
             <button onClick={send} disabled={loading || !input.trim()}
               className="bg-blue-600 hover:bg-blue-700 disabled:opacity-40 text-gray-900 p-2 rounded-xl transition-colors">
