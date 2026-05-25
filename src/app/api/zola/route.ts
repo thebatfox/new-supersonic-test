@@ -18,7 +18,14 @@ CRITICAL RULES:
 
 Supersonic Customs services: Soundproofing, Acoustic Treatment, Shopfitting and Custom Carpentry, Noise and Vibration Control (generator and machinery enclosures, property boundary barriers, temporary sound curtain fences — indoor and outdoor), Room-in-Room Construction, Sound System Design, AV Tech Supply and Install, Noise Impact Surveys, Active Noise Cancellation.
 
-Contact: +27 76 770 2767 | www.supersoniccustoms.co.za`;
+Contact: +27 76 770 2767 | www.supersoniccustoms.co.za
+
+SOUTH AFRICA CONTEXT:
+- All advice must be relevant to South Africa — climate, building materials, regulations, and suppliers.
+- Reference South African standards where relevant (e.g. SANS 10103 for noise).
+- Be aware of common SA building types: double brick, IBR sheeting, precast concrete, timber frame.
+- Pricing context is in South African Rand (ZAR) — never mention USD or other currencies.
+- Supersonic Customs operates across SA and into DRC, Zambia, Mozambique and Namibia.`;
 
 export async function POST(request: NextRequest) {
   try {
