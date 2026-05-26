@@ -9,6 +9,10 @@ interface Message {
 }
 
 const quickQuestions = [
+  "Can I soundproof a door in my Airbnb apartment?",
+  "Can I soundproof my boardroom?",
+  "Is there a product I can put over my windows to stop road noise?",
+  "Do egg cartons work for soundproofing?",
   "What is soundproofing?",
   "Soundproofing vs acoustic treatment?",
   "How do I reduce generator noise?",
