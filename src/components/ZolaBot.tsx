@@ -64,7 +64,7 @@ export default function ZolaBot() {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  const handleRegister = () => {
+  const handleRegister = async () => {
     if (!name.trim() || !phone.trim()) {
       setRegError('Please enter your name and phone number to continue.');
       return;
@@ -75,6 +75,17 @@ export default function ZolaBot() {
       role: 'assistant',
       content: `Hi ${name.split(' ')[0]}! 👋 I'm Zola, Supersonic Customs' assistant. What can I help you with today?`
     }]);
+
+    // Send lead to Formspree
+    try {
+      await fetch('/api/zola-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, phone, email }),
+      });
+    } catch {
+      // Silently fail - don't interrupt the user experience
+    }
   };
 
   const send = async (text?: string) => {
