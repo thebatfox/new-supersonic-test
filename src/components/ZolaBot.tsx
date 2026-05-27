@@ -8,18 +8,44 @@ interface Message {
   content: string;
 }
 
-const quickQuestions = [
-  "Can I soundproof a door in my Airbnb apartment?",
-  "Can I soundproof my boardroom?",
-  "Is there a product I can put over my windows to stop road noise?",
+const ALL_QUESTIONS = [
+  // Common misconceptions
   "Do egg cartons work for soundproofing?",
+  "Does acoustic foam soundproof a room?",
+  "Can I soundproof with PET felt panels?",
+  "Will carpet on the walls stop noise?",
+  // Residential
+  "Can I soundproof a door in my Airbnb apartment?",
+  "How do I stop road noise coming through my windows?",
+  "Is there a product I can put over my windows to stop road noise?",
+  "How do I stop my neighbour's music coming through the wall?",
+  "Can I soundproof a home studio in a complex?",
+  "How do I reduce noise between upstairs and downstairs?",
+  // Commercial
+  "Can I soundproof my boardroom?",
+  "How do I make my restaurant less noisy?",
+  "Can you treat a nightclub for acoustics?",
+  "How do I stop noise from a gym disturbing offices?",
+  // Industrial
+  "How do I reduce generator noise?",
+  "Can you build an enclosure for my compressor?",
+  "What is a sound barrier fence?",
+  "How do I comply with noise regulations in South Africa?",
+  // General
   "What is soundproofing?",
   "Soundproofing vs acoustic treatment?",
-  "How do I reduce generator noise?",
   "What is a site visit?",
   "Do you work outside Cape Town?",
   "How much does soundproofing cost?",
+  "What materials do you use?",
+  "How long does a typical project take?",
+  "Do you work on residential projects?",
 ];
+
+function getRandomQuestions(count: number): string[] {
+  const shuffled = [...ALL_QUESTIONS].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, count);
+}
 
 export default function ZolaBot() {
   const [open, setOpen] = useState(false);
@@ -29,6 +55,7 @@ export default function ZolaBot() {
   const [email, setEmail] = useState('');
   const [regError, setRegError] = useState('');
   const [messages, setMessages] = useState<Message[]>([]);
+  const [quickQuestions] = useState<string[]>(() => getRandomQuestions(6));
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
