@@ -173,7 +173,7 @@ export default function ZolaBot() {
                 Start Chat <ChevronRight className="w-4 h-4" />
               </button>
 
-              <p className="text-gray-400 text-xs text-center mt-3">Your details are kept private and only used to assist you.</p>
+              <p className="text-gray-400 text-xs text-center mt-3">Your details are kept private and only used to assist you. By chatting you agree to our <a href="/terms" className="text-blue-500 hover:underline">Terms & Conditions</a>.</p>
             </div>
           )}
 

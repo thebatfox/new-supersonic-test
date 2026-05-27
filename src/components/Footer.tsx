@@ -18,6 +18,7 @@ const company = [
   { label: 'Definitions', href: '/definitions' },
   { label: 'Blog', href: '/blog' },
   { label: 'Book a Site Visit', href: '/book-site-visit' },
+  { label: 'Terms & Conditions', href: '/terms' },
 ];
 
 export default function Footer() {
@@ -90,7 +91,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-500">
-          <p>© 2026 Supersonic Customs. All rights reserved.</p>
+          <p>© 2026 Supersonic Customs. All rights reserved. | <a href="/terms" className="hover:text-blue-400 transition-colors">Terms & Conditions</a></p>
         </div>
       </div>
     </footer>
