@@ -3,8 +3,16 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Acoustic & Soundproofing Definitions | Supersonic Customs',
-  description: 'Plain-language definitions of common acoustic and soundproofing terms — STC, NRC, decoupling, floating floors, RT60 and more.',
+  title: 'Acoustic & Soundproofing Glossary | Supersonic Customs Cape Town',
+  description: 'Plain-language definitions of acoustic and soundproofing terms by Cape Town\'s specialists — STC, NRC, decoupling, floating floors, RT60, mineral wool, mass loaded vinyl and more. Understand the science before you spend.',
+  alternates: {
+    canonical: "https://supersoniccustoms.co.za/definitions",
+  },
+  openGraph: {
+    title: 'Acoustic & Soundproofing Glossary | Supersonic Customs Cape Town',
+    description: 'Plain-language acoustic definitions from Cape Town\'s soundproofing specialists. Understand STC, NRC, decoupling and more before you invest.',
+    url: "https://supersoniccustoms.co.za/definitions",
+  },
 };
 
 const definitions = [

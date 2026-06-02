@@ -1,12 +1,24 @@
+import type { Metadata } from 'next';
 import GalleryHoldingPage from '@/components/GalleryHoldingPage';
 
-const images = ["acoustic-wall-panels-backlighting.jpg", "brick-office-acoustic-partition.jpg", "conference-room-coffered-ceiling.jpg", "conference-room-historical-artwork.jpg", "geometric-acoustic-panel-wall.jpg", "great-idea-office-workspace.jpg", "luxury-restaurant-interior.jpg", "marble-wall-office-lounge.jpg", "medical-office-gradient-wall.jpg", "meeting-room-artwork.jpg", "modern-office-phone-booths.jpg", "office-space-exposed-ceiling.jpg", "open-office-workspace.jpg", "restaurant-pendant-lighting.jpg", "rustic-restaurant-bar.jpg", "staircase-acoustic-treatment.jpg", "supersonic-ceiling-installation.jpg", "wooden-doorway-library-entrance.jpg", "wooden-slat-living-wall.jpg"];
+export const metadata: Metadata = {
+  title: "Commercial Acoustic Treatment Gallery | Offices & Workspaces Cape Town",
+  description: "Acoustic treatment and soundproofing solutions for commercial offices and workspaces across Cape Town. View our completed projects featuring bespoke acoustic panels and noise control installations.",
+  alternates: { canonical: "https://supersoniccustoms.co.za/gallery/commercial-spaces" },
+  openGraph: {
+    title: "Commercial Spaces Gallery | Supersonic Customs Cape Town",
+    description: "Acoustic treatment for offices and commercial spaces in Cape Town. Bespoke solutions designed around your brand and acoustic requirements.",
+    url: "https://supersoniccustoms.co.za/gallery/commercial-spaces",
+  },
+};
+
+const images = ["boardroom-acoustic-panels.jpg", "ceiling-acoustic-installation.jpg", "commercial-acoustic-treatment.jpg", "corporate-panel-installation.jpg", "corporate-reception.jpg", "modern-office-acoustic.jpg", "office-acoustic-baffles.jpg", "office-acoustic-panels.jpg", "office-sound-treatment.jpg", "open-plan-acoustic.jpg", "reception-acoustic-wall.jpg", "wall-acoustic-panels.jpg"];
 
 export default function CommercialSpacesPage() {
   return (
     <GalleryHoldingPage
       title="Commercial Spaces"
-      description="Offices, boardrooms, restaurants and commercial interiors with acoustic solutions."
+      description="Acoustic treatment and soundproofing solutions for offices, boardrooms and commercial environments."
       images={images}
       folder="commercial-spaces"
     />

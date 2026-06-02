@@ -10,33 +10,35 @@ const geistSans = GeistSans;
 const geistMono = GeistMono;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://supersoniccustoms.com"),
+  metadataBase: new URL("https://supersoniccustoms.co.za"),
   title: {
-    default: "Supersonic Customs - Professional Soundproofing & Acoustic Treatment",
+    default: "Supersonic Customs | Soundproofing & Acoustic Specialists — Cape Town",
     template: "%s | Supersonic Customs"
   },
-  description: "Specialist soundproofing & acoustic treatment company serving South Africa, DRC, Zambia, Mozambique & Namibia. Expert noise control solutions, sound isolation, carpentry & AV installations for residential, commercial & industrial applications.",
+  description: "Cape Town's leading soundproofing and acoustic treatment specialists. Expert noise control, acoustic panels, recording studio soundproofing, carpentry and AV installations. Serving residential, commercial and industrial clients across South Africa.",
   keywords: [
-    "soundproofing South Africa",
-    "acoustic treatment",
-    "noise control",
-    "sound isolation",
-    "acoustic panels",
-    "mass loaded vinyl",
-    "recording studio soundproofing",
-    "industrial acoustics",
-    "residential soundproofing",
-    "commercial noise control",
-    "AV installation",
-    "acoustic carpentry",
-    "room in room construction",
-    "noise impact surveys",
-    "active noise cancellation",
-    "sound system design",
-    "Cape Town acoustics",
-    "Southern Africa soundproofing"
+    "soundproofing Cape Town",
+    "acoustic treatment Cape Town",
+    "noise control Cape Town",
+    "acoustic panels Cape Town",
+    "recording studio soundproofing Cape Town",
+    "soundproofing specialists Cape Town",
+    "acoustic carpentry Cape Town",
+    "noise reduction South Africa",
+    "sound isolation Cape Town",
+    "room in room construction Cape Town",
+    "noise impact surveys Cape Town",
+    "active noise cancellation South Africa",
+    "sound system design Cape Town",
+    "industrial acoustics South Africa",
+    "residential soundproofing Cape Town",
+    "commercial acoustic treatment Cape Town",
+    "Paarden Eiland acoustics",
+    "Western Cape soundproofing",
+    "mineral wool insulation South Africa",
+    "acoustic consultants Cape Town"
   ],
-  authors: [{ name: "Supersonic Customs", url: "https://supersoniccustoms.com" }],
+  authors: [{ name: "Supersonic Customs", url: "https://supersoniccustoms.co.za" }],
   creator: "Supersonic Customs",
   publisher: "Supersonic Customs",
   robots: {
@@ -51,8 +53,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Supersonic Customs - Professional Soundproofing & Acoustic Treatment",
-    description: "Specialist soundproofing & acoustic treatment company serving Southern Africa. Expert solutions for all acoustic needs.",
+    title: "Supersonic Customs | Soundproofing & Acoustic Specialists — Cape Town",
+    description: "Cape Town's leading soundproofing and acoustic treatment specialists. Expert noise control solutions for homes, studios, offices and industrial environments across South Africa.",
     type: "website",
     locale: "en_ZA",
     siteName: "Supersonic Customs",
@@ -62,24 +64,24 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Supersonic Customs - Soundproofing Specialists in Southern Africa",
+        alt: "Supersonic Customs - Soundproofing & Acoustic Specialists, Cape Town",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Supersonic Customs - Professional Soundproofing & Acoustic Treatment",
-    description: "Specialist soundproofing & acoustic treatment company serving Southern Africa. Expert noise control solutions & AV installations.",
+    title: "Supersonic Customs | Soundproofing & Acoustic Specialists — Cape Town",
+    description: "Cape Town's leading soundproofing and acoustic treatment specialists. Expert noise control, acoustic panels, carpentry and AV installations.",
     images: ["/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://supersoniccustoms.com",
+    canonical: "https://supersoniccustoms.co.za",
   },
   category: "Professional Services",
   classification: "Acoustic Engineering & Soundproofing Services",
   other: {
     "geo.region": "ZA-WC",
-    "geo.placename": "Cape Town",
+    "geo.placename": "Cape Town, Western Cape",
     "geo.position": "-33.9249;18.4241",
     "ICBM": "-33.9249, 18.4241"
   }
@@ -100,7 +102,7 @@ export default function RootLayout({
       <body suppressHydrationWarning className="antialiased">
         <SchemaMarkup />
 
-        {/* Fixed Background Logo Watermark - 80% opacity */}
+        {/* Fixed Background Logo Watermark */}
         <div
           style={{
             position: 'fixed',

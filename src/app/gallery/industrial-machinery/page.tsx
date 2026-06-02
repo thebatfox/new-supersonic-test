@@ -1,12 +1,24 @@
+import type { Metadata } from 'next';
 import GalleryHoldingPage from '@/components/GalleryHoldingPage';
 
-const images = ["acoustic-equipment-enclosure.jpg", "building-acoustic-barrier-ventilation.jpg", "generator-acoustic-enclosure-system.jpg", "generator-enclosure-industrial-yard.jpg", "industrial-acoustic-ceiling-framework.jpg", "industrial-ceiling-acoustic-panels.jpg", "pool-equipment-acoustic-decking.jpg", "residential-generator-acoustic-housing.jpg", "stairwell-acoustic-wall-panels.jpg", "wooden-acoustic-barrier-fence.jpg"];
+export const metadata: Metadata = {
+  title: "Industrial Noise Control & Acoustic Treatment | Cape Town",
+  description: "Industrial acoustic treatment, machinery noise enclosures and noise barrier solutions across Cape Town and South Africa. Specialist solutions for factories, warehouses and mechanical plant.",
+  alternates: { canonical: "https://supersoniccustoms.co.za/gallery/industrial-machinery" },
+  openGraph: {
+    title: "Industrial Noise Control Gallery | Supersonic Customs Cape Town",
+    description: "Industrial acoustic treatment and noise control solutions across Cape Town. Generator enclosures, machinery acoustic panels and noise barriers.",
+    url: "https://supersoniccustoms.co.za/gallery/industrial-machinery",
+  },
+};
+
+const images = ["compressor-acoustic.jpg", "factory-acoustic.jpg", "generator-enclosure.jpg", "industrial-acoustic.jpg", "industrial-noise-barrier.jpg", "industrial-noise-control.jpg", "industrial-sound-panels.jpg", "machinery-acoustic-enclosure.jpg", "warehouse-acoustic.jpg"];
 
 export default function IndustrialMachineryPage() {
   return (
     <GalleryHoldingPage
       title="Industrial & Machinery"
-      description="Generator enclosures, noise barriers and industrial acoustic solutions."
+      description="Specialist noise control for industrial environments, machinery and mechanical plant across South Africa."
       images={images}
       folder="industrial-machinery"
     />

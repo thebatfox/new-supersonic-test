@@ -1,8 +1,22 @@
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 import { ArrowLeft, MapPin, Calendar, Award, Target, Lightbulb, CheckCircle } from "lucide-react";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About Us | Soundproofing Specialists Cape Town",
+  description: "Supersonic Customs is Cape Town's specialist acoustic and soundproofing company, based in Paarden Eiland. Over 10 years of experience designing and installing bespoke acoustic solutions for residential, commercial and industrial clients across South Africa.",
+  alternates: {
+    canonical: "https://supersoniccustoms.co.za/about",
+  },
+  openGraph: {
+    title: "About Supersonic Customs | Soundproofing Specialists Cape Town",
+    description: "Cape Town's specialist acoustic and soundproofing company. Based in Paarden Eiland with our own fabrication workshop. Serving South Africa and beyond since 2018.",
+    url: "https://supersoniccustoms.co.za/about",
+  },
+};
 
 export default function AboutPage() {
   return (
