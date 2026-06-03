@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import GalleryHoldingPage from '@/components/GalleryHoldingPage';
 
 export const metadata: Metadata = {
-  title: "Commercial Acoustic Treatment Gallery | Offices & Workspaces Cape Town",
-  description: "Acoustic treatment and soundproofing solutions for commercial offices and workspaces across Cape Town. View our completed projects featuring bespoke acoustic panels and noise control installations.",
+  title: "Commercial Acoustic Treatment Gallery | Offices & Workspaces South Africa",
+  description: "Acoustic treatment and soundproofing solutions for commercial offices and workspaces across South Africa. View our completed projects featuring bespoke acoustic panels and noise control installations.",
   alternates: { canonical: "https://supersoniccustoms.co.za/gallery/commercial-spaces" },
   openGraph: {
-    title: "Commercial Spaces Gallery | Supersonic Customs Cape Town",
-    description: "Acoustic treatment for offices and commercial spaces in Cape Town. Bespoke solutions designed around your brand and acoustic requirements.",
+    title: "Commercial Spaces Gallery | Supersonic Customs South Africa",
+    description: "Acoustic treatment for offices and commercial spaces across South Africa. Bespoke solutions designed around your brand and acoustic requirements.",
     url: "https://supersoniccustoms.co.za/gallery/commercial-spaces",
   },
 };
