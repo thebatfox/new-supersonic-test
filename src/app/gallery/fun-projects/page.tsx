@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
 };
 
-const images = ["bespoke-acoustic.jpg", "creative-acoustic.jpg", "custom-acoustic-feature.jpg", "custom-installation.jpg", "fun-acoustic-project.jpg", "home-acoustic-treatment.jpg", "home-studio.jpg", "unique-acoustic-design.jpg"];
+const images = ["acoustic-component-rc-car-demonstration.jpg", "euphoria-communication-truck-display.jpg", "mobile-communication-truck-setup.jpg"];
 
 export default function FunProjectsPage() {
   return (
