@@ -6,14 +6,14 @@ import { ArrowLeft, MapPin, Calendar, Award, Target, Lightbulb, CheckCircle } fr
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Us | Soundproofing Specialists Cape Town",
-  description: "Supersonic Customs is Cape Town's specialist acoustic and soundproofing company, based in Paarden Eiland. Over 10 years of experience designing and installing bespoke acoustic solutions for residential, commercial and industrial clients across South Africa.",
+  title: "About Us | Soundproofing Specialists South Africa",
+  description: "Supersonic Customs is South Africa's specialist acoustic and soundproofing company, based in Cape Town. Over 10 years of experience designing and installing bespoke acoustic solutions for residential, commercial and industrial clients nationwide.",
   alternates: {
     canonical: "https://supersoniccustoms.co.za/about",
   },
   openGraph: {
-    title: "About Supersonic Customs | Soundproofing Specialists Cape Town",
-    description: "Cape Town's specialist acoustic and soundproofing company. Based in Paarden Eiland with our own fabrication workshop. Serving South Africa and beyond since 2018.",
+    title: "About Supersonic Customs | Soundproofing Specialists South Africa",
+    description: "South Africa's specialist acoustic and soundproofing company. Based in Cape Town with our own fabrication workshop, serving Johannesburg, Durban, Pretoria and nationwide since 2018.",
     url: "https://supersoniccustoms.co.za/about",
   },
 };
