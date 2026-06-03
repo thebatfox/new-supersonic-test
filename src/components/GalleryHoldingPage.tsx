@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
 
@@ -12,92 +12,175 @@ function titleFromFilename(filename: string): string {
     .join(' ');
 }
 
+// Map filename keywords to work type tags
+function tagsFromFilename(filename: string): string[] {
+  const f = filename.toLowerCase();
+  const tags: string[] = [];
+
+  if (/soundproof|barrier|enclosure|isolation|seal|noise/.test(f)) tags.push('Soundproofing');
+  if (/acoustic|panel|baffle|absorption|treatment|fabric|mineral|wool/.test(f)) tags.push('Acoustic Treatment');
+  if (/ceiling|suspended|baffles|overhead|framework/.test(f)) tags.push('Ceiling Systems');
+  if (/dj.booth|dj-booth|booth/.test(f)) tags.push('DJ Booths');
+  if (/led|lighting|neon|light/.test(f)) tags.push('Lighting & AV');
+  if (/install|installation|work|progress|team|technician|cutting|welding|fabricat/.test(f)) tags.push('Installation');
+  if (/generator|enclosure|industrial|machinery|equipment/.test(f)) tags.push('Industrial');
+  if (/living.wall|living-wall|plant|green/.test(f)) tags.push('Living Walls');
+  if (/carpentry|joinery|wooden|timber|slat|wood/.test(f)) tags.push('Carpentry');
+  if (/vip|lounge|premium|luxury|elite/.test(f)) tags.push('VIP Spaces');
+
+  // Always have at least one tag
+  if (tags.length === 0) tags.push('Acoustic Treatment');
+  return tags;
+}
+
 interface GalleryPageProps {
   title: string;
   description: string;
-  images: string[]; // just the filenames, e.g. 'halo-nightclub-main-floor.jpg'
-  folder: string;   // e.g. 'night-clubs'
+  images: string[];
+  folder: string;
 }
 
 export default function GalleryHoldingPage({ title, description, images, folder }: GalleryPageProps) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [activeTag, setActiveTag] = useState('All');
+
+  // Build tag list from all images
+  const allTags = useMemo(() => {
+    const tagSet = new Set<string>();
+    images.forEach(img => tagsFromFilename(img).forEach(t => tagSet.add(t)));
+    return ['All', ...Array.from(tagSet).sort()];
+  }, [images]);
+
+  // Filter images by tag
+  const filtered = useMemo(() => {
+    if (activeTag === 'All') return images;
+    return images.filter(img => tagsFromFilename(img).includes(activeTag));
+  }, [images, activeTag]);
 
   const openLightbox = (index: number) => setLightboxIndex(index);
   const closeLightbox = () => setLightboxIndex(null);
-  const prev = () => setLightboxIndex(i => (i !== null ? (i - 1 + images.length) % images.length : null));
-  const next = () => setLightboxIndex(i => (i !== null ? (i + 1) % images.length : null));
+  const prev = () => setLightboxIndex(i => (i !== null ? (i - 1 + filtered.length) % filtered.length : null));
+  const next = () => setLightboxIndex(i => (i !== null ? (i + 1) % filtered.length : null));
 
   return (
     <div className="min-h-screen bg-gray-100">
+
       {/* Header */}
-      <div className="bg-white border-b border-gray-200 py-6 px-6">
+      <div className="bg-white border-b border-gray-200 py-8 px-6">
         <div className="max-w-7xl mx-auto">
-          <Link href="/#gallery" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-4 transition-colors">
+          <Link href="/#gallery" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-5 transition-colors text-sm">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Gallery
           </Link>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{title}</h1>
-          <p className="text-gray-500">{description}</p>
-          <p className="text-gray-500 text-sm mt-1">{images.length} photos</p>
+          <p className="text-gray-500 mb-1">{description}</p>
+          <p className="text-gray-400 text-sm">{filtered.length} of {images.length} photos</p>
         </div>
       </div>
 
+      {/* Tag Filter Bar */}
+      {allTags.length > 2 && (
+        <div className="bg-white border-b border-gray-200 sticky top-0 z-10">
+          <div className="max-w-7xl mx-auto px-6 py-3 flex flex-wrap gap-2">
+            {allTags.map(tag => (
+              <button
+                key={tag}
+                onClick={() => setActiveTag(tag)}
+                className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
+                  activeTag === tag
+                    ? 'bg-blue-500 text-white shadow-sm'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
+              >
+                {tag}
+                {tag !== 'All' && (
+                  <span className={`ml-1.5 text-xs ${activeTag === tag ? 'text-blue-100' : 'text-gray-400'}`}>
+                    {images.filter(img => tagsFromFilename(img).includes(tag)).length}
+                  </span>
+                )}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Masonry Grid */}
       <div className="max-w-7xl mx-auto px-6 py-10">
-        <div className="columns-2 md:columns-3 lg:columns-4 gap-4">
-          {images.map((filename, index) => (
-            <div
-              key={filename}
-              className="break-inside-avoid group relative cursor-pointer rounded-2xl overflow-hidden bg-white mb-4"
-              onClick={() => openLightbox(index)}
-            >
-              <img
-                src={`/gallery/${folder}/${filename}`}
-                alt={titleFromFilename(filename)}
-                className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gray-100/0 group-hover:bg-gray-100/50 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                <ZoomIn className="w-8 h-8 text-gray-900" />
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <p className="text-gray-900 text-xs font-medium truncate">{titleFromFilename(filename)}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        {filtered.length === 0 ? (
+          <div className="text-center py-20 text-gray-400">No images in this category yet.</div>
+        ) : (
+          <div className="columns-2 md:columns-3 lg:columns-4 gap-4">
+            {filtered.map((filename, index) => {
+              const tags = tagsFromFilename(filename);
+              return (
+                <div
+                  key={filename}
+                  className="break-inside-avoid group relative cursor-pointer rounded-xl overflow-hidden bg-white mb-4 shadow-sm hover:shadow-md transition-shadow duration-300"
+                  onClick={() => openLightbox(index)}
+                >
+                  <img
+                    src={`/gallery/${folder}/${filename}`}
+                    alt={titleFromFilename(filename)}
+                    className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <ZoomIn className="w-8 h-8 text-white drop-shadow" />
+                  </div>
+                  {/* Tags on hover */}
+                  <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <div className="flex flex-wrap gap-1">
+                      {tags.map(tag => (
+                        <span key={tag} className="text-xs bg-blue-500/80 text-white px-2 py-0.5 rounded-full font-medium">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
 
       {/* Lightbox */}
       {lightboxIndex !== null && (
         <div
-          className="fixed inset-0 z-50 bg-gray-100/95 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
           onClick={closeLightbox}
         >
-          <button className="absolute top-4 right-4 text-gray-900 hover:text-gray-600 z-10" onClick={closeLightbox}>
+          <button className="absolute top-4 right-4 text-white/70 hover:text-white z-10 transition-colors" onClick={closeLightbox}>
             <X className="w-8 h-8" />
           </button>
           <button
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-900 hover:text-blue-400 z-10 bg-gray-100/50 rounded-full p-2"
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white z-10 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-all"
             onClick={(e) => { e.stopPropagation(); prev(); }}
           >
-            <ChevronLeft className="w-8 h-8" />
+            <ChevronLeft className="w-7 h-7" />
           </button>
           <button
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-900 hover:text-blue-400 z-10 bg-gray-100/50 rounded-full p-2"
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white z-10 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-all"
             onClick={(e) => { e.stopPropagation(); next(); }}
           >
-            <ChevronRight className="w-8 h-8" />
+            <ChevronRight className="w-7 h-7" />
           </button>
           <div className="max-w-5xl max-h-[90vh] relative" onClick={e => e.stopPropagation()}>
             <img
-              src={`/gallery/${folder}/${images[lightboxIndex]}`}
-              alt={titleFromFilename(images[lightboxIndex])}
+              src={`/gallery/${folder}/${filtered[lightboxIndex]}`}
+              alt={titleFromFilename(filtered[lightboxIndex])}
               className="max-h-[80vh] max-w-full object-contain rounded-xl"
             />
-            <div className="text-center mt-3">
-              <span className="text-gray-900 font-medium">{titleFromFilename(images[lightboxIndex])}</span>
-              <span className="text-gray-500 text-sm ml-3">{lightboxIndex + 1} / {images.length}</span>
+            <div className="flex items-center justify-between mt-3 px-1">
+              <div className="flex flex-wrap gap-1">
+                {tagsFromFilename(filtered[lightboxIndex]).map(tag => (
+                  <span key={tag} className="text-xs bg-blue-500/80 text-white px-2 py-0.5 rounded-full font-medium">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <span className="text-white/50 text-sm">{lightboxIndex + 1} / {filtered.length}</span>
             </div>
           </div>
         </div>
