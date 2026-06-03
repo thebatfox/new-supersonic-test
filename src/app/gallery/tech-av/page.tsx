@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
 };
 
-const images = ["av-installation.jpg", "broadcast-acoustic.jpg", "control-room.jpg", "home-cinema.jpg", "home-studio-acoustic.jpg", "podcast-studio.jpg", "recording-studio.jpg", "recording-studio-acoustic.jpg", "studio-acoustic-panels.jpg", "studio-treatment.jpg"];
+const images = ["audio-equipment-backend.jpg", "audio-equipment-installation.jpg", "av-system-setup.jpg", "dj-booth-audio-installation.jpg", "dj-booth-professional-setup.jpg", "funktion-one-amplifier-rack.jpg", "supersonic-dj-booth-branded.jpg"];
 
 export default function TechAVPage() {
   return (
