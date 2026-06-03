@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import GalleryHoldingPage from '@/components/GalleryHoldingPage';
 
 export const metadata: Metadata = {
-  title: "Acoustic Panels Gallery | Fabric-Wrapped Panels Cape Town",
-  description: "View our acoustic panel installations across Cape Town. Custom fabric-wrapped panels, ceiling baffles and decorative acoustic solutions manufactured in our Paarden Eiland workshop.",
+  title: "Acoustic Panels Gallery | Fabric-Wrapped Panels South Africa",
+  description: "View our acoustic panel installations across South Africa. Custom fabric-wrapped panels, ceiling baffles and decorative acoustic solutions manufactured in our Cape Town workshop.",
   alternates: { canonical: "https://supersoniccustoms.co.za/gallery/acoustic-panels" },
   openGraph: {
-    title: "Acoustic Panels Gallery | Supersonic Customs Cape Town",
-    description: "Custom acoustic panel installations across Cape Town. Fabric-wrapped panels designed and manufactured in our own workshop.",
+    title: "Acoustic Panels Gallery | Supersonic Customs South Africa",
+    description: "Custom acoustic panel installations across South Africa. Fabric-wrapped panels designed and manufactured in our Cape Town workshop.",
     url: "https://supersoniccustoms.co.za/gallery/acoustic-panels",
   },
 };
