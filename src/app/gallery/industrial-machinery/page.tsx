@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import GalleryHoldingPage from '@/components/GalleryHoldingPage';
 
 export const metadata: Metadata = {
-  title: "Industrial Noise Control & Acoustic Treatment | Cape Town",
-  description: "Industrial acoustic treatment, machinery noise enclosures and noise barrier solutions across Cape Town and South Africa. Specialist solutions for factories, warehouses and mechanical plant.",
+  title: "Industrial Noise Control & Acoustic Treatment | South Africa",
+  description: "Industrial acoustic treatment, machinery noise enclosures and noise barrier solutions across South Africa. Specialist solutions for factories, warehouses and mechanical plant.",
   alternates: { canonical: "https://supersoniccustoms.co.za/gallery/industrial-machinery" },
   openGraph: {
-    title: "Industrial Noise Control Gallery | Supersonic Customs Cape Town",
-    description: "Industrial acoustic treatment and noise control solutions across Cape Town. Generator enclosures, machinery acoustic panels and noise barriers.",
+    title: "Industrial Noise Control Gallery | Supersonic Customs South Africa",
+    description: "Industrial acoustic treatment and noise control solutions across South Africa. Generator enclosures, machinery acoustic panels and noise barriers.",
     url: "https://supersoniccustoms.co.za/gallery/industrial-machinery",
   },
 };
