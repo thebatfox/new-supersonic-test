@@ -11,15 +11,11 @@ export const metadata: Metadata = {
     url: "https://supersoniccustoms.co.za/gallery/industrial-machinery",
   },
 };
-
-const images = ["acoustic-equipment-enclosure.jpg", "building-acoustic-barrier-ventilation.jpg", "generator-acoustic-enclosure-system.jpg", "generator-enclosure-industrial-yard.jpg", "industrial-acoustic-ceiling-framework.jpg", "industrial-ceiling-acoustic-panels.jpg", "pool-equipment-acoustic-decking.jpg", "residential-generator-acoustic-housing.jpg", "stairwell-acoustic-wall-panels.jpg", "wooden-acoustic-barrier-fence.jpg"];
-
 export default function IndustrialMachineryPage() {
   return (
     <GalleryHoldingPage
       title="Industrial & Machinery"
       description="Specialist noise control for industrial environments, machinery and mechanical plant across South Africa."
-      images={images}
       folder="industrial-machinery"
     />
   );
