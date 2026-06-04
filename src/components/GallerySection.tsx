@@ -16,6 +16,7 @@ function titleFromFilename(filename: string): string {
 const categories = [
   { id: 'night-clubs', label: 'Night Clubs' },
   { id: 'acoustic-panels', label: 'Acoustic Panels' },
+  { id: 'acoustic-ceilings-wallpaper', label: 'Acoustic Ceilings & Wallpaper' },
   { id: 'commercial-spaces', label: 'Commercial Spaces' },
   { id: 'restaurants', label: 'Restaurants' },
   { id: 'industrial-machinery', label: 'Industrial & Machinery' },
