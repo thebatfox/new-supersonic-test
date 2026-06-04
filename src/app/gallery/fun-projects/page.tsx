@@ -11,15 +11,11 @@ export const metadata: Metadata = {
     url: "https://supersoniccustoms.co.za/gallery/fun-projects",
   },
 };
-
-const images = ["acoustic-component-rc-car-demonstration.jpg", "euphoria-communication-truck-display.jpg", "mobile-communication-truck-setup.jpg"];
-
 export default function FunProjectsPage() {
   return (
     <GalleryHoldingPage
       title="Fun & Unique Projects"
       description="Creative and bespoke acoustic installations — because every project is different."
-      images={images}
       folder="fun-projects"
     />
   );
