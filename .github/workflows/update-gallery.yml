@@ -1,0 +1,38 @@
+name: Update Gallery Manifests
+
+on:
+  push:
+    paths:
+      - 'public/gallery/**'
+
+jobs:
+  update-manifests:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate gallery manifests
+        run: |
+          python3 -c "
+import os, json
+folders = ['acoustic-panels','commercial-spaces','fun-projects','industrial-machinery','night-clubs','restaurants','schools-worship','tech-av']
+extensions = {'.jpg','.jpeg','.png','.webp'}
+for folder in folders:
+  path = 'public/gallery/' + folder
+  if not os.path.isdir(path): continue
+  files = sorted([f for f in os.listdir(path) if os.path.splitext(f)[1].lower() in extensions])
+  with open(path + '/images.json', 'w') as mf: json.dump(files, mf, indent=2)
+  print(folder + ': ' + str(len(files)) + ' images')
+"
+
+      - name: Commit manifests
+        run: |
+          git config user.name "Supersonic Deploy"
+          git config user.email "deploy@supersoniccustoms.co.za"
+          git add public/gallery/**/images.json
+          git diff --staged --quiet || git commit -m "Auto: update gallery manifests"
+          git push
