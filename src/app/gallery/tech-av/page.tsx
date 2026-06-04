@@ -11,15 +11,11 @@ export const metadata: Metadata = {
     url: "https://supersoniccustoms.co.za/gallery/tech-av",
   },
 };
-
-const images = ["audio-equipment-backend.jpg", "audio-equipment-installation.jpg", "av-system-setup.jpg", "dj-booth-audio-installation.jpg", "dj-booth-professional-setup.jpg", "funktion-one-amplifier-rack.jpg", "supersonic-dj-booth-branded.jpg"];
-
 export default function TechAVPage() {
   return (
     <GalleryHoldingPage
       title="Tech & AV Installations"
       description="Recording studios, broadcast facilities and AV technology installations across South Africa."
-      images={images}
       folder="tech-av"
     />
   );
