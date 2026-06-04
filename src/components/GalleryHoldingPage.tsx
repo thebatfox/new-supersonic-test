@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
 
@@ -12,11 +12,9 @@ function titleFromFilename(filename: string): string {
     .join(' ');
 }
 
-// Map filename keywords to work type tags
 function tagsFromFilename(filename: string): string[] {
   const f = filename.toLowerCase();
   const tags: string[] = [];
-
   if (/soundproof|barrier|enclosure|isolation|seal|noise/.test(f)) tags.push('Soundproofing');
   if (/acoustic|panel|baffle|absorption|treatment|fabric|mineral|wool/.test(f)) tags.push('Acoustic Treatment');
   if (/ceiling|suspended|baffles|overhead|framework/.test(f)) tags.push('Ceiling Systems');
@@ -27,8 +25,6 @@ function tagsFromFilename(filename: string): string[] {
   if (/living.wall|living-wall|plant|green/.test(f)) tags.push('Living Walls');
   if (/carpentry|joinery|wooden|timber|slat|wood/.test(f)) tags.push('Carpentry');
   if (/vip|lounge|premium|luxury|elite/.test(f)) tags.push('VIP Spaces');
-
-  // Always have at least one tag
   if (tags.length === 0) tags.push('Acoustic Treatment');
   return tags;
 }
@@ -36,22 +32,30 @@ function tagsFromFilename(filename: string): string[] {
 interface GalleryPageProps {
   title: string;
   description: string;
-  images: string[];
   folder: string;
+  images?: string[];
 }
 
-export default function GalleryHoldingPage({ title, description, images, folder }: GalleryPageProps) {
+export default function GalleryHoldingPage({ title, description, folder, images: staticImages }: GalleryPageProps) {
+  const [images, setImages] = useState<string[]>(staticImages || []);
+  const [loading, setLoading] = useState(!staticImages);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [activeTag, setActiveTag] = useState('All');
 
-  // Build tag list from all images
+  useEffect(() => {
+    if (staticImages) return;
+    fetch(`/gallery/${folder}/images.json`)
+      .then(r => r.json())
+      .then(data => { setImages(data); setLoading(false); })
+      .catch(() => setLoading(false));
+  }, [folder, staticImages]);
+
   const allTags = useMemo(() => {
     const tagSet = new Set<string>();
     images.forEach(img => tagsFromFilename(img).forEach(t => tagSet.add(t)));
     return ['All', ...Array.from(tagSet).sort()];
   }, [images]);
 
-  // Filter images by tag
   const filtered = useMemo(() => {
     if (activeTag === 'All') return images;
     return images.filter(img => tagsFromFilename(img).includes(activeTag));
@@ -65,7 +69,6 @@ export default function GalleryHoldingPage({ title, description, images, folder 
   return (
     <div className="min-h-screen bg-gray-100">
 
-      {/* Header */}
       <div className="bg-white border-b border-gray-200 py-8 px-6">
         <div className="max-w-7xl mx-auto">
           <Link href="/#gallery" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-5 transition-colors text-sm">
@@ -74,12 +77,11 @@ export default function GalleryHoldingPage({ title, description, images, folder 
           </Link>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{title}</h1>
           <p className="text-gray-500 mb-1">{description}</p>
-          <p className="text-gray-400 text-sm">{filtered.length} of {images.length} photos</p>
+          {!loading && <p className="text-gray-400 text-sm">{filtered.length} of {images.length} photos</p>}
         </div>
       </div>
 
-      {/* Tag Filter Bar */}
-      {allTags.length > 2 && (
+      {!loading && allTags.length > 2 && (
         <div className="bg-white border-b border-gray-200 sticky top-0 z-10">
           <div className="max-w-7xl mx-auto px-6 py-3 flex flex-wrap gap-2">
             {allTags.map(tag => (
@@ -104,10 +106,11 @@ export default function GalleryHoldingPage({ title, description, images, folder 
         </div>
       )}
 
-      {/* Masonry Grid */}
       <div className="max-w-7xl mx-auto px-6 py-10">
-        {filtered.length === 0 ? (
-          <div className="text-center py-20 text-gray-400">No images in this category yet.</div>
+        {loading ? (
+          <div className="text-center py-20 text-gray-400">Loading gallery...</div>
+        ) : filtered.length === 0 ? (
+          <div className="text-center py-20 text-gray-400">No images yet — check back soon.</div>
         ) : (
           <div className="columns-2 md:columns-3 lg:columns-4 gap-4">
             {filtered.map((filename, index) => {
@@ -124,11 +127,9 @@ export default function GalleryHoldingPage({ title, description, images, folder 
                     className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
-                  {/* Hover overlay */}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
                     <ZoomIn className="w-8 h-8 text-white drop-shadow" />
                   </div>
-                  {/* Tags on hover */}
                   <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                     <div className="flex flex-wrap gap-1">
                       {tags.map(tag => (
@@ -145,7 +146,6 @@ export default function GalleryHoldingPage({ title, description, images, folder 
         )}
       </div>
 
-      {/* Lightbox */}
       {lightboxIndex !== null && (
         <div
           className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
