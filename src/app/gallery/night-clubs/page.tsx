@@ -1,22 +1,29 @@
 import type { Metadata } from 'next';
+import { promises as fs } from 'fs';
+import path from 'path';
 import GalleryHoldingPage from '@/components/GalleryHoldingPage';
 
 export const metadata: Metadata = {
-  title: "Nightclub Soundproofing & Acoustic Treatment | South Africa",
-  description: "Specialist nightclub soundproofing and acoustic treatment installations across South Africa. Noise containment, room-in-room construction and custom acoustic fit-outs for entertainment venues.",
-  alternates: { canonical: "https://supersoniccustoms.co.za/gallery/night-clubs" },
-  openGraph: {
-    title: "Nightclub Soundproofing Gallery | Supersonic Customs South Africa",
-    description: "Specialist soundproofing and acoustic treatment for nightclubs and entertainment venues across South Africa.",
-    url: "https://supersoniccustoms.co.za/gallery/night-clubs",
-  },
+  title: "Night Clubs & Entertainment | Supersonic Customs South Africa",
+  description: "Specialist soundproofing and acoustic fit-outs for entertainment venues across South Africa.",
 };
-export default function NightClubsPage() {
+
+export default async function GalleryPage() {
+  let images: string[] = [];
+  try {
+    const dir = path.join(process.cwd(), 'public', 'gallery', 'night-clubs');
+    const files = await fs.readdir(dir);
+    images = files
+      .filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f))
+      .sort();
+  } catch {}
+
   return (
     <GalleryHoldingPage
       title="Night Clubs & Entertainment"
       description="Specialist soundproofing and acoustic fit-outs for entertainment venues across South Africa."
       folder="night-clubs"
+      images={images}
     />
   );
 }
