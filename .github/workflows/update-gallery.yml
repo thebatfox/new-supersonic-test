@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'public/gallery/**'
+  workflow_dispatch:
 
 jobs:
   update-manifests:
