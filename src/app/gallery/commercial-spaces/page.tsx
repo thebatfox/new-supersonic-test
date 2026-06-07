@@ -1,22 +1,29 @@
 import type { Metadata } from 'next';
+import { promises as fs } from 'fs';
+import path from 'path';
 import GalleryHoldingPage from '@/components/GalleryHoldingPage';
 
 export const metadata: Metadata = {
-  title: "Commercial Acoustic Treatment Gallery | Offices & Workspaces South Africa",
-  description: "Acoustic treatment and soundproofing solutions for commercial offices and workspaces across South Africa. View our completed projects featuring bespoke acoustic panels and noise control installations.",
-  alternates: { canonical: "https://supersoniccustoms.co.za/gallery/commercial-spaces" },
-  openGraph: {
-    title: "Commercial Spaces Gallery | Supersonic Customs South Africa",
-    description: "Acoustic treatment for offices and commercial spaces across South Africa. Bespoke solutions designed around your brand and acoustic requirements.",
-    url: "https://supersoniccustoms.co.za/gallery/commercial-spaces",
-  },
+  title: "Commercial Spaces | Supersonic Customs South Africa",
+  description: "Acoustic treatment and soundproofing solutions for offices and commercial spaces across South Africa.",
 };
-export default function CommercialSpacesPage() {
+
+export default async function GalleryPage() {
+  let images: string[] = [];
+  try {
+    const dir = path.join(process.cwd(), 'public', 'gallery', 'commercial-spaces');
+    const files = await fs.readdir(dir);
+    images = files
+      .filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f))
+      .sort();
+  } catch {}
+
   return (
     <GalleryHoldingPage
       title="Commercial Spaces"
-      description="Acoustic treatment and soundproofing solutions for offices, boardrooms and commercial environments."
+      description="Acoustic treatment and soundproofing solutions for offices and commercial spaces across South Africa."
       folder="commercial-spaces"
+      images={images}
     />
   );
 }
