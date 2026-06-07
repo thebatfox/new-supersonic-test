@@ -45,7 +45,7 @@ export default function GalleryHoldingPage({ title, description, folder, images:
 
   useEffect(() => {
     if (staticImages) return;
-    fetch(`/gallery/${folder}/images.json`)
+    fetch(`/gallery/${folder}/images.json?v=${Date.now()}`)
       .then(r => r.json())
       .then(data => { setImages(data); setLoading(false); })
       .catch(() => setLoading(false));
