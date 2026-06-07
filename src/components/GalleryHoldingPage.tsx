@@ -110,7 +110,13 @@ export default function GalleryHoldingPage({ title, description, folder, images:
         {loading ? (
           <div className="text-center py-20 text-gray-400">Loading gallery...</div>
         ) : filtered.length === 0 ? (
-          <div className="text-center py-20 text-gray-400">No images yet — check back soon.</div>
+          <div className="text-center py-24">
+          <div className="inline-flex flex-col items-center gap-4">
+            <div className="text-5xl">🚧</div>
+            <h3 className="text-xl font-semibold text-gray-700">Gallery Under Construction</h3>
+            <p className="text-gray-400 max-w-sm">We are currently updating this gallery with fresh project photos. Please check back soon.</p>
+          </div>
+        </div>
         ) : (
           <div className="columns-2 md:columns-3 lg:columns-4 gap-4">
             {filtered.map((filename, index) => {
