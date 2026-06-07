@@ -40,7 +40,7 @@ export default function GalleryHoldingPage({ title, description, folder, images:
   const [images, setImages] = useState<string[]>(staticImages || []);
   const [loading, setLoading] = useState(!staticImages);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-  const [showPopup, setShowPopup] = useState(true);
+  const [showPopup, setShowPopup] = useState((staticImages || []).length === 0);
   const [activeTag, setActiveTag] = useState('All');
 
   useEffect(() => {
@@ -111,24 +111,7 @@ export default function GalleryHoldingPage({ title, description, folder, images:
         {loading ? (
           <div className="text-center py-20 text-gray-400">Loading gallery...</div>
         ) : filtered.length === 0 ? (
-          <div className="flex justify-center py-24 px-4">
-          <div className="relative bg-[#1A3D8F] text-white rounded-2xl px-10 py-12 max-w-lg w-full text-center shadow-2xl border-4 border-[#00B4D8] overflow-hidden">
-            {/* Stripes */}
-            <div className="absolute inset-0 opacity-5" style={{backgroundImage: "repeating-linear-gradient(45deg, #fff 0px, #fff 10px, transparent 10px, transparent 20px)"}} />
-            {/* Icon */}
-            <div className="text-6xl mb-5">🚧</div>
-            {/* Heading */}
-            <h3 className="text-2xl font-bold tracking-wide mb-3 text-[#00B4D8] uppercase">Under Construction</h3>
-            <p className="text-white/80 text-base leading-relaxed mb-6">
-              We are busy updating this gallery with fresh project photos.<br/>
-              Please be patient — it will be worth the wait.
-            </p>
-            {/* Divider */}
-            <div className="w-16 h-1 bg-[#00B4D8] rounded mx-auto mb-5" />
-            {/* Sign off */}
-            <p className="text-white/50 text-sm">— The Supersonic Customs Team</p>
-          </div>
-        </div>
+          <div className="text-center py-20 text-gray-400">No photos in this category yet.</div>
         ) : (
           <div className="columns-2 md:columns-3 lg:columns-4 gap-4">
             {filtered.map((filename, index) => {
