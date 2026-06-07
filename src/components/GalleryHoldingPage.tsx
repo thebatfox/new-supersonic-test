@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft, X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
@@ -34,23 +34,16 @@ interface GalleryPageProps {
   title: string;
   description: string;
   folder: string;
-  images?: string[];
+  images: string[];
 }
 
-export default function GalleryHoldingPage({ title, description, folder, images: staticImages }: GalleryPageProps) {
-  const [images, setImages] = useState<string[]>(staticImages || []);
-  const [loading, setLoading] = useState(!staticImages);
+export default function GalleryHoldingPage({ title, description, folder, images }: GalleryPageProps) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-  const [showPopup, setShowPopup] = useState((staticImages || []).length === 0);
   const [activeTag, setActiveTag] = useState('All');
+  const [popupDismissed, setPopupDismissed] = useState(false);
 
-  useEffect(() => {
-    if (staticImages) return;
-    fetch(`/gallery/${folder}/images.json?v=${Date.now()}`)
-      .then(r => r.json())
-      .then(data => { setImages(data); setLoading(false); })
-      .catch(() => setLoading(false));
-  }, [folder, staticImages]);
+  const isEmpty = images.length === 0;
+  const showPopup = isEmpty && !popupDismissed;
 
   const allTags = useMemo(() => {
     const tagSet = new Set<string>();
@@ -71,6 +64,7 @@ export default function GalleryHoldingPage({ title, description, folder, images:
   return (
     <div className="min-h-screen bg-gray-100">
 
+      {/* Header */}
       <div className="bg-white border-b border-gray-200 py-8 px-6">
         <div className="max-w-7xl mx-auto">
           <Link href="/#gallery" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-5 transition-colors text-sm">
@@ -79,11 +73,12 @@ export default function GalleryHoldingPage({ title, description, folder, images:
           </Link>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{title}</h1>
           <p className="text-gray-500 mb-1">{description}</p>
-          {!loading && <p className="text-gray-400 text-sm">{filtered.length} of {images.length} photos</p>}
+          <p className="text-gray-400 text-sm">{filtered.length} of {images.length} photos</p>
         </div>
       </div>
 
-      {!loading && allTags.length > 2 && (
+      {/* Tag Filter Bar */}
+      {allTags.length > 2 && (
         <div className="bg-white border-b border-gray-200 sticky top-0 z-10">
           <div className="max-w-7xl mx-auto px-6 py-3 flex flex-wrap gap-2">
             {allTags.map(tag => (
@@ -108,12 +103,11 @@ export default function GalleryHoldingPage({ title, description, folder, images:
         </div>
       )}
 
+      {/* Gallery Grid */}
       <div className="max-w-7xl mx-auto px-6 py-10">
-        {loading ? (
-          <div className="text-center py-20 text-gray-400">Loading gallery...</div>
-        ) : filtered.length === 0 ? (
+        {filtered.length === 0 && !isEmpty ? (
           <div className="text-center py-20 text-gray-400">No photos in this category yet.</div>
-        ) : (
+        ) : !isEmpty ? (
           <div className="columns-2 md:columns-3 lg:columns-4 gap-4">
             {filtered.map((filename, index) => {
               const tags = tagsFromFilename(filename);
@@ -145,14 +139,12 @@ export default function GalleryHoldingPage({ title, description, folder, images:
               );
             })}
           </div>
-        )}
+        ) : null}
       </div>
 
+      {/* Lightbox */}
       {lightboxIndex !== null && (
-        <div
-          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
-          onClick={closeLightbox}
-        >
+        <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4" onClick={closeLightbox}>
           <button className="absolute top-4 right-4 text-white/70 hover:text-white z-10 transition-colors" onClick={closeLightbox}>
             <X className="w-8 h-8" />
           </button>
@@ -187,9 +179,8 @@ export default function GalleryHoldingPage({ title, description, folder, images:
           </div>
         </div>
       )}
-    </div>
 
-      {/* Under Construction Popup */}
+      {/* Under Construction Popup - only when gallery is empty */}
       {showPopup && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
           <div className="relative bg-[#1A3D8F] text-white rounded-2xl px-10 py-12 max-w-md w-full text-center shadow-2xl border-4 border-[#00B4D8] overflow-hidden">
@@ -206,7 +197,7 @@ export default function GalleryHoldingPage({ title, description, folder, images:
             <div className="w-16 h-1 bg-[#00B4D8] rounded mx-auto mb-6" />
             <p className="text-white/50 text-sm mb-8">— The Supersonic Customs Team</p>
             <button
-              onClick={() => setShowPopup(false)}
+              onClick={() => setPopupDismissed(true)}
               className="bg-[#00B4D8] hover:bg-[#0090b0] text-white font-semibold px-8 py-3 rounded-xl transition-colors duration-200"
             >
               Got it
@@ -214,6 +205,7 @@ export default function GalleryHoldingPage({ title, description, folder, images:
           </div>
         </div>
       )}
+
     </div>
   );
 }
