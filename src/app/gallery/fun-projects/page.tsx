@@ -1,22 +1,29 @@
 import type { Metadata } from 'next';
+import { promises as fs } from 'fs';
+import path from 'path';
 import GalleryHoldingPage from '@/components/GalleryHoldingPage';
 
 export const metadata: Metadata = {
-  title: "Unique & Bespoke Acoustic Projects | South Africa",
-  description: "Unique and creative acoustic projects from Supersonic Customs across South Africa. From home studios and home theatres to bespoke acoustic carpentry and one-of-a-kind installations.",
-  alternates: { canonical: "https://supersoniccustoms.co.za/gallery/fun-projects" },
-  openGraph: {
-    title: "Unique Acoustic Projects Gallery | Supersonic Customs South Africa",
-    description: "Creative and bespoke acoustic installations from South Africa's acoustic specialists. Every project is different.",
-    url: "https://supersoniccustoms.co.za/gallery/fun-projects",
-  },
+  title: "Fun Projects | Supersonic Customs South Africa",
+  description: "Unique and creative acoustic installations from South Africa's acoustic specialists.",
 };
-export default function FunProjectsPage() {
+
+export default async function GalleryPage() {
+  let images: string[] = [];
+  try {
+    const dir = path.join(process.cwd(), 'public', 'gallery', 'fun-projects');
+    const files = await fs.readdir(dir);
+    images = files
+      .filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f))
+      .sort();
+  } catch {}
+
   return (
     <GalleryHoldingPage
-      title="Fun & Unique Projects"
-      description="Creative and bespoke acoustic installations — because every project is different."
+      title="Fun Projects"
+      description="Unique and creative acoustic installations from South Africa's acoustic specialists."
       folder="fun-projects"
+      images={images}
     />
   );
 }
