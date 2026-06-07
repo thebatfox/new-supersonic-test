@@ -1,22 +1,29 @@
 import type { Metadata } from 'next';
+import { promises as fs } from 'fs';
+import path from 'path';
 import GalleryHoldingPage from '@/components/GalleryHoldingPage';
 
 export const metadata: Metadata = {
-  title: "Acoustic Panels Gallery | Fabric-Wrapped Panels South Africa",
-  description: "View our acoustic panel installations across South Africa. Custom fabric-wrapped panels, ceiling baffles and decorative acoustic solutions manufactured in our Cape Town workshop.",
-  alternates: { canonical: "https://supersoniccustoms.co.za/gallery/acoustic-panels" },
-  openGraph: {
-    title: "Acoustic Panels Gallery | Supersonic Customs South Africa",
-    description: "Custom acoustic panel installations across South Africa. Fabric-wrapped panels designed and manufactured in our Cape Town workshop.",
-    url: "https://supersoniccustoms.co.za/gallery/acoustic-panels",
-  },
+  title: "Acoustic Panels | Supersonic Customs South Africa",
+  description: "Custom fabric-wrapped acoustic panels designed and manufactured in our Cape Town workshop. Installed across South Africa.",
 };
-export default function AcousticPanelsPage() {
+
+export default async function GalleryPage() {
+  let images: string[] = [];
+  try {
+    const dir = path.join(process.cwd(), 'public', 'gallery', 'acoustic-panels');
+    const files = await fs.readdir(dir);
+    images = files
+      .filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f))
+      .sort();
+  } catch {}
+
   return (
     <GalleryHoldingPage
       title="Acoustic Panels"
-      description="Custom acoustic panel fabrication and installation for every space."
+      description="Custom fabric-wrapped acoustic panels designed and manufactured in our Cape Town workshop. Installed across South Africa."
       folder="acoustic-panels"
+      images={images}
     />
   );
 }
