@@ -1,22 +1,29 @@
 import type { Metadata } from 'next';
+import { promises as fs } from 'fs';
+import path from 'path';
 import GalleryHoldingPage from '@/components/GalleryHoldingPage';
 
 export const metadata: Metadata = {
-  title: "AV Technology & Recording Studio Installations | South Africa",
-  description: "AV technology supply and installation, recording studio fit-outs and broadcast facility acoustic treatment across South Africa. Expert room-in-room construction and studio design.",
-  alternates: { canonical: "https://supersoniccustoms.co.za/gallery/tech-av" },
-  openGraph: {
-    title: "AV Tech & Studio Installations | Supersonic Customs South Africa",
-    description: "AV technology installations and recording studio acoustic fit-outs across South Africa. Room-in-room construction and bespoke studio design.",
-    url: "https://supersoniccustoms.co.za/gallery/tech-av",
-  },
+  title: "Tech & AV | Supersonic Customs South Africa",
+  description: "AV technology installations and recording studio acoustic fit-outs across South Africa.",
 };
-export default function TechAVPage() {
+
+export default async function GalleryPage() {
+  let images: string[] = [];
+  try {
+    const dir = path.join(process.cwd(), 'public', 'gallery', 'tech-av');
+    const files = await fs.readdir(dir);
+    images = files
+      .filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f))
+      .sort();
+  } catch {}
+
   return (
     <GalleryHoldingPage
-      title="Tech & AV Installations"
-      description="Recording studios, broadcast facilities and AV technology installations across South Africa."
+      title="Tech & AV"
+      description="AV technology installations and recording studio acoustic fit-outs across South Africa."
       folder="tech-av"
+      images={images}
     />
   );
 }
