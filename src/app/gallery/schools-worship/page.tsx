@@ -1,22 +1,29 @@
 import type { Metadata } from 'next';
+import { promises as fs } from 'fs';
+import path from 'path';
 import GalleryHoldingPage from '@/components/GalleryHoldingPage';
 
 export const metadata: Metadata = {
-  title: "School & Worship Acoustic Treatment | South Africa",
-  description: "Acoustic treatment for schools, halls, churches and places of worship across South Africa. Improve speech clarity and reduce noise for better learning and worship environments.",
-  alternates: { canonical: "https://supersoniccustoms.co.za/gallery/schools-worship" },
-  openGraph: {
-    title: "Schools & Worship Acoustic Treatment | Supersonic Customs South Africa",
-    description: "Acoustic solutions for schools, churches and community halls across South Africa. Better acoustics for learning and worship.",
-    url: "https://supersoniccustoms.co.za/gallery/schools-worship",
-  },
+  title: "Schools & Worship | Supersonic Customs South Africa",
+  description: "Acoustic treatment for schools, churches and community halls across South Africa.",
 };
-export default function SchoolsWorshipPage() {
+
+export default async function GalleryPage() {
+  let images: string[] = [];
+  try {
+    const dir = path.join(process.cwd(), 'public', 'gallery', 'schools-worship');
+    const files = await fs.readdir(dir);
+    images = files
+      .filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f))
+      .sort();
+  } catch {}
+
   return (
     <GalleryHoldingPage
-      title="Schools & Places of Worship"
-      description="Acoustic treatment for better learning and worship environments across South Africa."
+      title="Schools & Worship"
+      description="Acoustic treatment for schools, churches and community halls across South Africa."
       folder="schools-worship"
+      images={images}
     />
   );
 }
