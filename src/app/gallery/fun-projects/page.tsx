@@ -1,6 +1,4 @@
 import type { Metadata } from 'next';
-import { promises as fs } from 'fs';
-import path from 'path';
 import GalleryHoldingPage from '@/components/GalleryHoldingPage';
 
 export const metadata: Metadata = {
@@ -8,16 +6,9 @@ export const metadata: Metadata = {
   description: "Unique and creative acoustic installations from South Africa's acoustic specialists.",
 };
 
-export default async function GalleryPage() {
-  let images: string[] = [];
-  try {
-    const dir = path.join(process.cwd(), 'public', 'gallery', 'fun-projects');
-    const files = await fs.readdir(dir);
-    images = files
-      .filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f))
-      .sort();
-  } catch {}
+const images = [];
 
+export default function GalleryPage() {
   return (
     <GalleryHoldingPage
       title="Fun Projects"
