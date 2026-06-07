@@ -40,6 +40,7 @@ export default function GalleryHoldingPage({ title, description, folder, images:
   const [images, setImages] = useState<string[]>(staticImages || []);
   const [loading, setLoading] = useState(!staticImages);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [showPopup, setShowPopup] = useState(true);
   const [activeTag, setActiveTag] = useState('All');
 
   useEffect(() => {
@@ -199,6 +200,30 @@ export default function GalleryHoldingPage({ title, description, folder, images:
               </div>
               <span className="text-white/50 text-sm">{lightboxIndex + 1} / {filtered.length}</span>
             </div>
+          </div>
+        </div>
+      )}
+    </div>
+
+      {/* Under Construction Popup */}
+      {showPopup && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+          <div className="relative bg-[#1A3D8F] text-white rounded-2xl px-10 py-12 max-w-md w-full text-center shadow-2xl border-4 border-[#00B4D8] overflow-hidden">
+            <div className="absolute inset-0 opacity-5" style={{backgroundImage: "repeating-linear-gradient(45deg, #fff 0px, #fff 10px, transparent 10px, transparent 20px)"}} />
+            <div className="text-6xl mb-5">🚧</div>
+            <h3 className="text-2xl font-bold tracking-wide mb-3 text-[#00B4D8] uppercase">Gallery Under Construction</h3>
+            <p className="text-white/80 text-base leading-relaxed mb-6">
+              We are busy updating this gallery with fresh project photos.<br/>
+              Please be patient — it will be worth the wait.
+            </p>
+            <div className="w-16 h-1 bg-[#00B4D8] rounded mx-auto mb-6" />
+            <p className="text-white/50 text-sm mb-8">— The Supersonic Customs Team</p>
+            <button
+              onClick={() => setShowPopup(false)}
+              className="bg-[#00B4D8] hover:bg-[#0090b0] text-white font-semibold px-8 py-3 rounded-xl transition-colors duration-200"
+            >
+              Got it
+            </button>
           </div>
         </div>
       )}
