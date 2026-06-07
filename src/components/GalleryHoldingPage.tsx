@@ -110,11 +110,22 @@ export default function GalleryHoldingPage({ title, description, folder, images:
         {loading ? (
           <div className="text-center py-20 text-gray-400">Loading gallery...</div>
         ) : filtered.length === 0 ? (
-          <div className="text-center py-24">
-          <div className="inline-flex flex-col items-center gap-4">
-            <div className="text-5xl">🚧</div>
-            <h3 className="text-xl font-semibold text-gray-700">Gallery Under Construction</h3>
-            <p className="text-gray-400 max-w-sm">We are currently updating this gallery with fresh project photos. Please check back soon.</p>
+          <div className="flex justify-center py-24 px-4">
+          <div className="relative bg-[#1A3D8F] text-white rounded-2xl px-10 py-12 max-w-lg w-full text-center shadow-2xl border-4 border-[#00B4D8] overflow-hidden">
+            {/* Stripes */}
+            <div className="absolute inset-0 opacity-5" style={{backgroundImage: "repeating-linear-gradient(45deg, #fff 0px, #fff 10px, transparent 10px, transparent 20px)"}} />
+            {/* Icon */}
+            <div className="text-6xl mb-5">🚧</div>
+            {/* Heading */}
+            <h3 className="text-2xl font-bold tracking-wide mb-3 text-[#00B4D8] uppercase">Under Construction</h3>
+            <p className="text-white/80 text-base leading-relaxed mb-6">
+              We are busy updating this gallery with fresh project photos.<br/>
+              Please be patient — it will be worth the wait.
+            </p>
+            {/* Divider */}
+            <div className="w-16 h-1 bg-[#00B4D8] rounded mx-auto mb-5" />
+            {/* Sign off */}
+            <p className="text-white/50 text-sm">— The Supersonic Customs Team</p>
           </div>
         </div>
         ) : (
