@@ -1,22 +1,29 @@
 import type { Metadata } from 'next';
+import { promises as fs } from 'fs';
+import path from 'path';
 import GalleryHoldingPage from '@/components/GalleryHoldingPage';
 
 export const metadata: Metadata = {
-  title: "Industrial Noise Control & Acoustic Treatment | South Africa",
-  description: "Industrial acoustic treatment, machinery noise enclosures and noise barrier solutions across South Africa. Specialist solutions for factories, warehouses and mechanical plant.",
-  alternates: { canonical: "https://supersoniccustoms.co.za/gallery/industrial-machinery" },
-  openGraph: {
-    title: "Industrial Noise Control Gallery | Supersonic Customs South Africa",
-    description: "Industrial acoustic treatment and noise control solutions across South Africa. Generator enclosures, machinery acoustic panels and noise barriers.",
-    url: "https://supersoniccustoms.co.za/gallery/industrial-machinery",
-  },
+  title: "Industrial & Machinery | Supersonic Customs South Africa",
+  description: "Industrial acoustic treatment, generator enclosures and noise barrier solutions across South Africa.",
 };
-export default function IndustrialMachineryPage() {
+
+export default async function GalleryPage() {
+  let images: string[] = [];
+  try {
+    const dir = path.join(process.cwd(), 'public', 'gallery', 'industrial-machinery');
+    const files = await fs.readdir(dir);
+    images = files
+      .filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f))
+      .sort();
+  } catch {}
+
   return (
     <GalleryHoldingPage
       title="Industrial & Machinery"
-      description="Specialist noise control for industrial environments, machinery and mechanical plant across South Africa."
+      description="Industrial acoustic treatment, generator enclosures and noise barrier solutions across South Africa."
       folder="industrial-machinery"
+      images={images}
     />
   );
 }
