@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowLeft, X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
 
 function titleFromFilename(filename: string): string {
@@ -193,7 +194,10 @@ export default function GalleryHoldingPage({ title, description, folder, images:
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
           <div className="relative bg-[#1A3D8F] text-white rounded-2xl px-10 py-12 max-w-md w-full text-center shadow-2xl border-4 border-[#00B4D8] overflow-hidden">
             <div className="absolute inset-0 opacity-5" style={{backgroundImage: "repeating-linear-gradient(45deg, #fff 0px, #fff 10px, transparent 10px, transparent 20px)"}} />
-            <div className="text-6xl mb-5">🚧</div>
+            <div className="flex flex-col items-center gap-3 mb-5">
+              <Image src="/nav-logo.png" alt="Supersonic Customs" width={160} height={60} className="object-contain" />
+              <div className="text-5xl">🚧</div>
+            </div>
             <h3 className="text-2xl font-bold tracking-wide mb-3 text-[#00B4D8] uppercase">Gallery Under Construction</h3>
             <p className="text-white/80 text-base leading-relaxed mb-6">
               We are busy updating this gallery with fresh project photos.<br/>
