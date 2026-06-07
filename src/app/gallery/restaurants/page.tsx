@@ -1,20 +1,29 @@
 import type { Metadata } from 'next';
+import { promises as fs } from 'fs';
+import path from 'path';
 import GalleryHoldingPage from '@/components/GalleryHoldingPage';
 
 export const metadata: Metadata = {
   title: "Restaurant Acoustic Treatment | Noise Control South Africa",
-  description: "Restaurant acoustic treatment and noise control solutions across South Africa. Reduce background noise and improve speech intelligibility in dining environments with bespoke acoustic panel installations.",
+  description: "Restaurant acoustic treatment and noise control solutions across South Africa.",
   alternates: { canonical: "https://supersoniccustoms.co.za/gallery/restaurants" },
   openGraph: {
     title: "Restaurant Acoustic Treatment Gallery | Supersonic Customs South Africa",
-    description: "Acoustic treatment for restaurants across South Africa. Reduce noise and improve the dining experience with bespoke panel solutions.",
+    description: "Acoustic treatment for restaurants across South Africa.",
     url: "https://supersoniccustoms.co.za/gallery/restaurants",
   },
 };
 
-const images = ["restaurants-001.jpg", "restaurants-002.jpg", "restaurants-003.jpg", "restaurants-004.jpg", "restaurants-005.jpg", "restaurants-006.jpg", "restaurants-007.jpg"];
+export default async function RestaurantsPage() {
+  let images: string[] = [];
+  try {
+    const dir = path.join(process.cwd(), 'public', 'gallery', 'restaurants');
+    const files = await fs.readdir(dir);
+    images = files
+      .filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f))
+      .sort();
+  } catch {}
 
-export default function RestaurantsPage() {
   return (
     <GalleryHoldingPage
       title="Restaurants & Hospitality"
