@@ -17,18 +17,18 @@ const categories = [
     id: 'acoustic-panels',
     label: 'Acoustic Panels',
     preview: [
-      '/gallery/acoustic-panels/architectural-ceiling-panels.jpg',
-      '/gallery/acoustic-panels/geometric-ceiling-design.jpg',
-      '/gallery/acoustic-panels/suspended-ceiling-panels.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-001.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-002.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-003.jpg',
     ]
   },
   {
     id: 'acoustic-ceilings-wallpaper',
     label: 'Acoustic Ceilings & Wallpaper',
     preview: [
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-001.jpg',
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-panels-002.jpg',
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-panels-003.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-001.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-002.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-003.jpg',
     ]
   },
   {
@@ -44,9 +44,9 @@ const categories = [
     id: 'restaurants',
     label: 'Restaurants',
     preview: [
-      '/gallery/restaurants/fine-dining-acoustic-panels.jpg',
-      '/gallery/restaurants/lounge-acoustic-treatment.jpg',
-      '/gallery/restaurants/bar-ceiling-installation.jpg',
+      '/gallery/restaurants/restaurants-001.jpg',
+      '/gallery/restaurants/restaurants-002.jpg',
+      '/gallery/restaurants/restaurants-003.jpg',
     ]
   },
   {
