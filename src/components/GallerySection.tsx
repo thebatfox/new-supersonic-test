@@ -8,9 +8,9 @@ const categories = [
     id: 'night-clubs',
     label: 'Night Clubs',
     preview: [
-      '/gallery/night-clubs/halo-nightclub-main-floor.jpg',
-      '/gallery/night-clubs/dj-booth-geometric-ceiling.jpg',
-      '/gallery/night-clubs/vip-lounge-living-wall.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-001.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-002.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-003.jpg',
     ]
   },
   {
@@ -35,9 +35,9 @@ const categories = [
     id: 'commercial-spaces',
     label: 'Commercial Spaces',
     preview: [
-      '/gallery/commercial-spaces/conference-room-coffered-ceiling.jpg',
-      '/gallery/commercial-spaces/wooden-slat-living-wall.jpg',
-      '/gallery/commercial-spaces/marble-wall-office-lounge.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-001.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-002.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-003.jpg',
     ]
   },
   {
@@ -53,36 +53,36 @@ const categories = [
     id: 'industrial-machinery',
     label: 'Industrial & Machinery',
     preview: [
-      '/gallery/industrial-machinery/generator-acoustic-enclosure-system.jpg',
-      '/gallery/industrial-machinery/generator-enclosure-industrial-yard.jpg',
-      '/gallery/industrial-machinery/wooden-acoustic-barrier-fence.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-001.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-002.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-003.jpg',
     ]
   },
   {
     id: 'schools-worship',
     label: 'Schools & Worship',
     preview: [
-      '/gallery/schools-worship/church-sanctuary-pipe-organ-acoustics.jpg',
-      '/gallery/schools-worship/church-complete-acoustic-installation.jpg',
-      '/gallery/schools-worship/classroom-acoustic-panel-installation.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-001.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-002.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-003.jpg',
     ]
   },
   {
     id: 'tech-av',
     label: 'Tech & AV',
     preview: [
-      '/gallery/tech-av/funktion-one-amplifier-rack.jpg',
-      '/gallery/tech-av/dj-booth-professional-setup.jpg',
-      '/gallery/tech-av/av-system-setup.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-001.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-002.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-003.jpg',
     ]
   },
   {
     id: 'fun-projects',
     label: 'Fun Projects',
     preview: [
-      '/gallery/fun-projects/euphoria-communication-truck-display.jpg',
-      '/gallery/fun-projects/mobile-communication-truck-setup.jpg',
-      '/gallery/fun-projects/acoustic-component-rc-car-demonstration.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-001.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-002.jpg',
+      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-003.jpg',
     ]
   },
 ];
