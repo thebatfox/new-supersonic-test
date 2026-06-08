@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Custom fabric-wrapped acoustic panels manufactured in our Cape Town workshop.",
 };
 
-const images = [];
+const images: string[] = [];
 
 export default function GalleryPage() {
   return (
