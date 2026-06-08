@@ -56,15 +56,12 @@ export default function GalleryHoldingPage({ title, description, folder, images 
     return images.filter(img => tagsFromFilename(img).includes(activeTag));
   }, [images, activeTag]);
 
-  const openLightbox = (index: number) => setLightboxIndex(index);
-  const closeLightbox = () => setLightboxIndex(null);
   const prev = () => setLightboxIndex(i => (i !== null ? (i - 1 + filtered.length) % filtered.length : null));
   const next = () => setLightboxIndex(i => (i !== null ? (i + 1) % filtered.length : null));
 
   return (
     <div className="min-h-screen bg-gray-100">
 
-      {/* Header */}
       <div className="bg-white border-b border-gray-200 py-8 px-6">
         <div className="max-w-7xl mx-auto">
           <Link href="/#gallery" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-5 transition-colors text-sm">
@@ -77,7 +74,6 @@ export default function GalleryHoldingPage({ title, description, folder, images 
         </div>
       </div>
 
-      {/* Tag Filter Bar */}
       {allTags.length > 2 && (
         <div className="bg-white border-b border-gray-200 sticky top-0 z-10">
           <div className="max-w-7xl mx-auto px-6 py-3 flex flex-wrap gap-2">
@@ -85,11 +81,7 @@ export default function GalleryHoldingPage({ title, description, folder, images 
               <button
                 key={tag}
                 onClick={() => setActiveTag(tag)}
-                className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
-                  activeTag === tag
-                    ? 'bg-blue-500 text-white shadow-sm'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                }`}
+                className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${activeTag === tag ? 'bg-blue-500 text-white shadow-sm' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
               >
                 {tag}
                 {tag !== 'All' && (
@@ -103,75 +95,54 @@ export default function GalleryHoldingPage({ title, description, folder, images 
         </div>
       )}
 
-      {/* Gallery Grid */}
       <div className="max-w-7xl mx-auto px-6 py-10">
-        {filtered.length === 0 && !isEmpty ? (
-          <div className="text-center py-20 text-gray-400">No photos in this category yet.</div>
-        ) : !isEmpty ? (
+        {!isEmpty && (
           <div className="columns-2 md:columns-3 lg:columns-4 gap-4">
-            {filtered.map((filename, index) => {
-              const tags = tagsFromFilename(filename);
-              return (
-                <div
-                  key={filename}
-                  className="break-inside-avoid group relative cursor-pointer rounded-xl overflow-hidden bg-white mb-4 shadow-sm hover:shadow-md transition-shadow duration-300"
-                  onClick={() => openLightbox(index)}
-                >
-                  <img
-                    src={`/gallery/${folder}/${filename}`}
-                    alt={titleFromFilename(filename)}
-                    className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <ZoomIn className="w-8 h-8 text-white drop-shadow" />
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <div className="flex flex-wrap gap-1">
-                      {tags.map(tag => (
-                        <span key={tag} className="text-xs bg-blue-500/80 text-white px-2 py-0.5 rounded-full font-medium">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+            {filtered.map((filename, index) => (
+              <div
+                key={filename}
+                className="break-inside-avoid group relative cursor-pointer rounded-xl overflow-hidden bg-white mb-4 shadow-sm hover:shadow-md transition-shadow duration-300"
+                onClick={() => setLightboxIndex(index)}
+              >
+                <img
+                  src={`/gallery/${folder}/${filename}`}
+                  alt={titleFromFilename(filename)}
+                  className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                  <ZoomIn className="w-8 h-8 text-white drop-shadow" />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <div className="flex flex-wrap gap-1">
+                    {tagsFromFilename(filename).map(tag => (
+                      <span key={tag} className="text-xs bg-blue-500/80 text-white px-2 py-0.5 rounded-full font-medium">{tag}</span>
+                    ))}
                   </div>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
-        ) : null}
+        )}
       </div>
 
-      {/* Lightbox */}
       {lightboxIndex !== null && (
-        <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4" onClick={closeLightbox}>
-          <button className="absolute top-4 right-4 text-white/70 hover:text-white z-10 transition-colors" onClick={closeLightbox}>
+        <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4" onClick={() => setLightboxIndex(null)}>
+          <button className="absolute top-4 right-4 text-white/70 hover:text-white z-10" onClick={() => setLightboxIndex(null)}>
             <X className="w-8 h-8" />
           </button>
-          <button
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white z-10 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-all"
-            onClick={(e) => { e.stopPropagation(); prev(); }}
-          >
+          <button className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white z-10 bg-white/10 hover:bg-white/20 rounded-full p-2" onClick={(e) => { e.stopPropagation(); prev(); }}>
             <ChevronLeft className="w-7 h-7" />
           </button>
-          <button
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white z-10 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-all"
-            onClick={(e) => { e.stopPropagation(); next(); }}
-          >
+          <button className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white z-10 bg-white/10 hover:bg-white/20 rounded-full p-2" onClick={(e) => { e.stopPropagation(); next(); }}>
             <ChevronRight className="w-7 h-7" />
           </button>
           <div className="max-w-5xl max-h-[90vh] relative" onClick={e => e.stopPropagation()}>
-            <img
-              src={`/gallery/${folder}/${filtered[lightboxIndex]}`}
-              alt={titleFromFilename(filtered[lightboxIndex])}
-              className="max-h-[80vh] max-w-full object-contain rounded-xl"
-            />
+            <img src={`/gallery/${folder}/${filtered[lightboxIndex]}`} alt={titleFromFilename(filtered[lightboxIndex])} className="max-h-[80vh] max-w-full object-contain rounded-xl" />
             <div className="flex items-center justify-between mt-3 px-1">
               <div className="flex flex-wrap gap-1">
                 {tagsFromFilename(filtered[lightboxIndex]).map(tag => (
-                  <span key={tag} className="text-xs bg-blue-500/80 text-white px-2 py-0.5 rounded-full font-medium">
-                    {tag}
-                  </span>
+                  <span key={tag} className="text-xs bg-blue-500/80 text-white px-2 py-0.5 rounded-full font-medium">{tag}</span>
                 ))}
               </div>
               <span className="text-white/50 text-sm">{lightboxIndex + 1} / {filtered.length}</span>
@@ -180,7 +151,6 @@ export default function GalleryHoldingPage({ title, description, folder, images 
         </div>
       )}
 
-      {/* Under Construction Popup - only when gallery is empty */}
       {showPopup && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
           <div className="relative bg-[#1A3D8F] text-white rounded-2xl px-10 py-12 max-w-md w-full text-center shadow-2xl border-4 border-[#00B4D8] overflow-hidden">
@@ -196,16 +166,12 @@ export default function GalleryHoldingPage({ title, description, folder, images 
             </p>
             <div className="w-16 h-1 bg-[#00B4D8] rounded mx-auto mb-6" />
             <p className="text-white/50 text-sm mb-8">— The Supersonic Customs Team</p>
-            <button
-              onClick={() => setPopupDismissed(true)}
-              className="bg-[#00B4D8] hover:bg-[#0090b0] text-white font-semibold px-8 py-3 rounded-xl transition-colors duration-200"
-            >
+            <button onClick={() => setPopupDismissed(true)} className="bg-[#00B4D8] hover:bg-[#0090b0] text-white font-semibold px-8 py-3 rounded-xl transition-colors duration-200">
               Got it
             </button>
           </div>
         </div>
       )}
-
 
     </div>
   );
