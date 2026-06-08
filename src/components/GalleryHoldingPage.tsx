@@ -210,12 +210,12 @@ export default function GalleryHoldingPage({ title, description, folder, images 
             </p>
             <div className="w-16 h-1 bg-[#00B4D8] rounded mx-auto mb-6" />
             <p className="text-white/50 text-sm mb-8">— The Supersonic Customs Team</p>
-            <button
-              onClick={() => setPopupDismissed(true)}
-              className="bg-[#00B4D8] hover:bg-[#0090b0] text-white font-semibold px-8 py-3 rounded-xl transition-colors"
+            <Link
+              href="/"
+              className="inline-block bg-[#00B4D8] hover:bg-[#0090b0] text-white font-semibold px-8 py-3 rounded-xl transition-colors"
             >
               Got it
-            </button>
+            </Link>
           </div>
         </div>
       )}
