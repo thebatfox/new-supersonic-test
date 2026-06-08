@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Unique and creative acoustic installations across South Africa.",
 };
 
-const images = [];
+const images: string[] = [];
 
 export default function GalleryPage() {
   return (
