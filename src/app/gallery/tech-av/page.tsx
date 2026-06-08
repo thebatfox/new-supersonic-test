@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "AV technology installations and recording studio acoustic fit-outs across South Africa.",
 };
 
-const images = [];
+const images: string[] = [];
 
 export default function GalleryPage() {
   return (
