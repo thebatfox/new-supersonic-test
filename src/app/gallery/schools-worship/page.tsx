@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Acoustic treatment for schools, churches and community halls across South Africa.",
 };
 
-const images = [];
+const images: string[] = [];
 
 export default function GalleryPage() {
   return (
