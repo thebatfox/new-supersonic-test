@@ -206,6 +206,7 @@ export default function GalleryHoldingPage({ title, description, folder, images 
         </div>
       )}
 
+
     </div>
   );
 }
