@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Acoustic treatment and soundproofing for offices and commercial spaces across South Africa.",
 };
 
-const images = [];
+const images: string[] = [];
 
 export default function GalleryPage() {
   return (
