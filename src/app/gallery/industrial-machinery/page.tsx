@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Industrial acoustic treatment and noise barriers across South Africa.",
 };
 
-const images = [];
+const images: string[] = [];
 
 export default function GalleryPage() {
   return (
