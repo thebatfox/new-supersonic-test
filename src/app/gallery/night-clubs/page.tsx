@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Specialist soundproofing and acoustic fit-outs for entertainment venues across South Africa.",
 };
 
-const images = [];
+const images: string[] = [];
 
 export default function GalleryPage() {
   return (
