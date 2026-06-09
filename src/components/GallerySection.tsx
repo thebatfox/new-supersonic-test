@@ -8,36 +8,36 @@ const categories = [
     id: 'night-clubs',
     label: 'Night Clubs',
     preview: [
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-001.jpg',
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-002.jpg',
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-003.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-001.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-002.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-003.jpg',
     ]
   },
   {
     id: 'acoustic-panels',
     label: 'Acoustic Panels',
     preview: [
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-001.jpg',
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-002.jpg',
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-003.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-001.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-002.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-003.jpg',
     ]
   },
   {
     id: 'acoustic-ceilings-wallpaper',
     label: 'Acoustic Ceilings & Wallpaper',
     preview: [
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-001.jpg',
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-002.jpg',
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-003.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-001.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-002.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-003.jpg',
     ]
   },
   {
     id: 'commercial-spaces',
     label: 'Commercial Spaces',
     preview: [
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-001.jpg',
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-002.jpg',
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-003.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-001.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-002.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-003.jpg',
     ]
   },
   {
@@ -53,36 +53,36 @@ const categories = [
     id: 'industrial-machinery',
     label: 'Industrial & Machinery',
     preview: [
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-001.jpg',
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-002.jpg',
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-003.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-001.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-002.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-003.jpg',
     ]
   },
   {
     id: 'schools-worship',
     label: 'Schools & Worship',
     preview: [
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-001.jpg',
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-002.jpg',
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-003.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-001.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-002.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-003.jpg',
     ]
   },
   {
     id: 'tech-av',
     label: 'Tech & AV',
     preview: [
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-001.jpg',
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-002.jpg',
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-003.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-001.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-002.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-003.jpg',
     ]
   },
   {
     id: 'fun-projects',
     label: 'Fun Projects',
     preview: [
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-001.jpg',
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-002.jpg',
-      '/gallery/acoustic-ceilings-wallpaper/acoustic-ceilings-wallpaper-003.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-001.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-002.jpg',
+      '/gallery/acoustic-panels/acoustic-panels-003.jpg',
     ]
   },
 ];
