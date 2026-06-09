@@ -196,6 +196,7 @@ export default function GalleryHoldingPage({ title, description, folder, images 
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
           <div
             className="relative bg-[#1A3D8F] text-white rounded-2xl px-10 py-12 max-w-md w-full text-center shadow-2xl border-4 border-[#00B4D8] overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
           >
             <div
               className="absolute inset-0 opacity-5"
@@ -213,8 +214,9 @@ export default function GalleryHoldingPage({ title, description, folder, images 
             <div className="w-16 h-1 bg-[#00B4D8] rounded mx-auto mb-6" />
             <p className="text-white/50 text-sm mb-8">— The Supersonic Customs Team</p>
             <button
-              onClick={() => router.push("/")}
-              className="bg-[#00B4D8] hover:bg-[#0090b0] text-white font-semibold px-8 py-3 rounded-xl transition-colors cursor-pointer"
+              onClick={() => { window.location.href = "/"; }}
+              style={{ cursor: "pointer", position: "relative", zIndex: 100 }}
+              className="bg-[#00B4D8] hover:bg-[#0090b0] text-white font-semibold px-8 py-3 rounded-xl transition-colors"
             >
               Got it
             </button>
