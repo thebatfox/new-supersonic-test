@@ -44,7 +44,7 @@ export const services: Service[] = [
     title: 'Acoustic Treatment',
     subtitle: 'Making Every Space Sound Its Best',
     hero: true,
-    description: 'Great soundproofing keeps noise out - acoustic treatment makes the sound inside your space perform at its best. From controlling echo in busy restaurants and improving speech clarity in boardrooms, to perfecting the energy in nightclubs and precision in recording studios, we design and install custom acoustic treatment solutions that look as good as they sound.',
+    description: 'Good soundproofing keeps noise out. Acoustic treatment makes the sound inside your space work at its best. From controlling echo in busy restaurants and improving speech clarity in boardrooms, to perfecting the energy in nightclubs and precision in recording studios, we design and install custom acoustic treatment solutions that look as good as they sound.',
     features: ['Fabric-Wrapped Acoustic Panels', 'Ceiling Baffles & Acoustic Clouds', 'Bass Traps & Diffusers', 'Perforated & Slatted Timber Panels', 'Wood Wool Acoustic Panels', 'Foam Sound Absorbers']
   },
   {
@@ -53,7 +53,7 @@ export const services: Service[] = [
     title: 'Carpentry & Custom Manufacturing',
     subtitle: 'Built in South Africa, Built to Last',
     hero: true,
-    description: 'Our in-house shopfitting team goes far beyond acoustics. We design and build anything from bespoke acoustic installations and entertainment venue fit-outs to full shopfitting, custom cabinetry, and commercial interiors - all manufactured to your exact specification in South Africa. If you can imagine it, we can build it.',
+    description: 'Our in-house shopfitting team extends well beyond acoustics. We design and build anything from bespoke acoustic installations and entertainment venue fit-outs to full shopfitting, custom cabinetry, and commercial interiors - all manufactured to your exact specification in South Africa. If you can imagine it, we can build it.',
     features: ['Custom DJ Booths & Entertainment Fit-Outs', 'Shopfitting & Retail Interiors', 'Custom Cabinetry & Built-in Furniture', 'Bar, Restaurant & Club Fit-Outs', 'Acoustic Wall, Ceiling & Feature Work', 'Chain Curtain, Living Wall & LED Installations']
   },
   // ─── SUPPORTING SERVICES ─────────────────────────────────────────
