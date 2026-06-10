@@ -32,7 +32,7 @@ They might seem similar, but they serve completely different purposes. Let's bre
 
 ## What Is Soundproofing?
 
-Soundproofing is the process of stopping sound from entering or leaving a space. It's all about isolation—building barriers that block sound transmission through walls, floors, ceilings, and doors.
+Soundproofing is the process of stopping sound from entering or leaving a space. It's all about isolation-building barriers that block sound transmission through walls, floors, ceilings, and doors.
 
 ### Common Uses:
 - Blocking traffic noise from a bedroom or apartment
@@ -57,7 +57,7 @@ Closes up air gaps around doors, windows, and ceilings. Acoustic sealants and ga
 
 ## 🎛️ What Is Acoustic Treatment?
 
-Acoustic treatment is used to improve the sound quality within a room by managing how sound waves behave once they're inside. It does not block sound from entering or leaving—its job is to make the space sound better and more comfortable.
+Acoustic treatment is used to improve the sound quality within a room by managing how sound waves behave once they're inside. It does not block sound from entering or leaving-its job is to make the space sound better and more comfortable.
 
 ### Common Uses:
 - Reducing echo in a meeting room or classroom
@@ -75,7 +75,7 @@ Scatters sound evenly throughout the space to prevent harsh reflections and dead
 **Bass Trapping**
 Targets low-frequency build-up, usually in corners of rooms. Bass traps are thick absorbers made from high-density materials.
 
-**Key Point:** Acoustic treatment helps shape the sound you hear within a room—it's not about keeping sound in or out.
+**Key Point:** Acoustic treatment helps shape the sound you hear within a room-it's not about keeping sound in or out.
 
 ## Soundproofing vs Acoustic Treatment: A Side-by-Side Comparison
 
@@ -109,14 +109,14 @@ Most real-world projects require a combination of both.
 
 ## 🛠️ Quick Exercise
 
-Look around the spaces you use every day—your home, office, or local café. Ask yourself:
+Look around the spaces you use every day-your home, office, or local café. Ask yourself:
 
 - Is noise coming in from outside or other rooms? That's a **soundproofing** issue.
 - Is the space echoey, unclear, or uncomfortable to talk in? That's an **acoustic treatment** issue.
 
 ## Want to learn more or get expert advice for your space?
 
-We specialise in both soundproofing and acoustic design—reach out to Supersonic Customs for tailored solutions that really work.
+We specialise in both soundproofing and acoustic design-reach out to Supersonic Customs for tailored solutions that really work.
     `,
     author: "Supersonic Customs Team",
     publishDate: "2024-12-20",
