@@ -51,7 +51,7 @@ export default function ServicesSection() {
                       </li>
                     ))}
                   </ul>
-                  <Link href="/#contact" className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors group-hover:gap-3 duration-200">
+                  <Link href="/#contact" className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm font-medium transition-colours group-hover:gap-3 duration-200">
                     Get a Quote <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -92,7 +92,7 @@ export default function ServicesSection() {
           <p className="text-gray-500 mb-4">Not sure which service you need?</p>
           <Link
             href="/book-site-visit"
-            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-gray-900 font-semibold px-8 py-3 rounded-xl transition-colors duration-200"
+            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-gray-900 font-semibold px-8 py-3 rounded-xl transition-colours duration-200"
           >
             Book a Free Site Visit <ArrowRight className="w-4 h-4" />
           </Link>
