@@ -209,10 +209,10 @@ export default function GalleryHoldingPage({ title, description, folder, images 
             <p className="text-white/80 text-base leading-relaxed mb-6">
               We are busy updating this gallery with fresh project photos.
               <br />
-              Please be patient — it will be worth the wait.
+              Please be patient - it will be worth the wait.
             </p>
             <div className="w-16 h-1 bg-[#00B4D8] rounded mx-auto mb-6" />
-            <p className="text-white/50 text-sm mb-8">— The Supersonic Customs Team</p>
+            <p className="text-white/50 text-sm mb-8">- The Supersonic Customs Team</p>
             <button
               onClick={() => { window.location.href = "/"; }}
               style={{ cursor: "pointer", position: "relative", zIndex: 100 }}
