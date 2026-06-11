@@ -8,7 +8,90 @@ export interface BlogPost {
   publishDate: string;
   readTime: number;
   category: string;
-  tags: string[];
+  tags: string[,
+  {
+    id: "7",
+    title: "Why Your Restaurant Is Too Loud - And What You Can Actually Do About It",
+    slug: "why-your-restaurant-is-too-loud",
+    excerpt: "Most restaurant owners know the problem. The place fills up, the noise builds, and by 8pm your guests are leaning in just to hear each other. Here is what is actually happening, and how to fix it.",
+    content: `
+# Why Your Restaurant Is Too Loud - And What You Can Actually Do About It
+
+Most restaurant owners know the problem. The place fills up, the noise builds, and by 8pm your guests are leaning in just to hear each other. The staff are shouting across the pass. The music gets turned up to compete. It becomes a wall of noise that nobody enjoys.
+
+The frustrating part is that this is not a mystery. There is a physical explanation for it, and there are practical solutions. You just need to understand what is actually going on.
+
+## Sound Is Not Just Something You Hear
+
+This is the bit most people miss.
+
+Sound is not invisible. It is a physical force. It travels as pressure waves through air, and those waves push against everything they touch - walls, ceilings, tables, people. At high volumes, sound pressure is measurable and real. It is why you feel a kick drum in your chest at a concert, or why the windows rattle when a truck goes past.
+
+In an enclosed space like a restaurant, that pressure does not disappear. It bounces. Every hard surface - the tiled floor, the plastered ceiling, the glass windows, the timber tables - reflects sound back into the room. The waves multiply, they overlap, and the result is what acousticians call reverberation: a sustained wash of noise that sits in the room long after the original sound has stopped.
+
+The more people in the room, the more sources of sound. The more sound, the higher the pressure. The higher the pressure, the louder everyone has to speak to be heard. And so it compounds.
+
+## Atmosphere and Noise Are Two Different Problems
+
+Here is something worth understanding clearly, because it changes how you think about the solution.
+
+**Atmosphere** is about how sound behaves inside your space. It is the energy, the warmth, the feeling of a room that is alive. A good restaurant should have some noise - silence is cold and uncomfortable. The problem is not noise itself. The problem is uncontrolled noise that becomes exhausting.
+
+**Noise** in the problem sense is sound that has escaped its intended context. It might be kitchen noise bleeding into the dining room. It might be your restaurant disturbing the neighbours upstairs. It might be the private dining room that is not actually private because sound travels through the wall.
+
+These two problems require different solutions. Confusing them is why a lot of restaurant acoustic work falls short.
+
+## What Controlling the Atmosphere Actually Means
+
+When a room has too much reverberation, the solution is absorption. You introduce materials that soak up sound energy instead of bouncing it back.
+
+This is acoustic treatment, and it does not mean covering your restaurant in foam wedges. Done properly, it is invisible. Fabric-wrapped acoustic panels can be built into the ceiling design, integrated into booth seating, used as wall features, or concealed behind decorative finishes. The result is a room where conversation is comfortable, the music sounds cleaner, and the energy feels right rather than overwhelming.
+
+The technical measure here is RT60 - the time it takes for sound to decay by 60 decibels after a source stops. A restaurant with hard surfaces everywhere might have an RT60 of 2 seconds or more. A well-treated space sits closer to 0.8 to 1.2 seconds. The difference is the difference between a room that feels loud and a room that feels alive.
+
+## What Controlling the Noise Means
+
+If the problem is sound travelling where it should not - between rooms, through walls, under doors - that is soundproofing, not acoustic treatment.
+
+Sound pressure always seeks the path of least resistance. It will find every gap, every thin partition, every unsealed penetration. A gap of just a few millimetres under a door can undo thousands of rands of wall construction. This is why soundproofing is about sealing as much as it is about mass.
+
+For a restaurant this might mean:
+- Acoustic sealing around the kitchen pass and service areas
+- Decoupling the kitchen from the dining room structure so vibration does not travel through the building
+- Proper acoustic glazing if road noise is the issue
+- A heavier, decoupled partition if the private dining room needs to actually be private
+
+## The Most Common Mistake
+
+The most common mistake is treating both problems as one. Owners put up some acoustic foam or decorative panels, find that the noise still travels between rooms, and conclude that acoustics do not work.
+
+They do work. The issue is applying the right solution to the right problem. Absorption controls the atmosphere inside a room. Mass, sealing, and decoupling control the movement of sound between rooms. A proper acoustic assessment looks at both.
+
+## Where to Start
+
+If your restaurant is too loud, the first question is: loud for whom, and where?
+
+If guests inside the space are struggling to have a conversation, that is a reverberation problem. The fix is absorption - acoustic panels, treated ceiling surfaces, soft furnishings in the right places.
+
+If sound is travelling between spaces, disturbing neighbours, or the kitchen is bleeding into the dining room, that is an isolation problem. The fix involves sealing, mass, and decoupling.
+
+Most real-world restaurants have both. A proper site visit takes about an hour, involves listening to the space, understanding how it is used, and identifying where the pressure is going.
+
+If your restaurant has a noise problem, we can help. Contact Supersonic Customs for a site assessment.
+    `,
+    author: "Gregg Fox",
+    publishDate: "2026-06-10",
+    readTime: 6,
+    category: "Restaurants & Hospitality",
+    tags: ["restaurant acoustics", "soundproofing", "acoustic treatment", "noise control", "reverberation"],
+    image: "/blog/restaurant-acoustics.jpg",
+    seo: {
+      title: "Why Your Restaurant Is Too Loud - And What To Do About It | Supersonic Customs",
+      description: "Most restaurants suffer from noise problems that drive guests away. Learn the difference between atmosphere and noise, and how acoustic treatment and soundproofing fix both.",
+      keywords: ["restaurant too loud", "restaurant acoustics South Africa", "acoustic treatment restaurant", "restaurant soundproofing", "reverberation restaurant", "noisy restaurant fix"]
+    }
+  }
+];
   image: string;
   seo: {
     title: string;
