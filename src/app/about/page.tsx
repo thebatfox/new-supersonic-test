@@ -23,7 +23,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-background">
       {/* Navigation Header */}
       <nav className="bg-primary text-primary-foreground py-4 px-6 shadow-lg">
-        <div className="max-w-7xl mx-auto flex justify-between items-centre">
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
           <Link href="/">
             <Button variant="secondary" size="sm">
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -68,8 +68,8 @@ export default function AboutPage() {
 
       {/* Hero Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-primary/10 to-blue-600/10">
-        <div className="max-w-4xl mx-auto text-centre">
-          <div className="mb-6 flex justify-centre">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="mb-6 flex justify-center">
             <img
               src="https://ugc.same-assets.com/mPV43MWKgtE4HVSGMz-VP38DKbAO2OjZ.svg"
               alt="Supersonic Customs Logo"
@@ -91,7 +91,7 @@ export default function AboutPage() {
           {/* Introduction */}
           <Card className="mb-12">
             <CardContent className="p-8">
-              <h2 className="text-3xl font-bold mb-6 text-centre">Welcome to Supersonic Customs</h2>
+              <h2 className="text-3xl font-bold mb-6 text-center">Welcome to Supersonic Customs</h2>
               <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed space-y-6">
                 <p>
                   Welcome to Supersonic Customs, your trusted partner in soundproofing and acoustic treatment solutions. Based in Paarden Eiland, Cape Town, our small but dynamic team of eight passionate professionals is dedicated to transforming spaces into acoustic masterpieces.
@@ -105,7 +105,7 @@ export default function AboutPage() {
 
           {/* Company Stats */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <Card className="text-centre">
+            <Card className="text-center">
               <CardContent className="p-6">
                 <Calendar className="w-12 h-12 text-primary mx-auto mb-4" />
                 <div className="text-3xl font-bold text-primary mb-2">10+</div>
@@ -113,7 +113,7 @@ export default function AboutPage() {
               </CardContent>
             </Card>
 
-            <Card className="text-centre">
+            <Card className="text-center">
               <CardContent className="p-6">
                 <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
                 <div className="text-3xl font-bold text-primary mb-2">5</div>
@@ -121,7 +121,7 @@ export default function AboutPage() {
               </CardContent>
             </Card>
 
-            <Card className="text-centre">
+            <Card className="text-center">
               <CardContent className="p-6">
                 <Award className="w-12 h-12 text-primary mx-auto mb-4" />
                 <div className="text-3xl font-bold text-primary mb-2">10+</div>
@@ -135,7 +135,7 @@ export default function AboutPage() {
           {/* Our Approach */}
           <Card className="mb-12">
             <CardContent className="p-8">
-              <h2 className="text-3xl font-bold mb-6 text-centre">Our Approach</h2>
+              <h2 className="text-3xl font-bold mb-6 text-center">Our Approach</h2>
               <div className="text-muted-foreground leading-relaxed space-y-6">
                 <p>
                   Whether you need to isolate the noise of a powerful generator, contain the energy of a loud nightclub, or create a serene and functional acoustic environment, we deliver tailored solutions to suit your needs. Our advanced techniques and materials ensure sound levels are comfortable and controlled, protecting your spaces from disruptive noise while enhancing the experience inside.
@@ -150,7 +150,7 @@ export default function AboutPage() {
           {/* What We Do */}
           <Card className="mb-12">
             <CardContent className="p-8">
-              <h2 className="text-3xl font-bold mb-8 text-centre">What We Specialize In</h2>
+              <h2 className="text-3xl font-bold mb-8 text-center">What We Specialize In</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
@@ -226,8 +226,8 @@ export default function AboutPage() {
           {/* Geographic Coverage */}
           <Card className="mb-12">
             <CardContent className="p-8">
-              <h2 className="text-3xl font-bold mb-6 text-centre">Our Reach Across Southern Africa</h2>
-              <div className="grid md:grid-cols-5 gap-4 text-centre">
+              <h2 className="text-3xl font-bold mb-6 text-center">Our Reach Across Southern Africa</h2>
+              <div className="grid md:grid-cols-5 gap-4 text-center">
                 <div className="p-4 bg-primary/10 rounded-xl">
                   <MapPin className="w-8 h-8 text-primary mx-auto mb-2" />
                   <h4 className="font-semibold">South Africa</h4>
@@ -259,12 +259,12 @@ export default function AboutPage() {
 
           {/* Closing Statement */}
           <Card className="mb-12">
-            <CardContent className="p-8 text-centre">
+            <CardContent className="p-8 text-center">
               <h2 className="text-3xl font-bold mb-6">Let's Make Great Spaces Together!</h2>
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
                 Whether you're enhancing a vibrant entertainment venue, refining a corporate space, or improving acoustic performance in schools or studios, Supersonic Customs is here to help.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-centre">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/#contact">
                   <Button size="lg" className="text-lg px-8 py-3">
                     Get In Touch
