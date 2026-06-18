@@ -48,7 +48,7 @@ export default function DefinitionsPage() {
     <div className="min-h-screen bg-gray-100">
       <div className="bg-white border-b border-gray-200 py-8 px-6">
         <div className="max-w-5xl mx-auto">
-          <Link href="/" className="inline-flex items-centre text-blue-400 hover:text-blue-300 mb-6 transition-colours text-sm">
+          <Link href="/" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6 transition-colours text-sm">
             <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
           </Link>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -81,7 +81,7 @@ export default function DefinitionsPage() {
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{def.term}</h3>
                   <p className="text-gray-600 leading-relaxed mb-4">{def.definition}</p>
                   {def.related.length > 0 && (
-                    <div className="flex flex-wrap gap-2 items-centre">
+                    <div className="flex flex-wrap gap-2 items-center">
                       <span className="text-gray-500 text-xs">Related:</span>
                       {def.related.map(rel => (
                         <a key={rel} href={`#${rel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
@@ -97,15 +97,15 @@ export default function DefinitionsPage() {
           </div>
         ))}
 
-        <div className="mt-16 bg-blue-600/10 border border-blue-500/30 rounded-2xl p-8 text-centre">
+        <div className="mt-16 bg-blue-600/10 border border-blue-500/30 rounded-2xl p-8 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-3">Still have questions?</h3>
           <p className="text-gray-500 mb-6 max-w-xl mx-auto">Our team has decades of combined experience across Southern Africa. Book a free site visit and get expert advice specific to your space and budget.</p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-centre">
-            <Link href="/book-site-visit" className="inline-flex items-centre justify-centre gap-2 bg-blue-600 hover:bg-blue-700 text-gray-900 font-semibold px-6 py-3 rounded-xl transition-colours">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/book-site-visit" className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-gray-900 font-semibold px-6 py-3 rounded-xl transition-colours">
               Book a Free Site Visit <ArrowRight className="w-4 h-4" />
             </Link>
             <a href="https://wa.me/27767702767?text=Hi%20Supersonic%20Customs!%20I%20have%20a%20soundproofing%20question." target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-centre justify-centre gap-2 bg-green-600 hover:bg-green-700 text-gray-900 font-semibold px-6 py-3 rounded-xl transition-colours">
+              className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-gray-900 font-semibold px-6 py-3 rounded-xl transition-colours">
               💬 WhatsApp Us
             </a>
           </div>
