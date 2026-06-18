@@ -876,6 +876,109 @@ If your restaurant has a noise problem, we can help. Contact Supersonic Customs 
       keywords: ["restaurant too loud", "restaurant acoustics South Africa", "acoustic treatment restaurant", "restaurant soundproofing", "reverberation restaurant", "noisy restaurant fix"]
     }
   }
+,
+  {
+    id: "8",
+    title: "Understanding Noise: Why 85 Decibels Is the Line That Matters",
+    slug: "understanding-noise-85-decibels",
+    excerpt: "Somewhere in the ordinary noise of a factory floor or a busy kitchen sits a precise threshold that determines whether a workplace is simply loud, or quietly causing harm. Here is what that threshold means, and why it is set where it is.",
+    content: `# Understanding Noise: Why 85 Decibels Is the Line That Matters
+
+Most people walk past loud machinery every day without a second thought. A generator humming in the background, a factory floor running at full pace, a kitchen during the dinner rush. It all sounds, more or less, like noise. What is far less obvious is that somewhere in that noise sits a precise and well studied threshold, one that determines whether a workplace is simply loud, or whether it is quietly causing harm.
+
+This threshold is known as 85 decibels, time weighted average, and it sits at the centre of occupational hearing protection law around the world, including in South Africa. Understanding what it actually means, and why it is set where it is, requires understanding a few things about sound itself that are not obvious at first glance.
+
+## How Loudness Is Measured
+
+Sound is measured in decibels, written as dB. Unlike a ruler, where doubling the number means doubling the length, the decibel scale does not work in a straight line. Human hearing covers an enormous range, from the faintest whisper to the roar of a jet engine, and a simple linear scale could never capture that range in numbers anyone could use sensibly. Instead, the decibel scale is logarithmic, compressing a vast range of physical sound energy into a manageable set of numbers.
+
+To make this concrete, it helps to see where everyday sounds actually sit on that scale.
+
+### Real World Decibel Levels
+
+| Decibel Level | Real World Example |
+|---|---|
+| 10 dB | Breathing |
+| 20 dB | Rustling leaves |
+| 30 dB | A whisper at close range |
+| 40 dB | A quiet library, or a refrigerator humming |
+| 50 dB | Light rainfall, or normal background noise at home |
+| 60 dB | Normal conversation, or an air conditioning unit |
+| 70 dB | A vacuum cleaner, or a washing machine |
+| 75 dB | A busy restaurant |
+| 80 dB | An alarm clock, or heavy city traffic |
+| 85 dB | Action level - a factory floor, a loud kitchen, a motorcycle at close range |
+| 90 dB | A lawnmower, a blender, or power tools |
+| 95 dB | A nightclub, or a motorcycle revving |
+| 100 dB | A jackhammer, a snowmobile, or a loud nightclub speaker |
+| 110 dB | A rock concert, or a chainsaw |
+| 120 dB | An ambulance siren, or thunder |
+| 130 dB | A jet engine at close range on take off, the threshold of pain |
+| 140+ dB | A gunshot, or a firecracker close to the ear, immediate risk of permanent damage |
+
+Notice where 85 decibels sits on that list. It is not an extreme sound. It is a factory floor, a loud kitchen, traffic on a busy road. This is precisely why the threshold catches so many workplaces by surprise. It does not take an obviously dangerous environment to reach it. It takes an ordinary working day in a moderately loud space.
+
+## Loudness Is Not the Whole Story
+
+A brief loud sound and a sustained moderate sound do very different things to a person's hearing. A single loud bang may pass with little consequence. The same average loudness, repeated across an entire eight hour shift, day after day, can cause permanent and irreversible damage.
+
+This is why occupational health science does not simply measure peak loudness. It measures something called the Time Weighted Average, or TWA. Rather than capturing one moment, the TWA captures the average noise exposure across a standard working shift, accounting for quieter periods and louder ones, and producing a single honest figure for the day as a whole.
+
+This is the figure that matters when we talk about 85 decibels TWA. It is not a momentary spike. It is what a worker experiences, on average, across their entire shift.
+
+## The Action Level, Explained
+
+When that average reaches 85 decibels, regulatory frameworks, including those governing workplace safety in South Africa, draw a clear line. They call it the action level.
+
+The word is chosen carefully. It is not the point of maximum danger, and it is not the legal limit at which noise becomes outright prohibited. It is the point at which enough is known about hearing damage that an employer is required to act, rather than simply being permitted to consider it.
+
+Once a workplace crosses this threshold, the employer must put in place what is known as a hearing conservation programme. This is not a single piece of equipment or a single rule. It is a coordinated system, built from several parts working together.
+
+- The workplace noise must be properly measured, rather than estimated by ear
+- Workers must be provided with suitable hearing protection, such as earplugs or earmuffs
+- Hearing must be tested at regular intervals, typically once a year, so early signs of damage are caught before they become permanent
+- Workers must be trained, not simply handed equipment, so they understand the risk and how to protect themselves properly
+- High noise areas must be clearly marked, so no one wanders into harm unknowingly
+
+These measures matter, and South African law requires them for good reason. But they sit at the end of the chain, not the beginning. Hearing protection manages a hazard that already exists. It does not remove it.
+
+## Why a Ten Decibel Rise Is Not What It Sounds Like
+
+Here is the part that surprises most people, including some who have worked around noise for years.
+
+Because the decibel scale is logarithmic, an increase of ten decibels does not mean a sound has become ten percent louder, or even simply louder in any straightforward sense. It means the sound now carries roughly ten times more physical energy. Yet to the human ear, that same increase is typically perceived as only about twice as loud.
+
+This gap between what is physically happening and what a person actually perceives is the central trap in understanding noise exposure. Consider the difference between 80 decibels and 90 decibels. To a person standing in that environment, the second figure may sound only somewhat louder, perhaps noticeably more present, but not alarmingly so. Physically, however, it carries ten times the sound energy of the first.
+
+This matters because hearing damage tracks the physical energy reaching the ear, not the listener's impression of how loud it seems. A sound that feels only slightly more intense can be doing many times more harm than instinct would suggest. It is precisely this gap that explains why permitted exposure times fall so sharply as noise levels climb. In many regulatory standards, the safe exposure duration is cut in half for every three decibel increase, even though three decibels barely registers as a change to the ear at all.
+
+Waiting until a workplace sounds dangerous is, in a very real sense, already too late. By the time an environment feels unmistakably harmful, the actual physical exposure has often been severe for some time.
+
+## Treating the Cause, Not Just the Symptom
+
+This is the point at which hearing protection, on its own, falls short. Earplugs and earmuffs are a necessary part of a safe workplace, and South African law rightly requires them once the action level is reached. But they manage an existing hazard. They do not reduce it.
+
+The more durable approach is to address the noise at its source, before it ever reaches a worker's ear. This might mean enclosing noisy machinery, building an acoustic barrier around a generator, or treating a kitchen or factory floor so that sound does not build up and travel as freely in the first place.
+
+This is the principle that sits behind the acoustic engineering work undertaken by Supersonic Customs. Rather than simply equipping people to endure a hazardous sound environment, the more lasting solution is to reduce the hazard itself. Mass, decoupling, absorption and sealing, the same four pillars that govern good acoustic design, apply just as directly to protecting a worker's hearing as they do to creating a comfortable room.
+
+Protective equipment manages exposure for the person wearing it, on any given day. Acoustic engineering reduces the exposure for everyone, every day, for as long as the treatment remains in place. Understanding the difference between the two is, in the end, the difference between coping with a noisy workplace and genuinely solving it.
+
+If your workplace is approaching or exceeding 85 decibels, contact Supersonic Customs for an acoustic assessment.
+`,
+    author: "Gregg Fox",
+    publishDate: "2026-06-18",
+    readTime: 8,
+    category: "Industrial Acoustics",
+    tags: ["occupational noise", "hearing conservation", "decibel levels", "workplace safety", "noise control"],
+    published: true,
+    image: "/blog/occupational-noise.jpg",
+    seo: {
+      title: "Understanding Noise: Why 85 Decibels Is the Line That Matters | Supersonic Customs",
+      description: "A plain language guide to occupational noise exposure, the 85 dB action level, hearing conservation programmes, and why the decibel scale is not what it seems.",
+      keywords: ["85 dB action level", "occupational noise South Africa", "hearing conservation programme", "workplace noise exposure", "decibel scale explained", "industrial noise control"]
+    }
+  }
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
