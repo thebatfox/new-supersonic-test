@@ -59,8 +59,8 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-20 px-6 bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-centre mb-4">Contact Us</h2>
-        <p className="text-xl text-centre opacity-90 mb-12">
+        <h2 className="text-4xl font-bold text-center mb-4">Contact Us</h2>
+        <p className="text-xl text-center opacity-90 mb-12">
           Ready to start your acoustic project? Get in touch with our experts.
         </p>
 
@@ -71,7 +71,7 @@ export default function ContactSection() {
               <h3 className="text-2xl font-semibold mb-6">Get In Touch</h3>
               <div className="space-y-4">
                 {contactInfo.map((info) => (
-                  <div key={info.label} className="flex items-centre space-x-4">
+                  <div key={info.label} className="flex items-center space-x-4">
                     <info.icon className="w-6 h-6" />
                     <div>
                       <p className="font-medium">{info.label}</p>
