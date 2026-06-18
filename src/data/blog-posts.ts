@@ -8,7 +8,10 @@ export interface BlogPost {
   publishDate: string;
   readTime: number;
   category: string;
-  tags: string[,
+  tags: string[];
+}
+
+export const blogPosts: BlogPost[] = [
   {
     id: "7",
     title: "Why Your Restaurant Is Too Loud - And What You Can Actually Do About It",
