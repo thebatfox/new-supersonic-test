@@ -7,7 +7,7 @@ export default function HeroSection() {
       style={{
         backgroundImage: 'url(/hero-bg.jpg)',
         backgroundSize: 'cover',
-        backgroundPosition: 'centre',
+        backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}
     >
@@ -15,8 +15,8 @@ export default function HeroSection() {
       <div className="absolute inset-0 pointer-events-none" style={{backgroundImage: "linear-gradient(hsla(0,0%,100%,0.05) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.05) 1px, transparent 1px), linear-gradient(hsla(0,0%,100%,0.02) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.02) 1px, transparent 1px)", backgroundSize: "50px 50px, 50px 50px, 10px 10px, 10px 10px"}} />
       {/* Dark overlay for text readability */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-blue-950/70" />
-      <div className="relative max-w-7xl mx-auto text-centre z-10">
-        <div className="mb-6 flex justify-centre">
+      <div className="relative max-w-7xl mx-auto text-center z-10">
+        <div className="mb-6 flex justify-center">
           <img
             src="https://ugc.same-assets.com/mPV43MWKgtE4HVSGMz-VP38DKbAO2OjZ.svg"
             alt="Supersonic Customs Logo"
@@ -32,42 +32,42 @@ export default function HeroSection() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left mb-8">
             <ul className="space-y-3">
-              <li className="flex items-centre">
+              <li className="flex items-center">
                 <div className="w-2 h-2 bg-white rounded-full mr-3" />
                 Nightclubs, bars & entertainment venues
               </li>
-              <li className="flex items-centre">
+              <li className="flex items-center">
                 <div className="w-2 h-2 bg-white rounded-full mr-3" />
                 Corporate offices & meeting spaces
               </li>
-              <li className="flex items-centre">
+              <li className="flex items-center">
                 <div className="w-2 h-2 bg-white rounded-full mr-3" />
                 Schools, universities & classrooms
               </li>
             </ul>
             <ul className="space-y-3">
-              <li className="flex items-centre">
+              <li className="flex items-center">
                 <div className="w-2 h-2 bg-white rounded-full mr-3" />
                 Residential homes, apartments & estates
               </li>
-              <li className="flex items-centre">
+              <li className="flex items-center">
                 <div className="w-2 h-2 bg-white rounded-full mr-3" />
                 Churches and houses of worship
               </li>
-              <li className="flex items-centre">
+              <li className="flex items-center">
                 <div className="w-2 h-2 bg-white rounded-full mr-3" />
                 Generator & equipment noise treatment
               </li>
             </ul>
           </div>
 
-          <p className="text-centre mb-8 text-lg opacity-80">
+          <p className="text-center mb-8 text-lg opacity-80">
             Our work spans <strong>South Africa, DRC, Zambia, Mozambique, and Namibia</strong>,
             with proven results across diverse industries and environments.
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-centre">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg" variant="secondary" className="text-lg px-8 py-3" asChild>
             <a href="/about">Who are we?</a>
           </Button>
