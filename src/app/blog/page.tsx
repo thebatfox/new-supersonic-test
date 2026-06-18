@@ -12,9 +12,9 @@ export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   const categories = getAllCategories();
-  const sortedPosts = [...blogPosts].sort(
-    (a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
-  );
+  const sortedPosts = [...blogPosts]
+    .filter((post) => post.published)
+    .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
 
   const displayedPosts =
     selectedCategory === "all"
