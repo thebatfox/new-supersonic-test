@@ -75,48 +75,81 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   // Convert markdown-style content to HTML-like structure
   const formatContent = (content: string) => {
-    return content
-      .split('\n')
-      .map((line, index) => {
-        const key = `${post.id}-${index}-${line.substring(0, 20).replace(/\W/g, '')}`;
+    const lines = content.split('\n');
+    const elements: React.ReactNode[] = [];
+    let i = 0;
 
-        // Handle headers
-        if (line.startsWith('# ')) {
-          return <h1 key={key} className="text-4xl font-bold mb-6 mt-8 first:mt-0">{line.substring(2)}</h1>;
-        }
-        if (line.startsWith('## ')) {
-          return <h2 key={key} className="text-2xl font-bold mb-4 mt-8">{line.substring(3)}</h2>;
-        }
-        if (line.startsWith('### ')) {
-          return <h3 key={key} className="text-xl font-semibold mb-3 mt-6">{line.substring(4)}</h3>;
-        }
-        if (line.startsWith('#### ')) {
-          return <h4 key={key} className="text-lg font-semibold mb-2 mt-4">{line.substring(5)}</h4>;
-        }
+    while (i < lines.length) {
+      const line = lines[i];
+      const key = `${post.id}-${i}-${line.substring(0, 20).replace(/\W/g, '')}`;
 
-        // Handle bold text
-        if (line.startsWith('**') && line.endsWith('**')) {
-          return <p key={key} className="font-bold mb-2">{line.substring(2, line.length - 2)}</p>;
+      // Detect table block - collect all consecutive table lines
+      if (line.startsWith('|')) {
+        const tableLines: string[] = [];
+        while (i < lines.length && lines[i].startsWith('|')) {
+          tableLines.push(lines[i]);
+          i++;
         }
+        // Filter out separator rows (|---|---|)
+        const dataRows = tableLines.filter(l => !l.match(/^\|[-| ]+\|$/));
+        const headerRow = dataRows[0];
+        const bodyRows = dataRows.slice(1);
+        const parseRow = (row: string) => row.split('|').filter((_, idx, arr) => idx > 0 && idx < arr.length - 1).map(cell => cell.trim());
 
-        // Handle bullet points
-        if (line.startsWith('- ')) {
-          return <li key={key} className="ml-6 mb-1 list-disc">{line.substring(2)}</li>;
-        }
+        elements.push(
+          <div key={key} className="overflow-x-auto my-8">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr>
+                  {parseRow(headerRow).map((cell, ci) => (
+                    <th key={ci} className={`px-4 py-3 text-left font-semibold text-white bg-[#1A3D8F] border border-[#1A3D8F] ${ci === 0 ? 'text-center w-32' : ''}`}>
+                      {cell}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {bodyRows.map((row, ri) => {
+                  const cells = parseRow(row);
+                  const isAction = cells[0] === '85 dB';
+                  return (
+                    <tr key={ri} className={isAction ? 'bg-[#DCEEF7] font-semibold text-[#1A3D8F]' : ri % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                      {cells.map((cell, ci) => (
+                        <td key={ci} className={`px-4 py-2.5 border border-gray-200 ${ci === 0 ? 'text-center font-medium' : ''}`}>
+                          {cell}
+                        </td>
+                      ))}
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        );
+        continue;
+      }
 
-        // Handle empty lines
-        if (line.trim() === '') {
-          return <br key={key} />;
-        }
-
-        // Regular paragraphs
-        if (line.trim()) {
-          return <p key={key} className="mb-4 leading-relaxed">{line}</p>;
-        }
-
-        return null;
-      })
-      .filter(Boolean);
+      // Headers
+      if (line.startsWith('# ')) {
+        elements.push(<h1 key={key} className="text-4xl font-bold mb-6 mt-8 first:mt-0">{line.substring(2)}</h1>);
+      } else if (line.startsWith('## ')) {
+        elements.push(<h2 key={key} className="text-2xl font-bold mb-4 mt-8">{line.substring(3)}</h2>);
+      } else if (line.startsWith('### ')) {
+        elements.push(<h3 key={key} className="text-xl font-semibold mb-3 mt-6">{line.substring(4)}</h3>);
+      } else if (line.startsWith('#### ')) {
+        elements.push(<h4 key={key} className="text-lg font-semibold mb-2 mt-4">{line.substring(5)}</h4>);
+      } else if (line.startsWith('**') && line.endsWith('**')) {
+        elements.push(<p key={key} className="font-bold mb-2">{line.substring(2, line.length - 2)}</p>);
+      } else if (line.startsWith('- ')) {
+        elements.push(<li key={key} className="ml-6 mb-1 list-disc">{line.substring(2)}</li>);
+      } else if (line.trim() === '') {
+        elements.push(<br key={key} />);
+      } else if (line.trim()) {
+        elements.push(<p key={key} className="mb-4 leading-relaxed">{line}</p>);
+      }
+      i++;
+    }
+    return elements;
   };
 
   return (
