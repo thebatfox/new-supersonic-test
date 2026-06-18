@@ -65,12 +65,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
   const post = getBlogPost(slug);
 
-  if (!post) {
+  if (!post || !post.published) {
     notFound();
   }
 
   const relatedPosts = blogPosts
-    .filter(p => p.id !== post.id && (p.category === post.category || p.tags.some(tag => post.tags.includes(tag))))
+    .filter(p => p.published && p.id !== post.id && (p.category === post.category || p.tags.some(tag => post.tags.includes(tag))))
     .slice(0, 3);
 
   // Convert markdown-style content to HTML-like structure
