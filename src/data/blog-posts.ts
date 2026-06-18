@@ -9,6 +9,7 @@ export interface BlogPost {
   readTime: number;
   category: string;
   tags: string[];
+  published: boolean;
   image: string;
   seo: {
     title: string;
@@ -123,6 +124,7 @@ We specialise in both soundproofing and acoustic design-contact Supersonic Custo
     readTime: 6,
     category: "Beginner's Guide",
     tags: ["soundproofing", "acoustic treatment", "beginner guide", "sound control", "acoustic design"],
+    published: false,
     image: "/blog/soundproofing-vs-acoustic-treatment.jpg",
     seo: {
       title: "Soundproofing vs Acoustic Treatment: Complete Beginner's Guide | Supersonic Customs",
@@ -210,6 +212,7 @@ Ready to transform your home office? Contact Supersonic Customs for a profession
     readTime: 8,
     category: "Home Acoustics",
     tags: ["home office", "soundproofing", "productivity", "remote work", "acoustic treatment"],
+    published: false,
     image: "/blog/home-office-soundproofing.jpg",
     seo: {
       title: "Complete Home Office Soundproofing Guide 2024 | Supersonic Customs",
@@ -328,6 +331,7 @@ Transform your restaurant's atmosphere with professional acoustic design. Contac
     readTime: 6,
     category: "Commercial Acoustics",
     tags: ["restaurant acoustics", "dining atmosphere", "commercial soundproofing", "hospitality", "customer experience"],
+    published: false,
     image: "/blog/restaurant-acoustics.jpg",
     seo: {
       title: "Restaurant Acoustics Guide: Perfect Dining Atmosphere | Supersonic Customs",
@@ -474,6 +478,7 @@ Our industrial noise control experts provide comprehensive solutions from assess
     readTime: 7,
     category: "Industrial Acoustics",
     tags: ["industrial noise control", "workplace safety", "noise regulations", "compliance", "worker protection"],
+    published: false,
     image: "/blog/industrial-noise-control.jpg",
     seo: {
       title: "Industrial Noise Control & Regulations Guide | Supersonic Customs",
@@ -616,6 +621,7 @@ Transform your educational or worship space with professional acoustic design. C
     readTime: 8,
     category: "Educational Acoustics",
     tags: ["church acoustics", "school acoustics", "speech intelligibility", "educational environments", "worship spaces"],
+    published: false,
     image: "/blog/church-school-acoustics.jpg",
     seo: {
       title: "Church & School Acoustics Design Guide | Supersonic Customs",
@@ -779,6 +785,7 @@ Create the perfect entertainment experience while maintaining community harmony.
     readTime: 9,
     category: "Entertainment Acoustics",
     tags: ["nightclub acoustics", "entertainment venue", "sound system design", "noise control", "compliance"],
+    published: false,
     image: "/blog/nightclub-acoustics.jpg",
     seo: {
       title: "Nightclub & Entertainment Venue Acoustics Guide | Supersonic Customs",
@@ -861,6 +868,7 @@ If your restaurant has a noise problem, we can help. Contact Supersonic Customs 
     readTime: 6,
     category: "Restaurants & Hospitality",
     tags: ["restaurant acoustics", "soundproofing", "acoustic treatment", "noise control", "reverberation"],
+    published: true,
     image: "/blog/restaurant-acoustics.jpg",
     seo: {
       title: "Why Your Restaurant Is Too Loud - And What To Do About It | Supersonic Customs",
